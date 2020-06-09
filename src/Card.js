@@ -137,10 +137,12 @@ function Card({
   <div class='book'>
     <img src={bookImage} />
   </div>
-  <div>
-    <p class= "text-lg font-semibold text-gray-900 -mt-">name</p>
-    <p>author</p>
-    <p>desc</p>
+  <div className="w-40 ">
+    <p className= "text-lg font-semibold text-gray-900 break-words">{name}</p>
+    <p className="text-gray-700 text-base">author</p>
+    <p className="text-gray-700 text-base">desc</p>
+
+
 
   </div>
 
