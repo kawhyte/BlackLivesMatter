@@ -46,7 +46,7 @@ const CardList = () => {
  
 
   const emptyQuery = ""
-  debugger
+
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels, setlabels] = useState(data.allAirtable.nodes)
 
@@ -168,7 +168,7 @@ const CardList = () => {
       key={node.recordId}
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
-      email={node.data.Email}
+      genre={node.data.Genre}
       workPhone={node.data.Phone_1}
       cellularPhone={node.data.Phone_2}
       unemployment={node.data.Unemployment}
@@ -184,9 +184,9 @@ const CardList = () => {
     // } else {
       return (
         <>
-          <div className="m-6 ">
-            {/* <Filter handleInputChange={handleInputChange} /> */}
-          </div>
+          {/* <div className="m-6 ">
+            <Filter handleInputChange={handleInputChange} /> 
+          </div> */}
 
           <div className=" flex justify-center ">
             <Labels labels={labels} onClicked={handleButtonClicked} />

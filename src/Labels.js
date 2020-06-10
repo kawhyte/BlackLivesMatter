@@ -2,13 +2,13 @@ import React from "react"
 let itemsToRender = ["VIEW ALL"]
 let arrayWithoutDuplicates = []
 function Labels(props) {
-  // console.log("#####", props)
+
 
   const { labels, onClicked } = props
 
   labels.map((label, i) => {
-    if (!itemsToRender.includes(label.data.Keywords)) {
-      itemsToRender.push(label.data.Keywords)
+    if (!itemsToRender.includes(label.data.Genre)) {
+      itemsToRender.push(label.data.Genre)
     }
 
     //return itemsToRender
@@ -21,11 +21,35 @@ function Labels(props) {
       []
     )
 
-  let arra
+    console.log("#####", arrayWithoutDuplicates)
 
   return (
-    <div className="max-w-2xl">
-      <div className="tab overflow-hidden justify-center bg-gray-100 p-3">
+//     <div className="max-w-xl bg-gray-300">
+
+// <p className="text-indigo-600 text-xl "> Filter by Keyword</p>
+
+ <div>
+<p className="text-indigo-600 text-xl mt-10 "> Filter by Keyword</p>
+<ul className="flex flex-wrap justify-center max-w-6xl">
+            {arrayWithoutDuplicates.map((item, i) => {
+              if (item !== null) {
+                return (
+                  <li key={i}>
+                    <button
+                      onClick={e => onClicked({ item })}
+                      className="mb-20 cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded border bg-indigo-200  hover:bg-indigo-500 hover:text-white text-gray-700 uppercase"
+                    >
+                      {item}
+                    </button>
+                  </li>
+                )
+              }
+            })}
+</ul>
+ 
+
+
+      {/* <div className="tab overflow-hidden justify-center bg-gray-100 p-3">
         <input
           className="absolute opacity-0 "
           id="tab-multi-one"
@@ -56,7 +80,7 @@ function Labels(props) {
             })}
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

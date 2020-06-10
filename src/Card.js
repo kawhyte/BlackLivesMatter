@@ -4,7 +4,7 @@ function Card({
   name,
   bookImage,
   contactName,
-  email,
+  label,
   workPhone,
   cellularPhone,
   unemployment,
@@ -138,7 +138,7 @@ function Card({
     <img src={bookImage} />
   </div>
   <div className="w-40 ">
-  <a href="#" class="break-words text-sm text-grey-500">{name}<span className="ml-1">{"(2020)"} </span></a>
+  <a href="#" class="truncate-custom text-sm text-grey-500">{name}<span className="ml-1">{"(2020)"} </span></a>
     {/* <p className= "text-lg font-semibold text-gray-900 break-words">{name}</p> */}
     {/* <p className="text-gray-700 text-base">author</p>
     <p className="text-gray-700 text-base">desc</p> */}
