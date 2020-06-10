@@ -1,11 +1,11 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 // import { IdentityContextProvider } from "react-netlify-identity"
-import IdentityModal, {
-  useIdentityContext,
-  useNetlifyIdentity,
-} from "react-netlify-identity-widget"
-import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
+// import IdentityModal, {
+//   useIdentityContext,
+//   useNetlifyIdentity,
+// } from "react-netlify-identity-widget"
+// import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
 
 // function initNetlifyIdentity() {
 //   console.log("netlifyIdentity called here!")
@@ -41,18 +41,18 @@ const Header = ({ siteTitle }) => {
 
   // }
 
-  const identity = useIdentityContext()
-  const [dialog, setDialog] = React.useState(false)
-  const name =
-    (identity &&
-      identity.user &&
-      identity.user.user_metadata.full_name &&
-      identity.user.user_metadata.full_name) ||
-    "No Name"
+  // const identity = useIdentityContext()
+  // const [dialog, setDialog] = React.useState(false)
+  // const name =
+  //   (identity &&
+  //     identity.user &&
+  //     identity.user.user_metadata.full_name &&
+  //     identity.user.user_metadata.full_name) ||
+  //   "No Name"
 
-  console.log(JSON.stringify(identity))
+  // console.log(JSON.stringify(identity))
 
-  const isLoggedIn = identity && identity.isLoggedIn
+  // const isLoggedIn = identity && identity.isLoggedIn
 
   return (
     <>
@@ -68,7 +68,7 @@ const Header = ({ siteTitle }) => {
               alt="Family"
             />
             {/* <svg className="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"/></svg> */}
-            {isLoggedIn ? `Hello ${name}` : "Made with 🍕 by Kenny"}
+             
           </a>
 
           <div className="flex w-2/3 justify-end content-center pr-10">
@@ -101,19 +101,19 @@ const Header = ({ siteTitle }) => {
             </h2> */}
 
             <div className="flex">
-              <button
+              {/* <button
                 onClick={() => setDialog(true)}
                 className="block uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded"
               >
                 {isLoggedIn ? ` Log out` : "Sign in"}
-              </button>
+              </button> */}
               {/* <a
               href="https://legislation-tweets.herokuapp.com/"
               className="ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
             >
              Login
             </a> */}
-              {/* <button className="hidden md:block">
+               <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
@@ -125,13 +125,13 @@ const Header = ({ siteTitle }) => {
                   </span>{" "}
                   by Kenny
                 </a>
-              </button> */}
-              <IdentityModal
+              </button> 
+              {/* <IdentityModal
                 aria-label="Warning about next steps"
                 className="z-10"
                 showDialog={dialog}
                 onCloseDialog={() => setDialog(false)}
-              />
+              /> */}
             </div>
           </div>
 

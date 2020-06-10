@@ -8,10 +8,10 @@ import Pagination from "./common/pagination"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
 
-import IdentityModal, {
-  useIdentityContext,
-  useNetlifyIdentity,
-} from "react-netlify-identity-widget"
+// import IdentityModal, {
+//   useIdentityContext,
+//   useNetlifyIdentity,
+// } from "react-netlify-identity-widget"
 
 let returnedState = ""
 let returnedName = ""
@@ -176,7 +176,7 @@ const CardList = () => {
     />
   ))
 
-  const identity = useIdentityContext()
+  // const identity = useIdentityContext()
 
   {
     // if (!identity.isLoggedIn) {
@@ -185,13 +185,18 @@ const CardList = () => {
       return (
         <>
           <div className="m-6 ">
-            <Filter handleInputChange={handleInputChange} />
+            {/* <Filter handleInputChange={handleInputChange} /> */}
           </div>
 
           <div className=" flex justify-center ">
             <Labels labels={labels} onClicked={handleButtonClicked} />
           </div>
-          <div className="flex  flex-wrap justify-center m-6 bg-red-500">{component}</div>
+          
+          <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p>
+          <div className="flex  flex-wrap container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-red-500">
+            {component}
+            
+            </div>
 
           <Pagination
             itemsCount={state.length}
