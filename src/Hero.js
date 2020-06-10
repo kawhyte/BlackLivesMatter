@@ -15,13 +15,13 @@ function Hero() {
             <p className="lg:text-lg mb-4 sm:mb-12">A Repository of Books & Movies on Race and Racism </p>
             {/* <a href="#" class="font-semibold text-lg bg-blue-500 hover:bg-blue-400 text-white py-3 px-10 rounded-full">Learn more</a> */}
         </div>
-        <div className=" w-full sm:w-3/5">
+        <div className=" w-full sm:w-3/5  ml-2">
 
         <img
-              className="w-full"
-              src="https://res.cloudinary.com/babyhulk/image/upload/v1591067872/hero-image/contacts.png"
+              className=" object-right sm:object-top md:object-right lg:object-bottom xl:object-left "
+              src="https://res.cloudinary.com/babyhulk/image/upload/f_auto/v1591813794/hero-image/diversity.png"
             //   src="https://res.cloudinary.com/babyhulk/image/upload/w_70,h_70,f_auto/v1589318555/hero-image/avatar-01.png"
-              alt="Contacts"
+              alt="Showing diversity"
             />
 
            

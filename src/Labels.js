@@ -29,7 +29,7 @@ function Labels(props) {
 // <p className="text-indigo-600 text-xl "> Filter by Keyword</p>
 
  <div>
-<p className="text-indigo-600 text-xl mt-10 "> Filter by Keyword</p>
+<p className="text-indigo-600 text-xl mt-10 "> Filter by Tags</p>
 <ul className="flex flex-wrap justify-center max-w-6xl">
             {arrayWithoutDuplicates.map((item, i) => {
               if (item !== null) {
@@ -37,7 +37,7 @@ function Labels(props) {
                   <li key={i}>
                     <button
                       onClick={e => onClicked({ item })}
-                      className="mb-20 cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded border bg-indigo-200  hover:bg-indigo-500 hover:text-white text-gray-700 uppercase"
+                      className="mb-20 cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2 uppercase rounded border bg-gray-100  hover:bg-indigo-500 hover:text-white text-gray-700 uppercase"
                     >
                       {item}
                     </button>

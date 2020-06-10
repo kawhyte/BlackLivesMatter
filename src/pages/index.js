@@ -1,6 +1,6 @@
 import React from "react"
 import "../css/global.css"
-import CardList from "../CardList"
+import BookList from "../BookList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Footer from "../Footer"
@@ -10,8 +10,6 @@ import Footer from "../Footer"
 
 const index = () => {
 
-
-
   return (
      
     <div>
@@ -20,7 +18,7 @@ const index = () => {
 
       <Hero />
 
-      <CardList />
+      <BookList />
      
       <Footer />
     </div>
