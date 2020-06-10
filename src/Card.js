@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 let star = ""
 function Card({ name, bookImage, author, rating }) {
   for (let index = 0; index < rating; index++) {
@@ -16,9 +17,12 @@ function Card({ name, bookImage, author, rating }) {
   return (
     <div class="m-6">
       <div class="list-inline">
+         
+           
         <div class="book mb-2">
           <img src={bookImage} />
         </div>
+
         <div className="w-40 ">
           <a href="#" class="truncate-custom text-sm text-gray-700">
             {name}
