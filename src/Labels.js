@@ -17,12 +17,10 @@ function Labels(props) {
       []
     )
 
-  console.log("#####", arrayWithoutDuplicates)
-
   return (
     <div>
       <div className="flex  mt-10">
-        <span className="text-indigo-600 text-xl mt-10 mr-2 ">
+        <span className="text-gray-600 text-xl mt-10 mr-2 ">
           {" "}
           Filter by Tags:
         </span>

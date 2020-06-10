@@ -3,7 +3,7 @@ import React from 'react'
 function Hero() {
     return (
 
-<main className="bg-white font-montserrat">
+<main className="bg-white font-montserrat mb-2">
 
     <header className="h-10 sm:h-20 flex items-center">
      
@@ -11,9 +11,8 @@ function Hero() {
     <div className="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="sm:w-2/5 flex flex-col items-start mt-8 sm:mt-0">
             <h1 className="text-4xl lg:text-6xl leading-none mb-4 knockout"><strong className="font-black">Exploring Race & Racism </strong></h1>
-            {/* <p className="text-4xl lg:text-6xl leading-none mb-4"> Race and Racism</p> */}
             <p className="lg:text-lg mb-4 sm:mb-12">A Repository of Books & Movies on Race and Racism </p>
-            {/* <a href="#" class="font-semibold text-lg bg-blue-500 hover:bg-blue-400 text-white py-3 px-10 rounded-full">Learn more</a> */}
+    
         </div>
         <div className=" w-full sm:w-3/5  ml-2">
 
@@ -30,14 +29,6 @@ function Hero() {
   
 </main>
 
-
-        // <div className="flex py-2 justify-center ">
-        //     <div className="p-8 text-center max-w-2xl">
-        //         <div className="md:text-3xl text-3xl font-bold">Agency <span className="text-3xl text-indigo-600">Contacts</span> Search</div>
-        //         <div className="text-md font-normal text- mt-4"> Find contact information for Government Agencies   in all US states.
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

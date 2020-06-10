@@ -122,6 +122,8 @@ const CardList = () => {
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
       genre={node.data.Genre}
+      author={node.data.Author}
+      rating={node.data.Rating}
     />
   ))
 
@@ -136,8 +138,8 @@ const CardList = () => {
             <Labels labels={labels} onClicked={handleButtonClicked} />
           </div>
           
-          <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p>
-          <div className="flex  flex-wrap container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-red-500">
+          {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
+          <div className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
             {component}
             
             </div>
