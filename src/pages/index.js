@@ -14,12 +14,8 @@ const index = () => {
      
     <div>
       <NavBar /> 
-
-
       <Hero />
-
       <BookList />
-     
       <Footer />
     </div>
   )

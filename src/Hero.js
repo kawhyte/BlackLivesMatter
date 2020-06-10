@@ -10,7 +10,7 @@ function Hero() {
     </header>
     <div className="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="sm:w-2/5 flex flex-col items-start mt-8 sm:mt-0">
-            <h1 className="text-4xl lg:text-6xl leading-none mb-4"><strong className="font-black">Exploring Race & Racism </strong></h1>
+            <h1 className="text-4xl lg:text-6xl leading-none mb-4 knockout"><strong className="font-black">Exploring Race & Racism </strong></h1>
             {/* <p className="text-4xl lg:text-6xl leading-none mb-4"> Race and Racism</p> */}
             <p className="lg:text-lg mb-4 sm:mb-12">A Repository of Books & Movies on Race and Racism </p>
             {/* <a href="#" class="font-semibold text-lg bg-blue-500 hover:bg-blue-400 text-white py-3 px-10 rounded-full">Learn more</a> */}

@@ -8,10 +8,6 @@ import Pagination from "./common/pagination"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
 
-// import IdentityModal, {
-//   useIdentityContext,
-//   useNetlifyIdentity,
-// } from "react-netlify-identity-widget"
 
 let returnedState = ""
 let returnedName = ""
@@ -59,32 +55,9 @@ const CardList = () => {
   const handleInputChange = event => {
     const query = event.target.value
 
-    // console.log("Query ", query)
-
     const contactsToBeFiltered = data.allAirtable.nodes || []
 
-    // console.log("contactsToBeFiltered ", contactsToBeFiltered)
-
     const contacts = contactsToBeFiltered.filter(contact => {
-      // if (contact.data.Phone__c_ === null || contact.data.Phone__w_ === null ) {
-      //   console.log("RETURNED")
-      //   return
-      // }
-      //  const { State, Contact_Name } = contact.data
-      // console.log("contact.data ", contact.data.State)
-
-      // if (contact.data.Phone_2 !== null && contact.data.Phone_2 !== "") {
-      //   returnedPhone2 = contact.data.Phone_2.replace(
-      //     /[^A-Z0-9]/gi,
-      //     ""
-      //   ).includes(query.replace(/[^A-Z0-9]/gi, ""))
-      // }
-      // if (contact.data.Phone_1 !== null && contact.data.Phone_1 !== "") {
-      //   returnedPhone1 = contact.data.Phone_1.replace(
-      //     /[^A-Z0-9]/gi,
-      //     ""
-      //   ).includes(query.replace(/[^A-Z0-9]/gi, ""))
-      // }
 
       if (contact.data.Contact_Name !== null) {
         returnedName = contact.data.Contact_Name.toLowerCase().includes(
@@ -98,20 +71,12 @@ const CardList = () => {
       }
 
       return (
-        //returnedPhone2 || returnedPhone1 || returnedName || returnedState
         returnedName || returnedState
-
-        // contact.data.Phone__c_.replace(/[^A-Z0-9]/ig, '').includes(query.replace(/[^A-Z0-9]/ig, ''))
-
-        //||
-        //    (legislativeSession.jurisdiction.name && legislativeSession.jurisdiction.name
-        //       .toLowerCase()
-        //      .includes(query.toLowerCase()))
       )
     })
 
     setState(
-      // query,
+
       contacts
     )
   }
@@ -133,8 +98,8 @@ const CardList = () => {
     let contacts = contactsToBeFiltered.filter(contact => {
       let found = false
 
-      if (contact.data.Keywords !== null) {
-        contact.data.Keywords.forEach(element => {
+      if (contact.data.Genre !== null) {
+        contact.data.Genre.forEach(element => {
           if (element.toLowerCase().includes(filterValue.item.toLowerCase())) {
             found = true
           }
@@ -143,25 +108,13 @@ const CardList = () => {
 
       return found
     })
-
-    // const contacts = contactsToBeFiltered.filter(contact => {
-    //   if (contact.data.Keywords !== null) {
-    //     returnedState = contact.data.Keywords.toLowerCase().includes(
-    //       filterValue.item.toLowerCase()
-    //     )
-
-    //   }
-    //   return returnedState
-    // })
     setState(
-      // query,
       contacts
     )
   }
 
-  // console.log("STATE", state)
+
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
-  // console.log("NEW PAGES", newPages)
 
   let component = newPages.map(node => (
     <Card
@@ -169,24 +122,15 @@ const CardList = () => {
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
       genre={node.data.Genre}
-      workPhone={node.data.Phone_1}
-      cellularPhone={node.data.Phone_2}
-      unemployment={node.data.Unemployment}
-      withholding={node.data.Withholding}
     />
   ))
 
-  // const identity = useIdentityContext()
+
 
   {
-    // if (!identity.isLoggedIn) {
-    //   return <Section /> 
-    // } else {
+
       return (
         <>
-          {/* <div className="m-6 ">
-            <Filter handleInputChange={handleInputChange} /> 
-          </div> */}
 
           <div className=" flex justify-center ">
             <Labels labels={labels} onClicked={handleButtonClicked} />
@@ -208,6 +152,6 @@ const CardList = () => {
       )
     }
   }
-//}
+
 
 export default CardList
