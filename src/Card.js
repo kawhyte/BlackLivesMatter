@@ -9,7 +9,7 @@ function Card({ name, bookImage, author, rating, id, description, genre, publish
       <div class="list-inline">
         
         <Link 
-        to={`/details/`}
+        to={`/details`}
         state = {{id: id, name: name, description: description, author: author, bookImage: bookImage , rating:rating, genre:genre , published:published, date:date }}
         
         >
