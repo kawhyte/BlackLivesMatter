@@ -6,7 +6,7 @@ import Footer from "../Footer"
 
 const Details = props => {
   let item = props.location.state
-  console.log("Detail prop", props.location.state.genre)
+
   return (
     <>
       <NavBar />
