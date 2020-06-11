@@ -17,9 +17,10 @@ const CardList = () => {
     {
       allAirtable(limit: 100) {
         nodes {
+          id
           data {
             Author
-            Date(formatString: "dddd mm yyyy")
+            Date
             Description
             Genre
             Name
@@ -118,12 +119,15 @@ const CardList = () => {
 
   let component = newPages.map(node => (
     <Card
-      key={node.recordId}
+      id={node.id}
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
       genre={node.data.Genre}
       author={node.data.Author}
       rating={node.data.Rating}
+      description={node.data.Description}
+      published={node.data.Publisher}
+      date={node.data.Date}
     />
   ))
 

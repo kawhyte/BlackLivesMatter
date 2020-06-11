@@ -1,33 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 let star = ""
-function Card({ name, bookImage, author, rating }) {
-  for (let index = 0; index < rating; index++) {
-    star = (
-      <svg
-        class="w-4 h-4 fill-current text-yellow-600"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-      </svg>
-    )
-  }
+function Card({ name, bookImage, author, rating, id, description, genre, published, date }) {
 
+//console.log("ID ",id)
   return (
     <div class="m-6">
       <div class="list-inline">
-         
-           
-        <div class="book mb-2">
-          <img src={bookImage} />
-        </div>
-
+        
+        <Link 
+        to={`/details/`}
+        state = {{id: id, name: name, description: description, author: author, bookImage: bookImage , rating:rating, genre:genre , published:published, date:date }}
+        
+        >
+          <div class="book mb-2">
+            <img src={bookImage} />
+          </div>
+        </Link>
         <div className="w-40 ">
-          <a href="#" class="truncate-custom text-sm text-gray-700">
+          <Link class="truncate-custom text-sm text-gray-700" to="/details">
             {name}
-            <span className="ml-1">{"(2020)"} </span>
-          </a>
+          </Link>
+
+          {/* <span className="ml-1">{"(2020)"} </span> */}
+
           {/* <p className= "text-sm  font-semibold text-gray-500 break-words"> {author}</p>  */}
         </div>
 
