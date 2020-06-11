@@ -7,6 +7,14 @@ import Footer from "../Footer"
 const Details = props => {
   let item = props.location.state
 
+  if (item !== null) {
+
+    return ("")
+      
+  } else {
+      
+ 
+
   return (
     <>
       <NavBar />
@@ -102,6 +110,7 @@ const Details = props => {
       <Footer />
     </>
   )
+}
 }
 
 export default Details
