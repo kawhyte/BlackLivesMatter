@@ -6,6 +6,8 @@ function Card({
   bookImage,
   author,
   rating,
+  color,
+  type,
   id,
   description,
   genre,
@@ -32,8 +34,8 @@ function Card({
        {author}
           </div>
           <div className="w-64 truncate-custom text-sm text-gray-700 text-left ml-4">
-            <span class="inline-block bg-gray-200 rounded-full px-4 py-2 text-sm font-semibold text-gray-700 mt-2">
-              Biography
+            <span class={"inline-block  rounded-full px-4 py-2 text-sm font-semibold text-white mt-2 " + color} >
+          {type}
             </span>
           </div>
 

@@ -20,9 +20,11 @@ const CardList = () => {
           id
           data {
             Author
+            Color
             Date
             Description
             Genre
+            Type
             Name
             Publisher
             Rating
@@ -128,6 +130,8 @@ const CardList = () => {
       description={node.data.Description}
       published={node.data.Publisher}
       date={node.data.Date}
+      color={node.data.Color}
+      type={node.data.Type}
     />
   ))
 
