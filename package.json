@@ -14,14 +14,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@reach/dialog": "^0.10.3",
-    "@reach/tabs": "^0.10.3",
-    "@reach/visually-hidden": "^0.10.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.37",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-cli": "^2.12.44",
-    "gatsby-plugin-netlify-identity": "^0.0.3",
     "gatsby-plugin-postcss": "^2.3.2",
     "gatsby-source-airtable": "^2.1.1",
     "gatsby-source-filesystem": "^2.3.7",
@@ -30,7 +26,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-netlify-identity-widget": "^0.2.7",
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {

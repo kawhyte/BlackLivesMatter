@@ -1,17 +1,18 @@
 import React from "react"
 // import {Link} from 'gatsby'
-import NavBar from "../NavBar"
-import Hero from "../Hero"
-import Footer from "../Footer"
+import NavBar from "./NavBar"
+import Hero from "./Hero"
+import Footer from "./Footer"
 
 const Details = props => {
   let item = props.location.state
+  console.log(props.location.state)
 
-  if (item !== null) {
+  //if (item !== null) {
 
-    return ("")
+    //return ("")
       
-  } else {
+  ///} else {
       
  
 
@@ -111,6 +112,6 @@ const Details = props => {
     </>
   )
 }
-}
+//}
 
 export default Details

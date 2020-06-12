@@ -9,12 +9,12 @@ module.exports = {
   },
   plugins: [
 
-    {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: `https://agencycontacts.netlify.app` // required!
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-netlify-identity`,
+    //   options: {
+    //     url: `https://agencycontacts.netlify.app` // required!
+    //   }
+    // },
 
 
 

@@ -1,12 +1,7 @@
 import React from "react"
-import IdentityModal, {
-  useIdentityContext,
-  useNetlifyIdentity,
-} from "react-netlify-identity-widget"
 
 const NotFoundPage = () => {
-  
-  const identity = useIdentityContext()
+
 
     return (    
        <div>
