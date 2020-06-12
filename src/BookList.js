@@ -141,8 +141,12 @@ const CardList = () => {
           <div className=" flex justify-center ">
             <Labels labels={labels} onClicked={handleButtonClicked} />
           </div>
+
           
           {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
+          <div className= "flex  flex-wrap justify-start text-3xl mb-6 container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-blue-400">
+            <p class="font-black ...">Books</p>
+            </div>
           <div className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-400">
             {component}
             
