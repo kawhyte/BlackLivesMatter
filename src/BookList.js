@@ -12,10 +12,10 @@ import "./css/global.css"
 let returnedState = ""
 let returnedName = ""
 
-const CardList = () => {
+const BookList = () => {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(limit: 100) {
+      allAirtable {
         nodes {
           id
           data {
@@ -25,6 +25,7 @@ const CardList = () => {
             Description
             Genre
             Type
+            Link
             Name
             Publisher
             Rating
@@ -119,8 +120,9 @@ const CardList = () => {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let component = newPages.map(node => (
+  let component = newPages.map((node, i)=> (
     <Card
+    key={i}
       id={node.id}
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
@@ -132,6 +134,7 @@ const CardList = () => {
       date={node.data.Date}
       color={node.data.Color}
       type={node.data.Type}
+      link={node.data.Link}
     />
   ))
 
@@ -148,9 +151,9 @@ const CardList = () => {
 
           
           {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-          <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-            <p class="font-black">Books</p>
-            </div>
+          {/* <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <p className="font-black">Books</p>
+            </div> */}
           <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
             {component}
             
@@ -168,4 +171,4 @@ const CardList = () => {
   }
 
 
-export default CardList
+export default BookList
