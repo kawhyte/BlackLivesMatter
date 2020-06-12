@@ -14,17 +14,17 @@ function Card({
 }) {
   //console.log("ID ",id)
   return (
-    <div class="m-4 ">
-      <div class="bg-red-200 flex">
+    <div class="m-4 mb-10 ">
+      <div class="flex">
         <div class="book m-2">
           <img src={bookImage} />
         </div>
 
-        <div>
-          <div className="w-64 truncate-custom text-xl text-gray-500 m-2 mt-8 text-left ml-4">
+        <div className="w-64">
+          <div className="w-64 truncate-custom text-xl text-gray-500  mt-8 text-left ml-4">
             {rating}/5
           </div>
-          <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 m-2 text-left ml-4 ">
+          <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 ">
             {name}
           </div>
 

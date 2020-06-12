@@ -144,10 +144,10 @@ const CardList = () => {
 
           
           {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-          <div className= "flex  flex-wrap justify-start text-3xl mb-6 container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-blue-400">
-            <p class="font-black ...">Books</p>
+          <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <p class="font-black">Books</p>
             </div>
-          <div className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-400">
+          <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
             {component}
             
             </div>
