@@ -15,7 +15,7 @@ function Card({
   published,
   date,
 }) {
- console.log("ID ",rating)
+//  console.log("ID ",rating)
   return (
     <div className="m-4 mb-10">
       <div className="flex">

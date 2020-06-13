@@ -24,10 +24,10 @@ const BookList = () => {
             Date
             Description
             Genre
-            Type
             Link
             Name
             Publisher
+            Category
             Rating
             Attachments {
               filename
@@ -44,6 +44,8 @@ const BookList = () => {
   `)
 
  
+  console.log("")
+  console.log("Category ", data.allAirtable.nodes[0].data.Category )
 
   const emptyQuery = ""
 
@@ -121,6 +123,8 @@ const BookList = () => {
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let component = newPages.map((node, i)=> (
+
+    node.data.Category  === "Book" ?
     <Card
     key={i}
       id={node.id}
@@ -135,7 +139,27 @@ const BookList = () => {
       color={node.data.Color}
       type={node.data.Type}
       link={node.data.Link}
-    />
+    /> : ""
+  ))
+
+  let component2 = newPages.map((node, i)=> (
+
+    node.data.Category  === "Movie" ?
+    <Card
+    key={i}
+      id={node.id}
+      name={node.data.Name}
+      bookImage={node.data.Attachments[0].thumbnails.full.url}
+      genre={node.data.Genre}
+      author={node.data.Author}
+      rating={node.data.Rating}
+      description={node.data.Description}
+      published={node.data.Publisher}
+      date={node.data.Date}
+      color={node.data.Color}
+      type={node.data.Type}
+      link={node.data.Link}
+    /> : ""
   ))
 
 
@@ -151,14 +175,22 @@ const BookList = () => {
 
           
           {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-          {/* <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
             <p className="font-black">Books</p>
-            </div> */}
+            </div> 
+
           <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
             {component}
             
             </div>
 
+            <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <p className="font-black">MOVIES</p>
+            </div> 
+          <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+            {component2}
+            
+            </div>
           <Pagination
             itemsCount={state.length}
             pageSize={pageState.pageSize}
