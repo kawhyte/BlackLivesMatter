@@ -128,9 +128,8 @@ const BookList = () => {
       type={node.data.Type}
       link={node.data.Link}
       category={node.data.Category}
-    /> ))
-
-
+    />
+  ))
 
   const booksToRender = books.filter(item => {
     console.log("item ", item)
@@ -142,7 +141,6 @@ const BookList = () => {
   })
   console.log("booksToRender ", booksToRender)
   console.log("moviesToRender ", moviesToRender)
-
 
   {
     return (
@@ -164,18 +162,22 @@ const BookList = () => {
           {booksToRender}
         </div>
 
-        {moviesToRender.length > 0 ? (  <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black">MOVIES</p>
-        </div>) : ""}
+        {moviesToRender.length > 0 ? (
+          <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <p className="font-black">MOVIES</p>
+          </div>
+        ) : (
+          ""
+        )}
         <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
           {moviesToRender}
         </div>
-        <Pagination
+        {/* <Pagination
           itemsCount={state.length}
           pageSize={pageState.pageSize}
           onPageChange={handlePageChange}
           currentPage={pageState.currentPage}
-        />
+        /> */}
       </>
     )
   }

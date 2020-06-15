@@ -24,9 +24,7 @@ function Card({
         </div></a>
 
         <div className="w-64">
-          <div className="w-64 truncate-custom text-xl text-gray-500  mt-8 text-left ml-4">
-            {rating}
-          </div>
+        
 
 
    {/* <div class="flex justify-center">
@@ -47,12 +45,16 @@ function Card({
         </div>   */}
 
 
-          <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 ">
+          <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 mt-8 ">
             {name}
           </div>
+        
 
           <div className="w-64 truncate-custom text-lg text-gray-500 text-left ml-4">
             {author}
+          </div>
+          <div className="w-64 truncate-custom text-md text-gray-500   text-left ml-4">
+            {published}
           </div>
 
 
