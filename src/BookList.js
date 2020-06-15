@@ -8,7 +8,6 @@ import Pagination from "./common/pagination"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
 
-
 let returnedState = ""
 let returnedName = ""
 
@@ -43,9 +42,8 @@ const BookList = () => {
     }
   `)
 
- 
   console.log("")
-  console.log("Category ", data.allAirtable.nodes[0].data.Category )
+  console.log("Category ", data.allAirtable.nodes[0].data.Category)
 
   const emptyQuery = ""
 
@@ -64,7 +62,6 @@ const BookList = () => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
 
     const contacts = contactsToBeFiltered.filter(contact => {
-
       if (contact.data.Contact_Name !== null) {
         returnedName = contact.data.Contact_Name.toLowerCase().includes(
           query.toLowerCase()
@@ -76,15 +73,10 @@ const BookList = () => {
         )
       }
 
-      return (
-        returnedName || returnedState
-      )
+      return returnedName || returnedState
     })
 
-    setState(
-
-      contacts
-    )
+    setState(contacts)
   }
 
   const handlePageChange = page => {
@@ -114,19 +106,15 @@ const BookList = () => {
 
       return found
     })
-    setState(
-      contacts
-    )
+    setState(contacts)
   }
-
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let books = newPages.map((node, i)=> (
-
-    node.data.Category  === "Book" ?
+  let books = newPages.map((node, i) => (
+    // node.data.Category  === "Book" ?
     <Card
-    key={i}
+      key={i}
       id={node.id}
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
@@ -139,69 +127,58 @@ const BookList = () => {
       color={node.data.Color}
       type={node.data.Type}
       link={node.data.Link}
-    /> : []
-  ))
+      category={node.data.Category}
+    /> ))
 
-  let component2 = newPages.map((node, i)=> (
 
-    node.data.Category  === "Movie" ?
-    <Card
-    key={i}
-      id={node.id}
-      name={node.data.Name}
-      bookImage={node.data.Attachments[0].thumbnails.full.url}
-      genre={node.data.Genre}
-      author={node.data.Author}
-      rating={node.data.Rating}
-      description={node.data.Description}
-      published={node.data.Publisher}
-      date={node.data.Date}
-      color={node.data.Color}
-      type={node.data.Type}
-      link={node.data.Link}
-    /> : ""
-  ))
- console.log("Value ", books)
+
+  const booksToRender = books.filter(item => {
+    console.log("item ", item)
+    return item.props.category.includes("Book")
+  })
+  const moviesToRender = books.filter(item => {
+    console.log("item ", item)
+    return item.props.category.includes("Movie")
+  })
+  console.log("booksToRender ", booksToRender)
+  console.log("moviesToRender ", moviesToRender)
 
 
   {
+    return (
+      <>
+        <div className=" flex justify-center ">
+          <Labels labels={labels} onClicked={handleButtonClicked} />
+        </div>
 
-      return (
-        <>
-
-          <div className=" flex justify-center ">
-            <Labels labels={labels} onClicked={handleButtonClicked} />
-          </div>
-
-          
-          {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-         {  books.length > 0 ?    <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+        {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
+        {booksToRender.length > 0 ? (
+          <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
             <p className="font-black">BOOKS</p>
-            </div> : "" }
-            
+          </div>
+        ) : (
+          ""
+        )}
 
-          <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
-            {books}
-            
-            </div>
+        <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+          {booksToRender}
+        </div>
 
-            <div className= "flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-            <p className="font-black">MOVIES</p>
-            </div> 
-          <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
-            {component2}
-            
-            </div>
-          <Pagination
-            itemsCount={state.length}
-            pageSize={pageState.pageSize}
-            onPageChange={handlePageChange}
-            currentPage={pageState.currentPage}
-          />
-        </>
-      )
-    }
+        {moviesToRender.length > 0 ? (  <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+          <p className="font-black">MOVIES</p>
+        </div>) : ""}
+        <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+          {moviesToRender}
+        </div>
+        <Pagination
+          itemsCount={state.length}
+          pageSize={pageState.pageSize}
+          onPageChange={handlePageChange}
+          currentPage={pageState.currentPage}
+        />
+      </>
+    )
   }
-
+}
 
 export default BookList
