@@ -14,16 +14,22 @@ function Card({
   genre,
   published,
   date,
+  category,
 }) {
   //  console.log("ID ",rating)
   return (
-    <div className="m-4 mb-10">
-      <div className="flex">
+    <div className="m-4 mb-10 relative hover-trigger ">
+      <div className="flex ">
         <a href={link}>
-          {" "}
-          <div className="book m-2">
-            <img src={bookImage} />
-          </div>
+          {category === "Book" ? (
+            <div className="book m-2 ">
+              <img src={bookImage} />
+            </div>
+          ) : (
+            <div className="notbook m-2">
+              <img src={bookImage} />
+            </div>
+          )}
         </a>
 
         <div className="w-64">
@@ -43,38 +49,42 @@ function Card({
             })}
           </div>
         </div>   */}
-
-          <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 mt-8 ">
-            {name}
+          <a href={link}>
+            <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 mt-8 ">
+              {name}
+            </div>
+          </a>
+          <div class="absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom h-56 text-left">
+            {description}
           </div>
 
           <div className="w-64 truncate-custom text-lg text-gray-500 text-left ml-4">
             {author}
           </div>
-          <div className="w-64 truncate-custom text-md text-gray-500   text-left ml-4">
+          <div className="w-64 truncate-custom text-sm text-gray-500   text-left ml-4">
             {published}
           </div>
-
-          <ul className="flex flex-wrap items-center mt-1 mb-2 ml-4">
-            {genre.map((label, i) => {
-              return (
-                <li key={i}>
-                  {" "}
-                  <span
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={
-                      "text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white uppercase last: m-1 mr-0 mr-1 " +
-                      color
-                    }
-                  >
-                    {label}
-                  </span>{" "}
-                </li>
-              )
-            })}
-          </ul>
-
+          <div className="w-64  text-sm text-gray-500 ">
+            <ul className="flex flex-wrap items-center mt-1 mb-2 ml-4">
+              {genre.map((label, i) => {
+                return (
+                  <li key={i}>
+                    {" "}
+                    <span
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white uppercase last: m-1 mr-0 mr-1 " +
+                        color
+                      }
+                    >
+                      {label}
+                    </span>{" "}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
           {/* <span
               class={
                 "inline-block  rounded-full px-4 py-2 text-sm font-semibold text-white mt-2 " +
