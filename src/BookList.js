@@ -122,7 +122,7 @@ const BookList = () => {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let component = newPages.map((node, i)=> (
+  let books = newPages.map((node, i)=> (
 
     node.data.Category  === "Book" ?
     <Card
@@ -139,7 +139,7 @@ const BookList = () => {
       color={node.data.Color}
       type={node.data.Type}
       link={node.data.Link}
-    /> : ""
+    /> : []
   ))
 
   let component2 = newPages.map((node, i)=> (
@@ -161,7 +161,7 @@ const BookList = () => {
       link={node.data.Link}
     /> : ""
   ))
-
+ console.log("Value ", books)
 
 
   {
@@ -175,16 +175,17 @@ const BookList = () => {
 
           
           {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-            <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-            <p className="font-black">Books</p>
-            </div> 
+         {  books.length > 0 ?    <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <p className="font-black">BOOKS</p>
+            </div> : "" }
+            
 
           <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
-            {component}
+            {books}
             
             </div>
 
-            <div className= "flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+            <div className= "flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
             <p className="font-black">MOVIES</p>
             </div> 
           <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
