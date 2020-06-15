@@ -15,19 +15,19 @@ function Card({
   published,
   date,
 }) {
-//  console.log("ID ",rating)
+  //  console.log("ID ",rating)
   return (
     <div className="m-4 mb-10">
       <div className="flex">
-      <a href={link}>   <div className="book m-2">
-         <img src={bookImage} />  
-        </div></a>
+        <a href={link}>
+          {" "}
+          <div className="book m-2">
+            <img src={bookImage} />
+          </div>
+        </a>
 
         <div className="w-64">
-        
-
-
-   {/* <div class="flex justify-center">
+          {/* <div class="flex justify-center">
           <div class="flex items-center mt-1">
             {[...Array(rating)].map((item, i) => {
               if (item !== null) {
@@ -44,11 +44,9 @@ function Card({
           </div>
         </div>   */}
 
-
           <div className="w-64 truncate-custom text-xl font-extrabold text-gray-700 text-left ml-4 mt-8 ">
             {name}
           </div>
-        
 
           <div className="w-64 truncate-custom text-lg text-gray-500 text-left ml-4">
             {author}
@@ -57,34 +55,27 @@ function Card({
             {published}
           </div>
 
-
-        
-
           <ul className="flex flex-wrap items-center mt-1 mb-2 ml-4">
-                    {genre.map((label, i) => {
-                      return (
-                        <li key={i}>
-                          {" "}
-                          <span
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={"text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white uppercase last: m-1 mr-0 mr-1 " + color}
-                          >
-           
-                            {label}
-                          </span>{" "}
-                        </li>
-                      )
-                    })}
-                  </ul>
+            {genre.map((label, i) => {
+              return (
+                <li key={i}>
+                  {" "}
+                  <span
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={
+                      "text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white uppercase last: m-1 mr-0 mr-1 " +
+                      color
+                    }
+                  >
+                    {label}
+                  </span>{" "}
+                </li>
+              )
+            })}
+          </ul>
 
-
-
-
-           
-        
-
- {/* <span
+          {/* <span
               class={
                 "inline-block  rounded-full px-4 py-2 text-sm font-semibold text-white mt-2 " +
                 color
@@ -92,9 +83,6 @@ function Card({
             >
               {type}
             </span> */}
-
-
-
 
           {/* <div className="w-64 truncate-custom text-sm text-gray-700 text-left ml-4">
             <span class="inline-block bg-gray-200 rounded-full px-4 py-2 text-sm font-semibold text-gray-700 mt-2">
