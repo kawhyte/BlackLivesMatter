@@ -152,7 +152,7 @@ const BookList = () => {
         {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
         {booksToRender.length > 0 ? (
           <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-            <p className="font-black">BOOKS</p>
+            <p className="font-black">BOOK</p>
           </div>
         ) : (
           ""
@@ -164,7 +164,7 @@ const BookList = () => {
 
         {moviesToRender.length > 0 ? (
           <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-            <p className="font-black">MOVIES</p>
+            <p className="font-black">MOVIE/TV</p>
           </div>
         ) : (
           ""
