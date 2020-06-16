@@ -25,7 +25,7 @@ function Card({
               <img
                 alt="Book cover"
                 src={
-                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,r_20,f_auto/" + bookImage
+                  "https://res.cloudinary.com/babyhulk/image/fetch/w_150,h_220,c_fill,g_face,f_auto/" + bookImage
                 }
               />
             </div>
@@ -34,7 +34,7 @@ function Card({
               <img
                 alt="Book cover"
                 src={
-                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,r_20,f_auto/" + bookImage
+                  "https://res.cloudinary.com/babyhulk/image/fetch/w_150,h_220,c_fill,g_face,f_auto/" + bookImage
                 }
               />
             </div>
