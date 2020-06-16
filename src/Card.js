@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-let star = ""
+
 function Card({
   name,
   bookImage,
@@ -23,11 +22,21 @@ function Card({
         <a href={link}>
           {category === "Book" ? (
             <div className="book m-2 ">
-              <img src={bookImage} />
+              <img
+                alt="Book cover"
+                src={
+                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,r_20,f_auto/" + bookImage
+                }
+              />
             </div>
           ) : (
             <div className="notbook m-2">
-              <img src={bookImage} />
+              <img
+                alt="Book cover"
+                src={
+                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,r_20,f_auto/" + bookImage
+                }
+              />
             </div>
           )}
         </a>

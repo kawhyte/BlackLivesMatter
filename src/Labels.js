@@ -8,6 +8,7 @@ function Labels(props) {
     if (!itemsToRender.includes(label.data.Genre)) {
       itemsToRender.push(label.data.Genre)
     }
+    return itemsToRender
   })
 
   arrayWithoutDuplicates = itemsToRender
@@ -20,10 +21,7 @@ function Labels(props) {
   return (
     <div>
       <div className="flex md:mt-6   mt-0  mb-16 sm:mt-0 ">
-        {/* <span className="text-gray-600 text-xl mt-10 mr-2 ">
-          {" "}
-          Filter by Tags:
-        </span> */}
+
         <ul className="flex flex-wrap justify-center max-w-6xl bg-gray-200 p-6 ml-6 mr-6">
           {arrayWithoutDuplicates.map((item, i) => {
             if (item !== null) {
@@ -37,8 +35,11 @@ function Labels(props) {
                   </button>
                 </li>
               )
+              
             }
-          })}
+            return ''
+          }
+          )}
         </ul>
       </div>
     </div>
