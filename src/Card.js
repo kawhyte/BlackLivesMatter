@@ -19,7 +19,7 @@ function Card({
   return (
     <div className="m-4 mb-10 relative hover-trigger ">
       <div className="flex ">
-        <a href={link}>
+        <a href={link}  target="_blank">
           {category === "Book" ? (
             <div className="book m-2 ">
               <img
