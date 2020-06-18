@@ -106,8 +106,8 @@ function FeaturedBooks() {
   return (
     <>
       {booksToRender.length > 0 ? (
-        <div className="mt-10  flex  flex-wrap justify-between text-3xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end ">
-          <p className="text-md">Featured Books</p>
+        <div className="mt-10  flex  flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end ">
+          <p className="text-md font-bold ">Featured Books</p>
           <p className="text-sm">Explore All Books</p>
         </div>
       ) : (
