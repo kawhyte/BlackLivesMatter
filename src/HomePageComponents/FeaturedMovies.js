@@ -107,7 +107,7 @@ function FeaturedBooks() {
     <>
       {moviesToRender.length > 0 ? (
         <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end  bg-gray-100">
-          <p className="text-md font-bold ">Featured Movies</p>
+          <p className="text-md font-bold p-2">Featured Movies</p>
           <p className="text-sm">Explore All Movies</p>
         </div>
       ) : (
