@@ -5,6 +5,8 @@ import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Footer from "../Footer"
 import Categories from "../Categories"
+import FeaturedBooks from "../HomePageComponents/FeaturedBooks"
+import FeaturedMovies from "../HomePageComponents/FeaturedMovies"
 
 const index = () => {
   return (
@@ -12,6 +14,8 @@ const index = () => {
       <NavBar />
       <Hero />
       <Categories />
+      <FeaturedBooks />
+      <FeaturedMovies />
       {/* <BookList /> */}
       <Footer />
     </div>
