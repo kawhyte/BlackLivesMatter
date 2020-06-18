@@ -141,13 +141,13 @@ const BookList = () => {
 
       {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
       {booksToRender.length > 0 ? (
-        <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black">Books</p>
+        <div className="flex container flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+          <p className="font-bold text-md">Books</p>
         </div>
       ) : (
         ""
       )}
-      <div className="flex flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+      <div className="flex container flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
         {booksToRender}
       </div>
 

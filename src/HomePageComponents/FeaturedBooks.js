@@ -3,6 +3,7 @@ import Card from "../Card"
 import Labels from "../Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
+import { Link } from "gatsby"
 // import "./css/global.css"
 
 function FeaturedBooks() {
@@ -108,7 +109,7 @@ function FeaturedBooks() {
       {booksToRender.length > 0 ? (
         <div className="mt-10  flex container  flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-blue-100">
           <p className="text-md font-bold p-2 ">Featured Books</p>
-          <p className="text-sm">Explore All Books</p>
+          <p className="text-sm "><Link className="text-blue-500" to="/books">Explore All Books</Link></p>
         </div>
       ) : (
         ""

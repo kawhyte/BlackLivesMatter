@@ -46,7 +46,7 @@ function Card({
         </div>
         <div className="w-auto ">
           <a href={link}>
-            <div className="w-auto truncate-custom text-xl font-medium	 text-gray-700 text-center  mt-6 ">
+            <div className="w-64 truncate-custom text-xl font-medium break-words text-gray-700 text-center  mt-6 ">
               {name}
             </div>
           </a>
