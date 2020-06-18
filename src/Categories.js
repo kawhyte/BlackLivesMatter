@@ -6,8 +6,8 @@ import article from "./img/articles.png"
 import business from "./img/small-business.png"
 function Categories() {
   return (
-    <div className="justify-center mx-auto px-6 pb-6 sm:px-12  sm:flex-row items-center bg-red-100 ">
-      <div className="mt-20 text-xl flex justify-center font-bold py-2 sm:px-12 items-center bg-blue-100">
+    <div className="justify-center mx-auto px-6 pb-6 sm:px-12  sm:flex-row items-center ">
+      <div className="mt-20 text-xl flex justify-center font-bold py-2 sm:px-12 items-center">
         Categories
       </div>
       <div className="flex flex-wrap justify-center ">
