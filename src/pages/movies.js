@@ -1,21 +1,21 @@
 import React from "react"
 import "../css/global.css"
-import BookList from "../BookList"
+import MovieList from "../MovieList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Categories from "../Categories"
 import Footer from "../Footer"
 
-const books = () => {
+const movies = () => {
   return (
     <div>
       <NavBar />
       <Hero />
       <Categories />
-      <BookList />
+      <MovieList />
       <Footer />
     </div>
   )
 }
 
-export default books
+export default movies

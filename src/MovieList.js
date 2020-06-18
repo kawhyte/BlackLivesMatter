@@ -1,15 +1,16 @@
 import React, { useState } from "react"
-import Card from "../Card"
-import Labels from "../Labels"
+import Card from "./Card"
+import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
-import { paginate } from "../common/paginate"
-// import "./css/global.css"
-import { Link } from "gatsby"
+import { paginate } from "./common/paginate"
+import "./css/global.css"
 
-function FeaturedBooks() {
+
+
+const BookList = () => {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(limit: 4, filter: {data: { Category: {eq: "Movie"}}})  {
+      allAirtable (limit: 100, filter: {data: { Category: {eq: "Movie"}}}) {
         nodes {
           id
           data {
@@ -46,7 +47,34 @@ function FeaturedBooks() {
     pageSize: 100,
   })
 
+  // const handleInputChange = event => {
+  //   const query = event.target.value
 
+  //   const contactsToBeFiltered = data.allAirtable.nodes || []
+
+  //   const contacts = contactsToBeFiltered.filter(contact => {
+  //     if (contact.data.Contact_Name !== null) {
+  //       returnedName = contact.data.Contact_Name.toLowerCase().includes(
+  //         query.toLowerCase()
+  //       )
+  //     }
+  //     if (contact.data.State !== null) {
+  //       returnedState = contact.data.State.toLowerCase().includes(
+  //         query.toLowerCase()
+  //       )
+  //     }
+
+  //     return returnedName || returnedState
+  //   })
+
+  //   setState(contacts)
+  // }
+
+  // const handlePageChange = page => {
+  //   setPageState(prevState => {
+  //     return { ...prevState, currentPage: page }
+  //   })
+  // }
 
   const handleButtonClicked = filterValue => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
@@ -106,19 +134,41 @@ function FeaturedBooks() {
 
   return (
     <>
+      <div className=" flex justify-center ">
+        <Labels labels={labels} onClicked={handleButtonClicked} />
+      </div>
+
+
+      {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
       {moviesToRender.length > 0 ? (
-        <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end  bg-gray-100">
-          <p className="text-md font-bold p-2">Featured Movies & Documentaries</p>
-          <p className="text-sm"><Link className="text-blue-500" to="/movies">Explore All Movies & Documentaries</Link></p>
+        <div className="flex container flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+          <p className="font-bold text-md">Movies/Documentaries</p>
         </div>
       ) : (
         ""
       )}
-      <div className="flex flex-wrap  container justify-between  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+      <div className="flex container flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
         {moviesToRender}
       </div>
+
+      {/* {moviesToRender.length > 0 ? (
+        <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
+          <p className="font-black ">Movies/documentaries</p>
+        </div>
+      ) : (
+        ""
+      )} */}
+      {/* <div className="flex flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+        {moviesToRender}
+      </div> */}
+      {/* <Pagination
+          itemsCount={state.length}
+          pageSize={pageState.pageSize}
+          onPageChange={handlePageChange}
+          currentPage={pageState.currentPage}
+        /> */}
     </>
   )
 }
 
-export default FeaturedBooks
+export default BookList

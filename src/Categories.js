@@ -22,13 +22,16 @@ function Categories() {
           </div>
         </Link>
         <div class="bg-gray-200 px-2 py-2 m-2 rounded-lg text-center w-56 ">
+        <Link to="/movies">
           <div class="mb-3">
             <img class="w-auto mx-auto h-16  " src={movie} alt="" />
           </div>
           <h2 class="text-xl font-medium text-gray-700">
             Movies/Documentaries
           </h2>
+          </Link>
         </div>
+        
         {/* <div class="bg-gray-200 px-2 py-2 m-2 rounded-lg text-center w-56 ">
           <div class="mb-3">
             <img class="w-auto mx-auto h-20  " src={movie} alt="" />
