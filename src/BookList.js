@@ -138,29 +138,29 @@ const BookList = () => {
         <Labels labels={labels} onClicked={handleButtonClicked} />
       </div>
 
+
       {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
       {booksToRender.length > 0 ? (
         <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black uppercase">Books</p>
+          <p className="font-black">Books</p>
         </div>
       ) : (
         ""
       )}
-
-      <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+      <div className="flex flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
         {booksToRender}
       </div>
 
-      {moviesToRender.length > 0 ? (
+      {/* {moviesToRender.length > 0 ? (
         <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black uppercase">Movies/documentaries</p>
+          <p className="font-black ">Movies/documentaries</p>
         </div>
       ) : (
         ""
-      )}
-      <div className="flex  flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+      )} */}
+      {/* <div className="flex flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
         {moviesToRender}
-      </div>
+      </div> */}
       {/* <Pagination
           itemsCount={state.length}
           pageSize={pageState.pageSize}

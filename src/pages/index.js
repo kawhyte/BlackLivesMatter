@@ -4,13 +4,15 @@ import BookList from "../BookList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Footer from "../Footer"
+import Categories from "../Categories"
 
 const index = () => {
   return (
     <div>
       <NavBar />
       <Hero />
-      <BookList />
+      <Categories />
+      {/* <BookList /> */}
       <Footer />
     </div>
   )
