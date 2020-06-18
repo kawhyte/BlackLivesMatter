@@ -56,8 +56,8 @@ const Header = ({ siteTitle }) => {
 
   return (
     <>
-      <div className="w-full  mx-auto p-1">
-        <div className="w-full flex items-center justify-center">
+      <div className="w-full  mx-auto p-2 container">
+        <div className="w-full flex items-center justify-between">
           <a
             className="flex items-center justify-center flex-column text-indigo-600 no-underline hover:no-underline font-bold text-sm md:text-xl lg:text-xl"
             href="/"
@@ -71,10 +71,10 @@ const Header = ({ siteTitle }) => {
              
           </a>
 
-          <div className="flex w-2/3 justify-end content-center pr-10">
+          <div className="flex w-2/3 justify-end content-center pl-1">
             <Link
               className={
-                "hidden  ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-blue-900 transition duration-150 ease-in-out"
+                "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-blue-900 transition duration-150 ease-in-out"
               }
               to="/"
             >
@@ -83,11 +83,19 @@ const Header = ({ siteTitle }) => {
 
             <Link
               className={
-                " hidden  ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
-              to="/blog"
+              to="/movies"
             >
-              Blog
+              Movies
+            </Link>
+            <Link
+              className={
+                " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+              }
+              to="/books"
+            >
+              Books
             </Link>
 
             <a
@@ -113,17 +121,36 @@ const Header = ({ siteTitle }) => {
             >
              Login
             </a> */}
+               {/* <button className=" md:block">
+                <a
+                  href="https://www.kennywhyte.com/"
+                  className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
+                >
+                  Books
+                </a>
+              </button>  */}
+               {/* <button className=" md:block">
+                <a
+                  href="https://www.kennywhyte.com/"
+                  className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
+                >
+                  Movies
+                </a>
+              </button> */}
+               {/* <button className=" md:block"> 
+                <a
+                  href="https://www.kennywhyte.com/"
+                  className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
+                >
+                  Podcasts
+                </a>
+              </button>  */}
                <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
                 >
-                  Made with{" "}
-                  <span role="img" aria-label="pizza">
-                    {" "}
-                    🍕
-                  </span>{" "}
-                  by Kenny
+                  About
                 </a>
               </button> 
               {/* <IdentityModal

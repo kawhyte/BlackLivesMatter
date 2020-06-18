@@ -5,7 +5,8 @@ module.exports = {
     title: `Media`,
     description: `Media`,
     year:`2020`,
-    author: `@IAmKennyWhyte`,
+    author: `Kenny`,
+    twitter: `@IAmKennyWhyte`,
   },
   plugins: [
 
