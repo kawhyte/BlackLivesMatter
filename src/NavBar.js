@@ -81,7 +81,7 @@ const Header = ({ siteTitle }) => {
               Home
             </Link>
 
-            <Link
+            {/* <Link
               className={
                 " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
@@ -96,15 +96,15 @@ const Header = ({ siteTitle }) => {
               to="/podcasts"
             >
               Podcasts
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               className={
                 " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/books"
             >
               Books
-            </Link>
+            </Link> */}
 
             <a
               href="https://legislation-tweets.herokuapp.com/"
