@@ -7,6 +7,7 @@ import Footer from "../Footer"
 import Categories from "../Categories"
 import FeaturedBooks from "../HomePageComponents/FeaturedBooks"
 import FeaturedMovies from "../HomePageComponents/FeaturedMovies"
+import FeaturedPodcasts from "../HomePageComponents/FeaturedPodcasts"
 
 const index = () => {
   return (
@@ -16,6 +17,7 @@ const index = () => {
       <Categories />
       <FeaturedBooks />
       <FeaturedMovies />
+      <FeaturedPodcasts />
       {/* <BookList /> */}
       <Footer />
     </div>

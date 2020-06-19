@@ -40,10 +40,12 @@ function Categories() {
         </div> */}
 
         <div class="bg-gray-200 px-2 py-2 m-2 rounded-lg text-center w-56 transition duration-500 ease-in-out bg-gray-200 hover:bg-gray-300 transform hover:-translate-y-1 hover:scale-110 ">
+        <Link to="/podcasts">
           <div class="mb-3">
             <img class="w-auto mx-auto h-16  " src={podcast} alt="" />
           </div>
           <h2 class="text-xl font-medium text-gray-700">Podcasts</h2>
+          </Link>
         </div>
         <div class="bg-gray-200 px-2 py-2 m-2 rounded-lg text-center w-56 transition duration-500 ease-in-out bg-gray-200 hover:bg-gray-300 transform hover:-translate-y-1 hover:scale-110 ">
           <div class="mb-3">
