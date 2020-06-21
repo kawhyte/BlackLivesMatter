@@ -148,26 +148,13 @@ const BookList = () => {
       ) : (
         ""
       )}
-      <div className="flex container flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
+      {/* <div className="flex container flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100"> */}
+      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-gray-100">
+
         {booksToRender}
       </div>
 
-      {/* {moviesToRender.length > 0 ? (
-        <div className="flex  flex-wrap justify-start text-3xl mb-4  mt-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black ">Movies/documentaries</p>
-        </div>
-      ) : (
-        ""
-      )} */}
-      {/* <div className="flex flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100">
-        {moviesToRender}
-      </div> */}
-      {/* <Pagination
-          itemsCount={state.length}
-          pageSize={pageState.pageSize}
-          onPageChange={handlePageChange}
-          currentPage={pageState.currentPage}
-        /> */}
+  
     </>
   )
 }
