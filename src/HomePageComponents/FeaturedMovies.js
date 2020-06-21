@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 function FeaturedBooks() {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(limit: 4, filter: {data: { Category: {eq: "Movie"}}})  {
+      allAirtable(limit: 5, filter: {data: { Category: {eq: "Movie"}}})  {
         nodes {
           id
           data {
@@ -115,7 +115,7 @@ function FeaturedBooks() {
         ""
       )}
       {/* <div className="flex flex-wrap  container justify-between  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100"> */}
-      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-gray-100">
+      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 bg-gray-100">
 
        {moviesToRender}
       </div>
