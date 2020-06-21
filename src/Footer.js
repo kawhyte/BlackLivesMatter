@@ -41,10 +41,10 @@ const Footer = () => {
                 </div> */}
                 <div className="flex mt-5 md:m-0 items-center justify-center">
                     <p className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> <a href="https://www.kennywhyte.com/" className=" ml-0 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out">Made with 🍕 by {data.site.siteMetadata.author} </a></p>
-                    <div className="mx-4">
+                    {/* <div className="mx-4"> */}
                    
-                   <span className="mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> Website information updated {data.build.nodes[0].buildTime}</span>
-                  	</div>
+                   {/* <span className="mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> Website information updated {data.build.nodes[0].buildTime}</span> */}
+                  	{/* </div> */}
                 </div>
             </div>
                 <div className="mt-4 flex justify-center mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
