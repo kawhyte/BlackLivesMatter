@@ -1,12 +1,13 @@
 import React from "react"
 // import {Link} from 'gatsby'
-import NavBar from "./NavBar"
-import Hero from "./Hero"
-import Footer from "./Footer"
+import NavBar from "../src/NavBar"
+import Hero from "../src/Hero"
+import Footer from "../src/Footer"
+import { graphql } from 'gatsby'
 
-const Details = props => {
-  let item = props.location.state
-  console.log(props.location.state)
+const Details = ({ data }) => {
+  let item = data.location.state
+  console.log(data.location.state)
 
   //if (item !== null) {
 
@@ -18,7 +19,8 @@ const Details = props => {
 
   return (
     <>
-      <NavBar />
+    <div>{item.Author}</div>
+      {/* <NavBar />
       <Hero />
       <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="px-5 py-24 justify-center  ">
@@ -91,27 +93,29 @@ const Details = props => {
                 <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                   Button
                 </button>
-                {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                <svg
-                  fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                </svg>
-              </button> */}
+            
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
 //}
 
 export default Details
+
+
+export const query = graphql`
+query GetRecord($recordId: String!){
+    airtable(recordId: { eq: $recordId}) {
+        id
+        table
+        recordId
+        data {
+          Author
+        }
+    }
+}`
