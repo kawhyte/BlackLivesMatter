@@ -17,7 +17,7 @@ function Card({
 }) {
   //  console.log("ID ",rating)
   return (
-    <div className="m-4 mb-10 relative hover-trigger">
+    <div className="relative hover-trigger mt-6 mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
           <a href={link} target="_blank">
@@ -32,7 +32,7 @@ function Card({
                 />
               </div>
             ) : (
-              <div className="notbook m-2">
+              <div className="notbook m-2 ">
                 <img
                   alt="Book cover"
                   src={
@@ -44,9 +44,9 @@ function Card({
             )}
           </a>
         </div>
-        <div className="w-auto ">
+        <div className=" ">
           <a href={link}>
-            <div className="w-64 truncate-custom text-xl font-medium break-words text-gray-700 text-center  mt-6 ">
+            <div className=" truncate-custom text-sm md:text-lg font-medium break-words text-gray-700 text-center  mt-6 ">
               {name}
             </div>
           </a>
@@ -54,10 +54,10 @@ function Card({
             {description}..
           </div>
 
-          <div className="w-64 truncate-custom text-lg text-gray-500 text-center">
+          <div className=" truncate-custom text-sm md:text-md text-gray-500 text-center">
             {author}
           </div>
-          <div className="w-64 truncate-custom text-sm text-gray-500 text-center">
+          <div className=" truncate-custom text-xs md:text-md text-gray-500 text-center">
             {published}
           </div>
           {/* <div className="w-64  text-sm text-gray-500 ">
