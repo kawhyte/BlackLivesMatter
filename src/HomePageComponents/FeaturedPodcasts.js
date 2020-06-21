@@ -107,9 +107,9 @@ function FeaturedPodcasts() {
   return (
     <>
       {podcastsToRender.length > 0 ? (
-        <div className="mt-10  flex container  flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-blue-100">
-          <p className="text-md font-bold p-2 ">Featured Podcasts</p>
-          <p className="text-sm "><Link className="text-blue-500" to="/podcasts">Explore All Podcasts</Link></p>
+        <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-blue-100">
+          <p className="text-md font-bold p-2">Featured Podcasts</p>
+          <p className="text-sm pt-4 "><Link className="text-blue-500" to="/podcasts">Explore All Podcasts</Link></p>
         </div>
       ) : (
         ""
