@@ -92,7 +92,7 @@ const BusinessCardList = () => {
           <div className=" flex justify-center ">
         <Labels labels={labels} onClicked={handleButtonClicked} />
       </div>
-      {businessToRender.length > 0 ? (
+      {business.length > 0 ? (
         <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
           <p className="font-black">Business</p>
         </div>
@@ -100,8 +100,8 @@ const BusinessCardList = () => {
         ""
       )}
 
-      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-gray-100">
-        {businessToRender}
+      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-gray-100">
+        {business}
       </div>
     </>
   )

@@ -33,7 +33,7 @@ function BusinessCard({
           <h1 class="text-2xl font-semibold text-gray-800">
             {name}
           </h1>
-          <p class="py-2 text-sm text-gray-700 text-left">
+          <p class="py-2 text-sm text-gray-700 text-left break-words">
           {description}
           </p>
           {/* <div class="flex items-center mt-4 text-gray-700">
