@@ -98,10 +98,7 @@ const PodcastList = () => {
     console.log("item ", item)
     return item.props.category.includes("Podcast")
   })
-  const moviesToRender = books.filter(item => {
-    console.log("item ", item)
-    return item.props.category.includes("Movie")
-  })
+
 
 
   return (

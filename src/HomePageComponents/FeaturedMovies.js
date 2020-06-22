@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import Card from "../Card"
-import Labels from "../Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
 // import "./css/global.css"
@@ -37,8 +36,7 @@ function FeaturedBooks() {
     }
   `)
 
-  const [state, setState] = useState(data.allAirtable.nodes)
-  const [labels] = useState(data.allAirtable.nodes)
+  const [state] = useState(data.allAirtable.nodes)
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
@@ -48,29 +46,7 @@ function FeaturedBooks() {
 
 
 
-  const handleButtonClicked = filterValue => {
-    const contactsToBeFiltered = data.allAirtable.nodes || []
 
-    if (filterValue.item === "VIEW ALL") {
-      setState(data.allAirtable.nodes)
-      return
-    }
-
-    let contacts = contactsToBeFiltered.filter(contact => {
-      let found = false
-
-      if (contact.data.Genre !== null) {
-        contact.data.Genre.forEach(element => {
-          if (element.toLowerCase().includes(filterValue.item.toLowerCase())) {
-            found = true
-          }
-        })
-      }
-
-      return found
-    })
-    setState(contacts)
-  }
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 

@@ -1,6 +1,5 @@
 import React from "react"
 import "../css/global.css"
-import BookList from "../BookList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Footer from "../Footer"
