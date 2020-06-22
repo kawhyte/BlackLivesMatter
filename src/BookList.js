@@ -10,7 +10,7 @@ import "./css/global.css"
 const BookList = () => {
   const data = useStaticQuery(graphql`
     {
-      allAirtable (limit: 100, filter: {data: { Category: {eq: "Book"}}})  {
+       allAirtable(filter: {table: {eq: "Books"}, data: {Category: {eq: "Book"}}}, limit: 100) {
         nodes {
           id
           data {

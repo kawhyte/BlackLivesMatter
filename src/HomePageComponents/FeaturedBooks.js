@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 function FeaturedBooks() {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(limit: 5, filter: { data: { Category: { eq: "Book" } } }) {
+      allAirtable(filter: {table: {eq: "Books"}, data: {Category: {eq: "Book"}}}, limit: 5) {
         nodes {
           id
           data {
