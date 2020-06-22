@@ -35,12 +35,12 @@ module.exports = {
             // separateNodeType: false, // boolean, default is false, see the documentation on naming conflicts for more information
             // separateMapType: false, // boolean, default is false, see the documentation on using markdown and attachments for more information
          },
-          // {
-          //   baseId: `YOUR_AIRTABLE_BASE_ID`,
-          //   tableName: `YOUR_TABLE_NAME`,
+          {
+             baseId: process.env.AIRTABLE_BASEID,
+             tableName: `Business`,
           //   tableView: `YOUR_TABLE_VIEW_NAME` // optional
           //   // can leave off queryName, mapping or tableLinks if not needed
-          // }
+          }
         ]
       }
     },
