@@ -1,5 +1,5 @@
 import React from "react"
-// import {Link} from 'gatsby'
+ import {Link} from 'gatsby'
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Footer from "../Footer"
@@ -24,9 +24,10 @@ const Details = ({ data }) => {
     <div>{item.image}</div> */}
     {/* <div>{item.Image}</div> */}
       <NavBar />
-      <Hero />
+      {/* <Hero /> */}
       <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="px-5 py-24 justify-center  ">
+      <div className="text-left mb-6 "><Link to="/"><span className=" mr-3">ᗉ</span>Home</Link></div>
           <div className="container  px-6 px-12  justify-center sm:px-12 flex flex-col sm:flex-row">
             <div className="sm:w-3/5 flex items-center justify-center ">
               <img
@@ -40,9 +41,13 @@ const Details = ({ data }) => {
               <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase text-left">
                 {item.Author}
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1 text-left">
+              <h1 className="text-gray-900 text-3xl title-font font-medium text-left">
                 {item.Name}
               </h1>
+              <h2 className="text-sm title-font text-gray-500  text-left mb-3">
+                     {item.Publisher} 
+                    {/* on {item.Date} */}
+                  </h2>
               <p className="leading-relaxed text-left">{item.Description}</p>
               <div className="flex mb-4 mt-4">
                 <span className="flex items-center">
@@ -65,10 +70,10 @@ const Details = ({ data }) => {
               </div>
               <div className="flex mt-6 items-center pb-5 mb-1 ">
                 <div className="flex flex-col">
-                  <span className="text-sm text-left">
+                  {/* <span className="text-sm text-left">
                     Published by {item.Publisher} 
-                    {/* on {item.Date} */}
-                  </span>
+                  
+                  </span> */}
 
                   <ul className="flex flex-wrap items-center mt-1 mb-2">
                     {item.Genre.map((label, i) => {
@@ -94,9 +99,9 @@ const Details = ({ data }) => {
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span> */}
-                <button className="flex  text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+               <a href = {item.Link}>  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                   Get item
-                </button>
+                </button></a>
             
               </div>
             </div>

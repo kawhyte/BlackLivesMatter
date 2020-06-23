@@ -20,12 +20,12 @@ function Card({
   slug
 }) {
   //  console.log("recordId ",recordId)
-   console.log("slug ",slug)
+  //  console.log("slug ",slug)
   return (
     <div className="relative hover-trigger mt-6 mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
-        <Link to={ slug} > 
+        <Link to={`/${slug}`} > 
           {/* <a href="" target="_blank" rel="noreferrer"> */}
             {category === "Book" ? (
               <div className="book m-2">
@@ -67,6 +67,11 @@ function Card({
           <div className=" truncate-custom text-xs md:text-md text-gray-500 text-center">
             {published}
           </div>
+          {/* <div className="flex  mt-3 justify-center"> 
+          <button className="flex  text-white bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded">
+                  Get item
+           </button>
+           </div> */}
           {/* <div className="w-64  text-sm text-gray-500 ">
             <ul className="flex flex-wrap items-center  ml-4">
               {genre.map((label, i) => {
