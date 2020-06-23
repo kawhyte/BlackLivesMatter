@@ -12,6 +12,7 @@ function FeaturedBooks() {
         nodes {
           id
           data {
+            Slug
             Author
             Color
             Date
@@ -66,6 +67,7 @@ function FeaturedBooks() {
       type={node.data.Type}
       link={node.data.Link}
       category={node.data.Category}
+      slug={node.data.Slug}
     />
   ))
 

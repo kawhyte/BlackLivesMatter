@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 function Card({
   name,
@@ -14,13 +15,18 @@ function Card({
   published,
   date,
   category,
+  image,
+  recordId,
+  slug
 }) {
-  //  console.log("ID ",rating)
+  //  console.log("recordId ",recordId)
+   console.log("slug ",slug)
   return (
     <div className="relative hover-trigger mt-6 mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
-          <a href={link} target="_blank" rel="noreferrer">
+        <Link to={ slug} > 
+          {/* <a href="" target="_blank" rel="noreferrer"> */}
             {category === "Book" ? (
               <div className="book m-2">
                 <img
@@ -42,7 +48,8 @@ function Card({
                 />
               </div>
             )}
-          </a>
+          {/* </a> */}
+          </Link>
         </div>
         <div className=" ">
           <a href={link}>

@@ -55,6 +55,7 @@ exports.createPages = async function ({ actions, graphql }) {
             Genre
             Publisher
             Rating
+            Slug
           }
           recordId
         }
@@ -68,8 +69,8 @@ exports.createPages = async function ({ actions, graphql }) {
         
       //const slug = edge.node.fields.slug
       actions.createPage({
-        path: `/${node.recordId}`,
-        // path: `/${node.data.Name}`,
+        // path: `/${node.recordId}`,
+        path: `/${node.data.Slug}`,
         component: require.resolve(`./src/templates/details.js`),
         //context: { slug: slug },
         context: { recordId: node.recordId},

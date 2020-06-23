@@ -13,7 +13,9 @@ const BookList = () => {
        allAirtable(filter: {table: {eq: "Books"}, data: {Category: {eq: "Book"}}}, limit: 100) {
         nodes {
           id
+          recordId
           data {
+            Slug
             Author
             Color
             Date
@@ -24,6 +26,7 @@ const BookList = () => {
             Publisher
             Category
             Rating
+            Image
             Attachments {
               filename
               thumbnails {
@@ -47,7 +50,7 @@ const BookList = () => {
     pageSize: 100,
   })
 
-
+ console.log("%%%%%% ", data.allAirtable.nodes[0].Slug)
   // const handleInputChange = event => {
   //   const query = event.target.value
 
@@ -104,9 +107,11 @@ const BookList = () => {
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let books = newPages.map((node, i) => (
+
     <Card
       key={i}
       id={node.id}
+      recordId={node.recordId}
       name={node.data.Name}
       bookImage={node.data.Attachments[0].thumbnails.full.url}
       genre={node.data.Genre}
@@ -118,7 +123,9 @@ const BookList = () => {
       color={node.data.Color}
       type={node.data.Type}
       link={node.data.Link}
+      image={node.data.Image}
       category={node.data.Category}
+      slug={node.data.Slug}
     />
   ))
 

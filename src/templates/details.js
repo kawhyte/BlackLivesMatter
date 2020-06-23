@@ -126,6 +126,7 @@ query ($recordId: String!){
         Genre
         Publisher
         Rating
+        Slug
       }
       recordId
     }

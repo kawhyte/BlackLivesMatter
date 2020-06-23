@@ -12,6 +12,7 @@ function FeaturedPodcasts() {
         nodes {
           id
           data {
+            Slug
             Author
             Color
             Date
@@ -64,6 +65,7 @@ function FeaturedPodcasts() {
       type={node.data.Type}
       link={node.data.Link}
       category={node.data.Category}
+      slug={node.data.Slug}
     />
   ))
 
