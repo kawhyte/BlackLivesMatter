@@ -25,6 +25,7 @@ const BookList = () => {
             Name
             Publisher
             Category
+            Featured
             Rating
             Image
             Attachments {
@@ -50,7 +51,7 @@ const BookList = () => {
     pageSize: 100,
   })
 
- console.log("%%%%%% ", data.allAirtable.nodes[0].Slug)
+ 
   // const handleInputChange = event => {
   //   const query = event.target.value
 
@@ -131,7 +132,7 @@ const BookList = () => {
 
   const booksToRender = books.filter(item => {
     console.log("item ", item)
-    return item.props.category.includes("Book")
+    return (item.props.category.includes("Book")) 
   })
   const moviesToRender = books.filter(item => {
     console.log("item ", item)

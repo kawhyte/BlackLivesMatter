@@ -132,6 +132,7 @@ query ($recordId: String!){
         Publisher
         Rating
         Slug
+        Featured
       }
       recordId
     }

@@ -56,6 +56,7 @@ exports.createPages = async function ({ actions, graphql }) {
             Publisher
             Rating
             Slug
+            Featured
           }
           recordId
         }
@@ -76,7 +77,7 @@ exports.createPages = async function ({ actions, graphql }) {
         context: { recordId: node.recordId},
         // recordId: node.recordId,
       })
- console.log("#####", node)
+
 
     })
   }
