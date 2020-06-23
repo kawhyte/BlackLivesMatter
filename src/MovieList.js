@@ -14,6 +14,7 @@ const BookList = () => {
         nodes {
           id
           data {
+            Slug
             Author
             Color
             Date
@@ -118,6 +119,7 @@ const BookList = () => {
       type={node.data.Type}
       link={node.data.Link}
       category={node.data.Category}
+      slug={node.data.Slug}
     />
   ))
 
