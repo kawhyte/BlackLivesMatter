@@ -53,17 +53,32 @@ const Details = ({ data }) => {
                 <span className="flex items-center">
                   <span className="mr-3 text-sm">Rating</span>
 
-                  {[...Array(item.Rating)].map((star, i) => {
-                    if (star !== null) {
+                  {[...Array(5)].map((star, i) => {
+
+                    if (star !== null && (item.Rating ) ) {
+                     item.Rating--
                       return (
+
                         <svg
                           key={i}
-                          className="w-5 h-5 fill-current text-gray-700"
+                          className="w-5 h-5 fill-current text-yellow-500"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+                        </svg>
+                      ) 
+                    } else {
+                      return (
+
+                        <svg
+                          key={i}
+                          className="w-5 h-5 fill-current text-gray-300"
                           viewBox="0 0 24 24"
                         >
                           <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
                         </svg>
                       )
+
                     }
                   })}
                 </span>
@@ -99,7 +114,7 @@ const Details = ({ data }) => {
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span> */}
-               <a href = {item.Link}>  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+               <a href = {item.Link} rel="nofollow" target="_blank" >  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                   Get item
                 </button></a>
             
