@@ -95,7 +95,7 @@ const PodcastList = () => {
   ))
 
   const podcastToRender = books.filter(item => {
-    console.log("item ", item)
+ 
     return item.props.category.includes("Podcast")
   })
 

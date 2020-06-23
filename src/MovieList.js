@@ -122,15 +122,14 @@ const BookList = () => {
   ))
 
   const booksToRender = books.filter(item => {
-    console.log("item ", item)
+
     return item.props.category.includes("Book")
   })
   const moviesToRender = books.filter(item => {
-    console.log("item ", item)
+    
     return item.props.category.includes("Movie")
   })
-  console.log("booksToRender ", booksToRender)
-  console.log("moviesToRender ", moviesToRender)
+
 
   return (
     <>

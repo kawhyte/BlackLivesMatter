@@ -50,7 +50,7 @@ function Card({
               {name}
             </div>
           </a>
-          <div class="absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom h-auto text-left text-sm">
+          <div className="absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom h-auto text-left text-sm">
             {description}..
           </div>
 

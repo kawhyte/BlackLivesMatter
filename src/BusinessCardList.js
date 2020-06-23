@@ -77,15 +77,10 @@ const BusinessCardList = () => {
   ))
 
   const businessToRender = business.filter(item => {
-    console.log("item ", item)
+
     return item.props.category.includes("Food")
   })
-  //   const moviesToRender = books.filter(item => {
-  //     console.log("item ", item)
-  //     return item.props.category.includes("Movie")
-  //   })
-  console.log("booksToRender ", businessToRender)
-  //   console.log("moviesToRender ", moviesToRender)
+
 
   return (
     <>

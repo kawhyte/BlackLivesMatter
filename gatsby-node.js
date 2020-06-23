@@ -1,4 +1,4 @@
-// const path = require(`path`);
+const path = require(`path`);
 
 
 // exports.createPages = ({ graphql, actions }) => {
@@ -38,3 +38,44 @@
 //     resolve()
 //   })
 // }
+
+
+exports.createPages = async function ({ actions, graphql }) {
+    const { data } = await graphql(`
+    query { 
+      allAirtable(filter: {table: {eq: "Books"}}) {
+        nodes {
+          data {
+            Image
+            Name
+            Link
+            Description
+            Author
+            Date
+            Genre
+            Publisher
+            Rating
+          }
+          recordId
+        }
+      }
+    }
+    `)
+//     // For each path, create page and choose a template.
+//     // values in context Object are available in that page's query
+// console.log("%%%%%%%%data.allAirtable.nodes ", data.allAirtable.nodes[0])
+    data.allAirtable.nodes.map(( node ) => {
+        
+      //const slug = edge.node.fields.slug
+      actions.createPage({
+        path: `/${node.recordId}`,
+        // path: `/${node.data.Name}`,
+        component: require.resolve(`./src/templates/details.js`),
+        //context: { slug: slug },
+        context: { recordId: node.recordId},
+        // recordId: node.recordId,
+      })
+ console.log("#####", node)
+
+    })
+  }

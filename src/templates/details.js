@@ -1,13 +1,14 @@
 import React from "react"
 // import {Link} from 'gatsby'
-import NavBar from "../src/NavBar"
-import Hero from "../src/Hero"
-import Footer from "../src/Footer"
+import NavBar from "../NavBar"
+import Hero from "../Hero"
+import Footer from "../Footer"
 import { graphql } from 'gatsby'
 
 const Details = ({ data }) => {
-  let item = data.location.state
-  console.log(data.location.state)
+  let item = data.allAirtable.nodes[0].data
+  console.log("Item ", item)
+  // console.log("DATA ", item.Image)
 
   //if (item !== null) {
 
@@ -19,8 +20,10 @@ const Details = ({ data }) => {
 
   return (
     <>
-    <div>{item.Author}</div>
-      {/* <NavBar />
+    {/* <div>{item.Name}</div>
+    <div>{item.image}</div> */}
+    {/* <div>{item.Image}</div> */}
+      <NavBar />
       <Hero />
       <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="px-5 py-24 justify-center  ">
@@ -29,23 +32,23 @@ const Details = ({ data }) => {
               <img
                 alt="Poster of book or movie"
                 className="mr-10  mb-8  object-right  md:object-right lg:object-bottom xl:object-left rounded border border-gray-200"
-                src={item.bookImage}
+                src={item.Image}
               />
             </div>
 
             <div className="w-full sm:w-3/5  ml-2">
-              <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase">
-                {item.author}
+              <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase text-left">
+                {item.Author}
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                {item.name}
+              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1 text-left">
+                {item.Name}
               </h1>
-              <p className="leading-relaxed text-left">{item.description}</p>
+              <p className="leading-relaxed text-left">{item.Description}</p>
               <div className="flex mb-4 mt-4">
                 <span className="flex items-center">
                   <span className="mr-3 text-sm">Rating</span>
 
-                  {[...Array(item.rating)].map((star, i) => {
+                  {[...Array(item.Rating)].map((star, i) => {
                     if (star !== null) {
                       return (
                         <svg
@@ -63,11 +66,12 @@ const Details = ({ data }) => {
               <div className="flex mt-6 items-center pb-5 mb-1 ">
                 <div className="flex flex-col">
                   <span className="text-sm text-left">
-                    Released by {item.published} on {item.date}
+                    Published by {item.Publisher} 
+                    {/* on {item.Date} */}
                   </span>
 
                   <ul className="flex flex-wrap items-center mt-1 mb-2">
-                    {item.genre.map((label, i) => {
+                    {item.Genre.map((label, i) => {
                       return (
                         <li key={i}>
                           {" "}
@@ -87,11 +91,11 @@ const Details = ({ data }) => {
               </div>
 
               <div className="flex pt-10">
-                <span className="title-font font-medium text-2xl text-gray-900">
+                {/* <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
-                </span>
-                <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Button
+                </span> */}
+                <button className="flex  text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                  Get item
                 </button>
             
               </div>
@@ -99,7 +103,7 @@ const Details = ({ data }) => {
           </div>
         </div>
       </section>
-      <Footer /> */}
+      <Footer /> 
     </>
   )
 }
@@ -109,13 +113,21 @@ export default Details
 
 
 export const query = graphql`
-query GetRecord($recordId: String!){
-    airtable(recordId: { eq: $recordId}) {
-        id
-        table
-        recordId
-        data {
-          Author
-        }
+query ($recordId: String!){
+  allAirtable(filter: {table: {eq: "Books"}, recordId: {eq: $recordId}}) {
+    nodes {
+      data {
+        Image
+        Name
+        Link
+        Description
+        Author
+        Date
+        Genre
+        Publisher
+        Rating
+      }
+      recordId
     }
+  }
 }`

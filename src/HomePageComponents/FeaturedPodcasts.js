@@ -68,7 +68,7 @@ function FeaturedPodcasts() {
   ))
 
   const podcastsToRender = books.filter(item => {
-    console.log("item ", item)
+
     return item.props.category.includes("Podcast")
   })
 
