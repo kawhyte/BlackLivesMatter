@@ -37,7 +37,7 @@ function FeaturedItems() {
       }
     }
   `)
-  console.log("%%%%%% ", data.allAirtable.nodes[0].Featured)
+
   const [state] = useState(data.allAirtable.nodes)
 
   const [pageState] = useState({
