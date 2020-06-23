@@ -8,6 +8,8 @@ import { graphql } from 'gatsby'
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
   console.log("Item ", item)
+
+ let ratingNumber = item.Rating
   // console.log("DATA ", item.Image)
 
   //if (item !== null) {
@@ -55,8 +57,8 @@ const Details = ({ data }) => {
 
                   {[...Array(5)].map((star, i) => {
 
-                    if (star !== null && (item.Rating ) ) {
-                     item.Rating--
+                    if (star !== null && (Math.floor(ratingNumber) ) ) {
+                      ratingNumber--
                       return (
 
                         <svg
@@ -81,6 +83,7 @@ const Details = ({ data }) => {
 
                     }
                   })}
+                   <span className=" ml-3 mr-3 text-sm">{item.Rating}</span>
                 </span>
               </div>
               <div className="flex mt-6 items-center pb-5 mb-1 ">
@@ -114,7 +117,7 @@ const Details = ({ data }) => {
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span> */}
-               <a href = {item.Link} rel="nofollow" target="_blank" >  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+               <a href = {item.Link} rel="noreferrer" rel="nofollow" target="_blank" >  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                   Get item
                 </button></a>
             
