@@ -40,7 +40,7 @@ const Footer = () => {
                     <a href="https://www.kennywhyte.com/" className="text-xl font-bold">{data.build.nodes[0].buildTime}</a>
                 </div> */}
                 <div className="flex mt-5 md:m-0 items-center justify-center">
-                    <p className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> <a href="https://www.kennywhyte.com/" className=" ml-0 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out">Made with <span role="img" aria-labelledby="">🍕</span> by {data.site.siteMetadata.author} </a></p>
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> <a href="https://www.kennywhyte.com/" className=" ml-0 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out">Made with <span className="pr-1" role="img" aria-labelledby="">🍕</span> by {data.site.siteMetadata.author} </a></p>
                     {/* <div className="mx-4"> */}
                    
                    {/* <span className="mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> Website information updated {data.build.nodes[0].buildTime}</span> */}
@@ -50,8 +50,10 @@ const Footer = () => {
                 <div className="mt-4 flex justify-center mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
                   <h5 className= "pr-1">Illustrations by</h5> 
                   <a className= "pr-1" href="https://freepik.com/"> freepik </a> 
-                  <span className= "pr-1">and</span>
+                  <span className= "pr-1">+</span>
                   <a href="https://icons8.com/"> icons8</a>
+                  <span className= "pl-1 pr-1">+</span>
+                  <a href="https://codepen.io/rafaelrinaldi/">rafaelrinaldi</a>
                 </div>
         </div>
     </footer>
