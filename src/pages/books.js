@@ -10,7 +10,7 @@ const books = () => {
   return (
     <div>
       <NavBar />
-      <Hero />
+      {/* <Hero /> */}
       <Categories />
       <BookList />
       <Footer />
