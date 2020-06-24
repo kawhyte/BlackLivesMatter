@@ -11,7 +11,7 @@ const BusinessCardList = () => {
       allAirtable(filter: { table: { eq: "Business" } }) {
         nodes {
           data {
-            Keywords
+            Genre
             Name
             Link
             Description
@@ -77,20 +77,18 @@ const BusinessCardList = () => {
   ))
 
   const businessToRender = business.filter(item => {
-
     return item.props.category.includes("Food")
   })
 
-
   return (
     <>
-          <div className=" flex justify-center ">
+      <div className=" flex justify-center ">
         <Labels labels={labels} onClicked={handleButtonClicked} />
       </div>
       {business.length > 0 ? (
-        <div className="flex  flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-black">Business</p>
-        </div>
+         <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-gray-100">
+         <p className="text-md font-bold p-2 ">Home and Living</p>
+       </div>
       ) : (
         ""
       )}
