@@ -12,6 +12,7 @@ const BusinessCardList = () => {
         nodes {
           data {
             Genre
+            Primary_color
             Name
             Link
             Description
@@ -73,6 +74,7 @@ const BusinessCardList = () => {
       description={node.data.Description}
       link={node.data.Link}
       category={node.data.Category}
+      primary_color={node.data.Primary_color}
     />
   ))
 

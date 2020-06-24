@@ -14,20 +14,22 @@ function BusinessCard({
     published,
     date,
     category,
+    primary_color,
   }) {
   return (
     <>
       <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
         <img
           class="w-full h-50 object-cover object-center"
-          src={image}
+          src={"https://res.cloudinary.com/babyhulk/image/fetch/w_376,h_205,c_fill,g_face,f_auto/" +image}
           alt="avatar"
         />
-        <div class="flex items-center px-6 py-3 bg-gray-900">
-          <svg class="h-6 w-6 text-white fill-current" viewBox="0 0 512 512">
+        <div class={"flex  justify-between items-center px-6 py-3 " + primary_color}>
+          {/* <svg class="h-6 w-6 text-white fill-current" viewBox="0 0 512 512">
             <path d="M256 48C150 48 64 136.2 64 245.1v153.3c0 36.3 28.6 65.7 64 65.7h64V288h-85.3v-42.9c0-84.7 66.8-153.3 149.3-153.3s149.3 68.5 149.3 153.3V288H320v176h64c35.4 0 64-29.3 64-65.7V245.1C448 136.2 362 48 256 48z" />
-          </svg>
+          </svg> */}
         <h1 class="mx-3 text-white font-semibold text-lg">{category}</h1>
+        <a href={link} rel="noreferrer" rel="nofollow" target="_blank" class="bg-white hover:bg-black hover:text-white text-sm text-black font-bold py-2 px-4 rounded-full"> <button>Visit Shop</button></a>  
         </div>
         <div class="py-4 px-6">
           <h1 class="text-2xl font-semibold text-gray-800">
@@ -48,11 +50,11 @@ function BusinessCard({
                 </svg>
                 <h1 class="px-2 text-sm">California</h1>
             </div> */}
-          <div class="flex items-center mt-4 text-gray-700">
+          {/* <div class="flex items-center mt-4 text-gray-700">
           <div class="mt-8">
                     <a href={link} class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Visit Shop</a>
           </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

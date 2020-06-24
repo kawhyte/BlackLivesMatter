@@ -20,9 +20,12 @@ function Labels(props) {
 
   return (
     <div>
-      <div className="flex md:mt-6   mt-0  mb-16 sm:mt-0 ">
+      <div className=" md:mt-6   mt-0  mb-16 sm:mt-0 ">
 
-        <ul className="flex flex-wrap justify-center max-w-6xl bg-gray-200 p-6 ml-6 mr-6">
+
+        <ul className="flex flex-wrap justify-center max-w-6xl bg-gray-200 p-6 ml-2 mr-2">
+      {/* <div className="mt-0 flex container justify-center text-xl mb-0  px-2 sm:px-12 flex flex-col-reverse sm:flex-row items-end"> */}
+       {/* </div> */}
           {arrayWithoutDuplicates.map((item, i) => {
             if (item !== null) {
               return (
