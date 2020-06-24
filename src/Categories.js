@@ -50,7 +50,7 @@ function Categories() {
         <Link to="/business">
         <div className="flex justify-center bg-gray-200 px-2 py-2 m-2 rounded-lg text-center w-40 transition duration-500 ease-in-out bg-gray-200 hover:bg-gray-300 transform hover:-translate-y-1 hover:scale-110 ">
           <div className="mb-3">
-            <img className="w-auto mx-auto h-12  " src={business} alt="" />
+            <img className="w-auto mx-auto h-12  " src={business} alt="business icon" />
           </div>
           <h2 className="ml-4 pt-4 text-md font-medium text-gray-700">Businesses</h2>
         </div>
