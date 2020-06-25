@@ -156,7 +156,7 @@ const Header = ({ siteTitle }) => {
                <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
-                  className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
+                  className=" ml-8 mr-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
                 >
                   About
                 </a>
