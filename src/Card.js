@@ -22,7 +22,7 @@ function Card({
   //  console.log("recordId ",recordId)
   //  console.log("slug ",slug)
   return (
-    <div className="relative mt-6 mb-6">
+    <div className="relative hover-trigger mt-6 mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
         <Link to={`/${slug}`} > 
@@ -57,9 +57,9 @@ function Card({
               {name}
             </div>
           </a>
-          {/* <div className=" bg-white border border-grey-100 px-4 py-2  truncate-custom h-auto text-left text-sm">
-            {description}..
-          </div> */}
+          <div className="fade-in h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom break-words  text-left text-sm rounded ">
+            {description}
+          </div>
 
           <div className=" truncate-custom text-sm md:text-md text-gray-500 text-center">
             {author}
