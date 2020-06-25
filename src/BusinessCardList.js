@@ -99,7 +99,7 @@ const BusinessCardList = () => {
         <Labels labels={labels} onClicked={handleButtonClicked} activeButton= {activeButton} />
       </div>
       {FoodBusinessToRender.length > 0 ? (
-         <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row ">
+         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row ">
          <p className="text-md font-bold p-2 ">Food</p>
        </div>
       ) : (
@@ -113,7 +113,7 @@ const BusinessCardList = () => {
       </div>
 
       {EtsyBusinessToRender.length > 0 ? (
-            <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+            <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
          <p className="text-md font-bold p-2 ">Etsy Sellers</p>
        </div>
       ) : (
@@ -125,7 +125,7 @@ const BusinessCardList = () => {
       </div>
 
       {CosmeticsBusinessToRender.length > 0 ? (
-         <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
          <p className="text-md font-bold p-2 ">Cosmetics</p>
        </div>
       ) : (
@@ -137,7 +137,7 @@ const BusinessCardList = () => {
       </div>
 
       {HomeBusinessToRender.length > 0 ? (
-         <div className="mt-10 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
          <p className="text-md font-bold p-2 ">Home & Living</p>
        </div>
       ) : (
