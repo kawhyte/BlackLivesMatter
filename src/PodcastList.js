@@ -41,6 +41,7 @@ const PodcastList = () => {
 
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
+  const [activeButton, setActiveButton] = useState("VIEW ALL");
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
@@ -52,6 +53,7 @@ const PodcastList = () => {
 
   const handleButtonClicked = filterValue => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
+    setActiveButton(filterValue.item)
 
     if (filterValue.item === "VIEW ALL") {
       setState(data.allAirtable.nodes)
@@ -106,7 +108,7 @@ const PodcastList = () => {
   return (
     <>
       <div className=" flex justify-center ">
-        <Labels labels={labels} onClicked={handleButtonClicked} />
+        <Labels labels={labels} onClicked={handleButtonClicked} activeButton= {activeButton}/>
       </div>
 
 

@@ -32,6 +32,7 @@ const BusinessCardList = () => {
 
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
+  const [activeButton, setActiveButton] = useState("VIEW ALL");
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
@@ -41,6 +42,7 @@ const BusinessCardList = () => {
 
   const handleButtonClicked = filterValue => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
+    setActiveButton(filterValue.item)
 
     if (filterValue.item === "VIEW ALL") {
       setState(data.allAirtable.nodes)
@@ -94,7 +96,7 @@ const BusinessCardList = () => {
   return (
     <>
       <div className=" flex justify-center ">
-        <Labels labels={labels} onClicked={handleButtonClicked} />
+        <Labels labels={labels} onClicked={handleButtonClicked} activeButton= {activeButton} />
       </div>
       {FoodBusinessToRender.length > 0 ? (
          <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-gray-100">
