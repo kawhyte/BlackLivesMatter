@@ -16,6 +16,7 @@ function StartHere() {
           id
           recordId
           data {
+            NewUserItem
             Slug
             Author
             Color
@@ -46,7 +47,7 @@ function StartHere() {
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
   const [activeButton, setActiveButton] = useState("VIEW ALL")
-
+console.log(data.allAirtable.nodes[3])
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
     currentPage: 1,
@@ -59,23 +60,32 @@ function StartHere() {
 
   let books = createCards(newPages)
 
+  console.log("BOOKS ", books)
+
   const itemsToRender = books.filter(item => {
     
-    return (item.props.category.includes("Book"))
+    return (item.props.NewUserItem === true)
   })
 
   return (
     <>
+    <div className="flex justify-center flex-col"> 
       {/* <Labels
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
       /> */}
 
-      <div className= "pl-4  gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+      <div className= "bg-pink-100 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
 
       {itemsToRender}
       </div>
+      </div>
+
+
+
+
+      
       {/* <CreatePageSection business={books} /> */}
     </>
   )

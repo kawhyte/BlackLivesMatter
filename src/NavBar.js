@@ -92,7 +92,7 @@ const Header = ({ siteTitle }) => {
               className={
                 "ml-1 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
-              to="/podcasts"
+              to="/business"
             >
               <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
                 <div className="">
@@ -160,15 +160,15 @@ const Header = ({ siteTitle }) => {
                   Podcasts
                 </a>
               </button>  */}
-              <button className=" md:block">
+              {/* <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 mr-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
                 >
                   About
                 </a>
-              </button>
-            </div>
+              </button>*/}
+            </div> 
           </div>
 
           {/* <div class="flex w-1/2 justify-end content-center">		

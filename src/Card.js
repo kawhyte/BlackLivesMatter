@@ -17,7 +17,8 @@ function Card({
   category,
   image,
   recordId,
-  slug
+  slug,
+  NewUserItem
 }) {
   //  console.log("recordId ",recordId)
   //  console.log("slug ",slug)

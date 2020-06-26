@@ -32,7 +32,7 @@ const Footer = () => {
   //   <small className="f6 db tc">© {data.site.siteMetadata.year} <b className="ttu">{data.site.siteMetadata.title}</b>., All Rights Reserved</small>
   // </footer>
   // </div>
-    <div> 
+    <div > 
   <footer className="flex justify-center px-4 mt-4 mb-10 text-gray-900 bg-white">
         <div className="container py-6">
             <div className="flex flex-col items-center justify-center mt-4 mb-2 md:flex-row">
