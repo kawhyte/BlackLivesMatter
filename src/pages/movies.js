@@ -11,7 +11,7 @@ const movies = () => {
     <div>
       <NavBar />
       {/* <Hero /> */}
-      <Categories />
+      {/* <Categories /> */}
       <MovieList />
       <Footer />
     </div>

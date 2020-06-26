@@ -8,7 +8,7 @@ function business() {
   return (
     <div>
       <NavBar />
-      <Categories /> 
+      {/* <Categories />  */}
       <BusinessCardList />
       <Footer />
     </div>

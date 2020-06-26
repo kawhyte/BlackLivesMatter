@@ -11,7 +11,7 @@ const books = () => {
     <div>
       <NavBar />
       {/* <Hero /> */}
-      <Categories />
+      {/* <Categories /> */}
       <CardList />
       <Footer />
     </div>

@@ -118,7 +118,7 @@ const Details = ({ data }) => {
                   $58.00
                 </span> */}
                <a href = {item.Link} rel="noreferrer" rel="nofollow" target="_blank" >  <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Get item
+                  Go to Website
                 </button></a>
             
               </div>
