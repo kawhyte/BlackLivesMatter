@@ -7,10 +7,10 @@ import { graphql } from "gatsby"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
-  console.log("Item ", item)
+
 
   let ratingNumber = item.Rating
-  // console.log("DATA ", item.Image)
+ 
 
   //if (item !== null) {
 

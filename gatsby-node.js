@@ -65,7 +65,7 @@ exports.createPages = async function ({ actions, graphql }) {
     `)
 //     // For each path, create page and choose a template.
 //     // values in context Object are available in that page's query
-// console.log("%%%%%%%%data.allAirtable.nodes ", data.allAirtable.nodes[0])
+
     data.allAirtable.nodes.map(( node ) => {
         
       //const slug = edge.node.fields.slug

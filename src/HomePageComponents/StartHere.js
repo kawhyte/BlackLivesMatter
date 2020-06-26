@@ -47,7 +47,7 @@ function StartHere() {
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
   const [activeButton, setActiveButton] = useState("VIEW ALL")
-console.log(data.allAirtable.nodes[3])
+
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
     currentPage: 1,
@@ -60,7 +60,7 @@ console.log(data.allAirtable.nodes[3])
 
   let books = createCards(newPages)
 
-  console.log("BOOKS ", books)
+
 
   const itemsToRender = books.filter(item => {
     

@@ -5,7 +5,7 @@ let categoriesToRender = []
 
 
 function CreatePageSection({ business }) {
-  console.log("Create Cat props ", business)
+
 
   //get categories
   business.map((label, i) => {

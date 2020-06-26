@@ -20,8 +20,7 @@ function Card({
   slug,
   NewUserItem
 }) {
-  //  console.log("recordId ",recordId)
-  //  console.log("slug ",slug)
+
   return (
     <div className="relative hover-trigger mt-6 mb-6">
       <div className="flex flex-col  ">

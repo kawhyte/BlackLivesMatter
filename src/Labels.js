@@ -4,8 +4,8 @@ let arrayWithoutDuplicates = []
 function Labels(props) {
   const { labels, onClicked, activeButton } = props
   let itemsToRender = ["VIEW ALL"]
-  console.log("activeButton ", activeButton)
-  // console.log("onClicked ", onClicked)
+ 
+ 
 
   labels.map((label, i) => {
     if (!itemsToRender.includes(label.data.Genre)) {
@@ -20,7 +20,7 @@ function Labels(props) {
       (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
       []
     )
-  console.log("arrayWithoutDuplicates ", arrayWithoutDuplicates)
+ 
   return (
        <section className="h-32 bg-indigo-100  justify-center flex flex-row flex-wrap    rounded-l-lg  rounded-r-lg  max-w-2xl mx-auto z-10  mt-20"
         >
