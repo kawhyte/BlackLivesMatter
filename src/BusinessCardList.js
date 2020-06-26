@@ -4,7 +4,7 @@ import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
-import CreateCategories from "./HomePageComponents/CreateCategories"
+import CreatePageSection from "./HomePageComponents/CreatePageSection"
 
 const BusinessCardList = () => {
   const data = useStaticQuery(graphql`
@@ -90,7 +90,7 @@ const BusinessCardList = () => {
           activeButton={activeButton}
         />
       </div>
-      <CreateCategories business={business} />
+      <CreatePageSection business={business} />
     </>
   )
 }

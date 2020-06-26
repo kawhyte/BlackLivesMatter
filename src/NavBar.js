@@ -161,12 +161,6 @@ const Header = ({ siteTitle }) => {
                   About
                 </a>
               </button> 
-              {/* <IdentityModal
-                aria-label="Warning about next steps"
-                className="z-10"
-                showDialog={dialog}
-                onCloseDialog={() => setDialog(false)}
-              /> */}
             </div>
           </div>
 

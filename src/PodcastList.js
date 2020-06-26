@@ -5,7 +5,7 @@ import { paginate } from "./common/paginate"
 import { createCards } from "./common/createCards"
 import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
-import CreateCategories from "./HomePageComponents/CreateCategories"
+import CreatePageSection from "./HomePageComponents/CreatePageSection"
 
 const PodcastList = () => {
   const data = useStaticQuery(graphql`
@@ -69,7 +69,7 @@ const PodcastList = () => {
         onClicked={handleButtonClicked}
         activeButton={activeButton}
       />
-      <CreateCategories business={podcasts} />
+      <CreatePageSection business={podcasts} />
     </>
   )
 }

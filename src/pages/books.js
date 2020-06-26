@@ -1,6 +1,6 @@
 import React from "react"
 import "../css/global.css"
-import CardList from "../CardList"
+import CardList from "../bookList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Categories from "../Categories"

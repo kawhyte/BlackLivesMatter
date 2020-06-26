@@ -9,23 +9,12 @@ module.exports = {
     twitter: `@IAmKennyWhyte`,
   },
   plugins: [
-
-    // {
-    //   resolve: `gatsby-plugin-netlify-identity`,
-    //   options: {
-    //     url: `https://agencycontacts.netlify.app` // required!
-    //   }
-    // },
-
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100
       }
     },
-
-
-
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -45,7 +34,7 @@ module.exports = {
           {
              baseId: process.env.AIRTABLE_BASEID,
              tableName: `Business`,
-                         // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`], // optional, for deep linking to records across tables.
+             // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`], // optional, for deep linking to records across tables.
 
           //   tableView: `YOUR_TABLE_VIEW_NAME` // optional
           //   // can leave off queryName, mapping or tableLinks if not needed

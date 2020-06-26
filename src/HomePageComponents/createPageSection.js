@@ -2,7 +2,9 @@ import React from "react"
 let itemToRender = ""
 let bgColor = "bg-blue-100"
 let categoriesToRender = []
-function CreateCategories({ business }) {
+
+
+function CreatePageSection({ business }) {
   console.log("Create Cat props ", business)
 
   //get categories
@@ -58,4 +60,4 @@ function CreateCategories({ business }) {
   )
 }
 
-export default CreateCategories
+export default CreatePageSection

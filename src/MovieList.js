@@ -5,7 +5,7 @@ import { paginate } from "./common/paginate"
 import { createCards } from "./common/createCards"
 import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
-import CreateCategories from "./HomePageComponents/CreateCategories"
+import CreatePageSection from "./HomePageComponents/CreatePageSection"
 
 const MovieList = () => {
   const data = useStaticQuery(graphql`
@@ -66,7 +66,7 @@ const MovieList = () => {
           activeButton={activeButton}
         />
 
-      <CreateCategories business={movies} />
+      <CreatePageSection business={movies} />
     </>
   )
 }
