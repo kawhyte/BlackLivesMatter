@@ -1,6 +1,6 @@
 import React from "react"
 import "../css/global.css"
-import BookList from "../BookList"
+import CardList from "../CardList"
 import NavBar from "../NavBar"
 import Hero from "../Hero"
 import Categories from "../Categories"
@@ -12,7 +12,7 @@ const books = () => {
       <NavBar />
       {/* <Hero /> */}
       <Categories />
-      <BookList />
+      <CardList />
       <Footer />
     </div>
   )

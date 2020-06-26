@@ -33,11 +33,11 @@ function CreateCategories({ business }) {
                 <div
                   key={i}
                   className={
-                    "mt-10  flex container flex-wrap justify-between text-xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
+                    "mt-10  flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
                     bgColor
                   }
                 >
-                  <p className={"text-md font-bold pb-8 pt-4"}>{item}</p>
+                  <p className={"font-bold pb-8 pt-4"}>{item}</p>
                 </div>
               ) : (
                 ""

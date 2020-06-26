@@ -10,11 +10,12 @@ const BookList = () => {
   const data = useStaticQuery(graphql`
     {
       allAirtable(
-        filter: { table: { eq: "Books" }, data: { Category: { eq: "Movie" } } }
+        filter: { table: { eq: "Books" }, data: { Category: { eq: "Book" } } }
         limit: 100
       ) {
         nodes {
           id
+          recordId
           data {
             Slug
             Author
@@ -26,7 +27,9 @@ const BookList = () => {
             Name
             Publisher
             Category
+            Featured
             Rating
+            Image
             Attachments {
               filename
               thumbnails {
@@ -51,13 +54,14 @@ const BookList = () => {
     pageSize: 100,
   })
 
-
   const handleButtonClicked = filterValue => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
+
     setActiveButton(filterValue.item)
 
     if (filterValue.item === "VIEW ALL") {
       setState(data.allAirtable.nodes)
+
       return
     }
 
@@ -79,20 +83,24 @@ const BookList = () => {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let movies = createCards(newPages)
+  let books = createCards(newPages)
 
+ 
   return (
     <>
-     
-        <Labels
-          labels={labels}
-          onClicked={handleButtonClicked}
-          activeButton={activeButton}
-        />
+      <Labels
+        labels={labels}
+        onClicked={handleButtonClicked}
+        activeButton={activeButton}
+      />
 
-      <CreateCategories business={movies} />
+      <CreateCategories business={books} />
     </>
   )
 }
 
 export default BookList
+
+
+
+

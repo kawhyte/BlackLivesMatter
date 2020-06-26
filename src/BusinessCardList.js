@@ -83,7 +83,7 @@ const BusinessCardList = () => {
 
   return (
     <>
-      <div className=" flex justify-center ">
+      <div className="flex justify-center ">
         <Labels
           labels={labels}
           onClicked={handleButtonClicked}
