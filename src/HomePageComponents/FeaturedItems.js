@@ -45,6 +45,7 @@ function FeaturedItems() {
     pageSize: 100,
   })
 
+  
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let featuredItemsToRender = newPages.map((node, i) => (
