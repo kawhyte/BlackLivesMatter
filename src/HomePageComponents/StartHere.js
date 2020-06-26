@@ -76,7 +76,7 @@ console.log(data.allAirtable.nodes[3])
         activeButton={activeButton}
       /> */}
 
-      <div className= "bg-pink-100 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
+      <div className= "bg-yellow-100 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
 
       {itemsToRender}
       </div>
