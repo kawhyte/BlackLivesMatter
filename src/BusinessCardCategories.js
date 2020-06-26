@@ -1,7 +1,8 @@
 import React from "react"
+import CreateCategories from "./HomePageComponents/CreateCategories"
 
 function BusinessCardCategories({ business }) {
-  console.log("$$PROPS ", business[0].props.category)
+  // console.log("$$PROPS ", business[0].props.category)
   let categoriesToRender = []
 
 
@@ -13,27 +14,38 @@ function BusinessCardCategories({ business }) {
     }
     return categoriesToRender
   })
-  console.log("$$itemsToRender ", categoriesToRender)
+  // console.log("$$itemsToRender ", categoriesToRender)
   //loop array 
 
 
 
-  const FoodBusinessToRender = business.filter(item => {
-    return item.props.category.includes("Food")
-  })
-  const EtsyBusinessToRender = business.filter(item => {
-    return item.props.category.includes("Etsy Sellers")
-  })
-  const CosmeticsBusinessToRender = business.filter(item => {
-    return item.props.category.includes("Cosmetics")
-  })
-  const HomeBusinessToRender = business.filter(item => {
-    return item.props.category.includes("Home & Living")
-  })
+  // const FoodBusinessToRender = business.filter(item => {
+  //   return item.props.category.includes("Food")
+  // })
+  // const EtsyBusinessToRender = business.filter(item => {
+  //   return item.props.category.includes("Etsy Sellers")
+  // })
+  // const CosmeticsBusinessToRender = business.filter(item => {
+  //   return item.props.category.includes("Cosmetics")
+  // })
+  // const HomeBusinessToRender = business.filter(item => {
+  //   return item.props.category.includes("Home & Living")
+  // })
 
   return (
     <div>
-      {FoodBusinessToRender.length > 0 ? (
+
+<div className="flex justify-center ">
+     <CreateCategories categoriesToRender ={categoriesToRender} business={business} />
+</div>
+
+
+
+
+
+
+
+      {/* {FoodBusinessToRender.length > 0 ? (
         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row ">
           <p className="text-md font-bold p-2 ">Food</p>
         </div>
@@ -79,7 +91,7 @@ function BusinessCardCategories({ business }) {
 
       <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {HomeBusinessToRender}
-      </div>
+      </div> */}
     </div>
   )
 }
