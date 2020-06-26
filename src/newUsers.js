@@ -1,23 +1,57 @@
 import React from 'react'
+import StartHere from './HomePageComponents/StartHere'
 
-function newUsers() {
+
+
+
+function NewUsers() {
     return (
         <div>
-    <h1 class=" font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight">Don't listen to what they say, Go See</h1>
-    <hr class=" w-12 h-1 bg-orange-500 rounded-full mt-8" />
-   {/* <p className="lg:text-lg mb-4 sm:mb-12">New here?  A 5 step process to start understanding Race Relations in America </p>
-    
-    <Link to="/podcasts">
-<div className="flex justify-center px-2 py-2 m-2 rounded-lg text-center w-40 transition duration-500 ease-in-out bg-gray-200 hover:bg-gray-300 transform hover:-translate-y-1 hover:scale-110 ">
-  <div className="mb-3">
-    <img className="w-auto mx-auto h-12  " src={podcast} alt="podcast" />
-  </div>
-  <h2 className="ml-4 pt-4 text-md font-medium text-gray-700">Podcasts</h2>
-</div>
-  </Link> */}
 
+
+    <section class="bg-gray-100 py-8">
+	<div class="container max-w-5xl mx-auto m-8">
+		{/* <div class="w-full mb-4">	
+			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+		</div> */}
+	
+		<div class="flex flex-col justify-center flex-wrap">
+			<div class="p-6">
+				<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">New to Race Relations in America?</h3>
+				<h3 class="text-3xl text-indigo-800 font-bold leading-none mb-3">Start here</h3>
+				<p class="text-gray-600 mb-8">Start with the material below.</p>
+			</div>
+
+            <div>
+
+               <StartHere />
+            </div>
+
+
+            {/* <div className=""> 
+            <hr class="w-12 h-1 bg-orange-500 rounded-full mt-8 " />
+            
+            </div> */}
+			{/* <div class="w-full sm:w-1/2 p-6">
+
+
+            <img
+              className="w-full sm:h-64 mx-auto"
+              src="https://res.cloudinary.com/babyhulk/image/upload/v1591111034/hero-image/abstract-search.png"
+            //   src="https://res.cloudinary.com/babyhulk/image/upload/w_70,h_70,f_auto/v1589318555/hero-image/avatar-01.png"
+              alt="Contacts"
+            />
+			</div> */}
+		</div>
+		
+		
+
+	</div>
+</section>
+
+ 
         </div>
     )
 }
 
-export default newUsers
+export default NewUsers
