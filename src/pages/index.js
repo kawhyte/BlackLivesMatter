@@ -5,13 +5,15 @@ import Hero from "../Hero"
 import Footer from "../Footer"
 import Categories from "../Categories"
 import FeaturedItems from "../HomePageComponents/FeaturedItems"
+import newUsers from "../newUsers"
 
 const index = () => {
   return (
     <div>
       <NavBar />
       <Hero />
-      <Categories />
+      <newUsers /> 
+      {/* <Categories /> */}
       <FeaturedItems />
       <Footer />
     </div>

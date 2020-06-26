@@ -1,58 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { IdentityContextProvider } from "react-netlify-identity"
-// import IdentityModal, {
-//   useIdentityContext,
-//   useNetlifyIdentity,
-// } from "react-netlify-identity-widget"
-// import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
+import podcast from "./img/podcast.png"
+import movie from "./img/movie.png"
+import book from "./img/book.png"
+import business from "./img/small-business.png"
 
-// function initNetlifyIdentity() {
-//   console.log("netlifyIdentity called here!")
-
-//   const script = document.createElement("script")
-//   script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js"
-//   script.async = true
-//   document.body.appendChild(script)
-// }
-
-// function OpenNetlifyModal(){
-//  const netlifyIdentity = window.netlifyIdentity
-//  if(netlifyIdentity){
-
-//   netlifyIdentity.open();
-//  } else{
-//     console.log("netlifyIdentity  not identified ")
-//  }
-
-// }
 
 const Header = ({ siteTitle }) => {
-  // initNetlifyIdentity()
-  // const handleLogin = clicked => {
-  //   console.log("Clicked", clicked)
 
-  // useEffect(() => {
-
-  //   console.log('mounted')
-  //   initNetlifyIdentity()
-
-  // }, []);
-
-  // }
-
-  // const identity = useIdentityContext()
-  // const [dialog, setDialog] = React.useState(false)
-  // const name =
-  //   (identity &&
-  //     identity.user &&
-  //     identity.user.user_metadata.full_name &&
-  //     identity.user.user_metadata.full_name) ||
-  //   "No Name"
-
-  // console.log(JSON.stringify(identity))
-
-  // const isLoggedIn = identity && identity.isLoggedIn
 
   return (
     <>
@@ -68,50 +23,102 @@ const Header = ({ siteTitle }) => {
               alt="Family"
             />
             {/* <svg className="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"/></svg> */}
-             
           </a>
 
           <div className="flex w-2/3 justify-end content-center pl-1">
-            <Link
-              className={
-                "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-blue-900 transition duration-150 ease-in-out"
-              }
-              to="/"
-            >
-              Home
-            </Link>
 
-            {/* <Link
-              className={
-                " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/movies"
-            >
-              Movies
-            </Link>
+
             <Link
               className={
-                " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/podcasts"
-            >
-              Podcasts
-            </Link> */}
-            {/* <Link
-              className={
-                " ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/books"
             >
-              Books
-            </Link> */}
+              <div className="flex justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+                <div className="">
+                  <img
+                    className="w-auto mx-auto h-10"
+                    src={book}
+                    alt="books"
+                  />
+                </div>
+                <h2 className="ml-2 pt-3 text-sm font-medium text-gray-700">
+                  Books
+                </h2>
+              </div>
+            </Link>
 
-            <a
+            <Link
+              className={
+                " ml-2 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+              }
+              to="/movies"
+            >
+              <div className="flex  justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+                <div className="">
+                  <img
+                    className="w-auto mx-auto h-10"
+                    src={movie}
+                    alt="movies"
+                  />
+                </div>
+                <h2 className="ml-2 pt-3 text-sm font-medium text-gray-700">
+                  Movies
+                </h2>
+              </div>
+            </Link>
+
+            <Link
+              className={
+                "ml-2 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+              }
+              to="/podcasts"
+            >
+              <div className="flex justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+                <div className="">
+                  <img
+                    className="w-auto mx-auto h-10"
+                    src={podcast}
+                    alt="podcast"
+                  />
+                </div>
+                <h2 className="ml-2 pt-3  text-sm font-medium text-gray-700">
+                  Podcasts
+                </h2>
+              </div>
+            </Link>
+
+            <Link
+              className={
+                "ml-2 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+              }
+              to="/podcasts"
+            >
+              <div className="flex justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+                <div className="">
+                  <img
+                    className="w-auto mx-auto h-10"
+                    src={business}
+                    alt="podcast"
+                  />
+                </div>
+                <h2 className="ml-2 pt-3  text-sm font-medium text-gray-700">
+                 Shop
+                </h2>
+              </div>
+            </Link>
+
+
+
+
+          
+
+            {/* <a
               href="https://legislation-tweets.herokuapp.com/"
               className=" hidden ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
             >
               Twitter Mentions
-            </a>
+            </a> */}
             {/* <h2 onClick={OpenNetlifyModal} className="ml-40 ">
               Login
             </h2> */}
@@ -129,7 +136,7 @@ const Header = ({ siteTitle }) => {
             >
              Login
             </a> */}
-               {/* <button className=" md:block">
+              {/* <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
@@ -137,7 +144,7 @@ const Header = ({ siteTitle }) => {
                   Books
                 </a>
               </button>  */}
-               {/* <button className=" md:block">
+              {/* <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
@@ -145,7 +152,7 @@ const Header = ({ siteTitle }) => {
                   Movies
                 </a>
               </button> */}
-               {/* <button className=" md:block"> 
+              {/* <button className=" md:block"> 
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
@@ -153,14 +160,14 @@ const Header = ({ siteTitle }) => {
                   Podcasts
                 </a>
               </button>  */}
-               <button className=" md:block">
+              <button className=" md:block">
                 <a
                   href="https://www.kennywhyte.com/"
                   className=" ml-8 mr-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
                 >
                   About
                 </a>
-              </button> 
+              </button>
             </div>
           </div>
 
