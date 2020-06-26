@@ -68,32 +68,6 @@ function Card({
           <div className=" truncate-custom text-xs md:text-md text-gray-500 text-center">
             {published}
           </div>
-          {/* <div className="flex  mt-3 justify-center"> 
-          <button className="flex  text-white bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded">
-                  Get item
-           </button>
-           </div> */}
-          {/* <div className="w-64  text-sm text-gray-500 ">
-            <ul className="flex flex-wrap items-center  ml-4">
-              {genre.map((label, i) => {
-                return (
-                  <li key={i}>
-                    {" "}
-                    <span
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={
-                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white uppercase last: m-1 mr-0 mr-1 " +
-                        color
-                      }
-                    >
-                      {label}
-                    </span>{" "}
-                  </li>
-                )
-              })}
-            </ul>
-          </div> */}
         </div>
       </div>
     </div>
