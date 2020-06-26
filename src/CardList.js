@@ -3,6 +3,7 @@ import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./common/paginate"
 import { createCards } from "./common/createCards"
+import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
 import CreateCategories from "./HomePageComponents/CreateCategories"
 
@@ -54,38 +55,12 @@ const BookList = () => {
     pageSize: 100,
   })
 
-  const handleButtonClicked = filterValue => {
-    const contactsToBeFiltered = data.allAirtable.nodes || []
-
-    setActiveButton(filterValue.item)
-
-    if (filterValue.item === "VIEW ALL") {
-      setState(data.allAirtable.nodes)
-
-      return
-    }
-
-    let contacts = contactsToBeFiltered.filter(contact => {
-      let found = false
-
-      if (contact.data.Genre !== null) {
-        contact.data.Genre.forEach(element => {
-          if (element.toLowerCase().includes(filterValue.item.toLowerCase())) {
-            found = true
-          }
-        })
-      }
-
-      return found
-    })
-    setState(contacts)
-  }
+  const handleButtonClicked = filterByTags(data, setActiveButton, setState)
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let books = createCards(newPages)
 
- 
   return (
     <>
       <Labels
@@ -93,13 +68,13 @@ const BookList = () => {
         onClicked={handleButtonClicked}
         activeButton={activeButton}
       />
-
       <CreateCategories business={books} />
     </>
   )
 }
 
 export default BookList
+
 
 
 
