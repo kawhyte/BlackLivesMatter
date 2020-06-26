@@ -1,26 +1,54 @@
 import React from "react"
 let itemToRender = ""
-function CreateCategories({ business, categoriesToRender }) {
+let bgColor = "bg-blue-100"
+let categoriesToRender = []
+function CreateCategories({ business }) {
   console.log("Create Cat props ", business)
+
+  //get categories
+  business.map((label, i) => {
+    if (!categoriesToRender.includes(label.props.category)) {
+      categoriesToRender.push(label.props.category)
+    }
+    return categoriesToRender
+  })
 
   return (
     <div>
       {categoriesToRender.map((item, i) => {
+        if (i % 2 === 0) {
+          bgColor = "bg-blue-100"
+        } else {
+          bgColor = "bg-gray-100"
+        }
+
+        itemToRender = business.filter(card => {
+          return card.props.category.includes(item)
+        })
+
         if (item !== null) {
           return (
             <>
+              {itemToRender.length > 0 ? (
+                <div
+                  key={i}
+                  className={
+                    "mt-10  flex container flex-wrap justify-between text-xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
+                    bgColor
+                  }
+                >
+                  <p className={"text-md font-bold pb-8 pt-4"}>{item}</p>
+                </div>
+              ) : (
+                ""
+              )}
               <div
-                key={i}
-                className="mt-10 mb-3 flex container flex-wrap justify-between text-xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row"
-              >
-                <p className="text-md font-bold p-2 ">{item}</p>
-              </div>
-              <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
-                {
-                  (itemToRender = business.filter(card => {
-                    return card.props.category.includes(item)
-                  }))
+                className={
+                  "pl-4  gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  " +
+                  bgColor
                 }
+              >
+                {itemToRender}
               </div>
             </>
           )

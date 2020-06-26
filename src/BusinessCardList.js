@@ -4,7 +4,7 @@ import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
-import BusinessCardCategories from "./BusinessCardCategories"
+import CreateCategories from "./HomePageComponents/CreateCategories"
 
 const BusinessCardList = () => {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,7 @@ const BusinessCardList = () => {
 
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
-  const [activeButton, setActiveButton] = useState("VIEW ALL");
+  const [activeButton, setActiveButton] = useState("VIEW ALL")
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
@@ -81,22 +81,16 @@ const BusinessCardList = () => {
     />
   ))
 
-//   let CardstoRender = business.map((node, i) => (
-
-// <BusinessCardCategories
-// business ={business} 
-// /> 
-
-//   ))
-
-
   return (
     <>
       <div className=" flex justify-center ">
-        <Labels labels={labels} onClicked={handleButtonClicked} activeButton= {activeButton} />
+        <Labels
+          labels={labels}
+          onClicked={handleButtonClicked}
+          activeButton={activeButton}
+        />
       </div>
-    <BusinessCardCategories business ={business} /> 
- 
+      <CreateCategories business={business} />
     </>
   )
 }

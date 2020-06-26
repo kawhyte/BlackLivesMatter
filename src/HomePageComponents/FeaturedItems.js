@@ -3,7 +3,6 @@ import Card from "../Card"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
 import { Link } from "gatsby"
-// import "./css/global.css"
 
 function FeaturedItems() {
   const data = useStaticQuery(graphql`

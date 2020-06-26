@@ -40,19 +40,16 @@ function BusinessCard({
             rel="noreferrer"
             rel="nofollow"
             target="_blank"
-            className="inline-block  px-3 py-1 text-sm font-semibold  mr-2   px-3 py-1 "
+            className="inline-block  px-3 py-1 text-sm font-semibold  mr-2"
           >
-            <h1 className="truncate-custom text-blue-500 text-sm md:text-lg font-medium break-words text-gray-700 text-left  mt-1 hover:text-blue-300 ">
+            <h1 className="truncate-custom text-blue-500 text-sm md:text-lg font-medium break-words text-left  mt-1 hover:text-blue-300 ">
               {name}
             </h1>
           </a>
-          {/* <div className=" px-1">
-        <a href={link} rel="noreferrer" rel="nofollow" target="_blank" className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-black hover:text-white px-3 py-1 "> <button>Visit Shop</button></a>  
-          </div> */}
 
-         <p className="fade-in h-56 absolute bg-white hover-target  z-10 mt-2 mb-4 h-auto break-words text-sm md:text-md text-gray-600 text-left">
+          <p className="fade-in p-2 absolute bg-white hover-target  z-10 mt-2 mb-4 h-auto break-words text-sm md:text-md text-gray-600 text-left">
             {description}
-          </p> 
+          </p>
         </div>
       </div>
     </>
