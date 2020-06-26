@@ -1,16 +1,21 @@
 import React, { useState } from "react"
-import Card from "./Card"
 import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./common/paginate"
+import { createCards } from "./common/createCards"
 import "./css/global.css"
-
-
+import CreateCategories from "./HomePageComponents/CreateCategories"
 
 const PodcastList = () => {
   const data = useStaticQuery(graphql`
     {
-      allAirtable(filter: {table: {eq: "Books"}, data: {Category: {eq: "Podcast"}}}, limit: 100)  {
+      allAirtable(
+        filter: {
+          table: { eq: "Books" }
+          data: { Category: { eq: "Podcast" } }
+        }
+        limit: 100
+      ) {
         nodes {
           id
           data {
@@ -41,15 +46,13 @@ const PodcastList = () => {
 
   const [state, setState] = useState(data.allAirtable.nodes)
   const [labels] = useState(data.allAirtable.nodes)
-  const [activeButton, setActiveButton] = useState("VIEW ALL");
+  const [activeButton, setActiveButton] = useState("VIEW ALL")
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
     currentPage: 1,
     pageSize: 100,
   })
-
-
 
   const handleButtonClicked = filterValue => {
     const contactsToBeFiltered = data.allAirtable.nodes || []
@@ -78,55 +81,16 @@ const PodcastList = () => {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let books = newPages.map((node, i) => (
-    <Card
-      key={i}
-      id={node.id}
-      name={node.data.Name}
-      bookImage={node.data.Attachments[0].thumbnails.full.url}
-      genre={node.data.Genre}
-      author={node.data.Author}
-      rating={node.data.Rating}
-      description={node.data.Description}
-      published={node.data.Publisher}
-      date={node.data.Date}
-      color={node.data.Color}
-      type={node.data.Type}
-      link={node.data.Link}
-      category={node.data.Category}
-      slug={node.data.Slug}
-    />
-  ))
-
-  const podcastToRender = books.filter(item => {
- 
-    return item.props.category.includes("Podcast")
-  })
-
-
+  let podcasts = createCards(newPages)
 
   return (
     <>
-      <div className=" flex justify-center ">
-        <Labels labels={labels} onClicked={handleButtonClicked} activeButton= {activeButton}/>
-      </div>
-
-
-      {/* <p className = "uppercase container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">Books About Race</p> */}
-      {podcastToRender.length > 0 ? (
-        <div className="flex container flex-wrap justify-start text-3xl mb-4 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center ">
-          <p className="font-bold text-md">Podcast</p>
-        </div>
-      ) : (
-        ""
-      )}
-      {/* <div className="flex container flex-wrap justify-center  mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center bg-gray-100"> */}
-      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-gray-100">
-     
-        {podcastToRender}
-      </div>
-
-
+      <Labels
+        labels={labels}
+        onClicked={handleButtonClicked}
+        activeButton={activeButton}
+      />
+      <CreateCategories business={podcasts} />
     </>
   )
 }
