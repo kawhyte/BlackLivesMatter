@@ -1,10 +1,24 @@
 import React from "react"
 
-function BusinessCardCategories({business}) {
-    
- console.log("$$PROPS ", business)
+function BusinessCardCategories({ business }) {
+  console.log("$$PROPS ", business[0].props.category)
+  let categoriesToRender = []
 
- const FoodBusinessToRender = business.filter(item => {
+
+
+  //get categories
+  business.map((label, i) => {
+    if (!categoriesToRender.includes(label.props.category)) {
+        categoriesToRender.push(label.props.category)
+    }
+    return categoriesToRender
+  })
+  console.log("$$itemsToRender ", categoriesToRender)
+  //loop array 
+
+
+
+  const FoodBusinessToRender = business.filter(item => {
     return item.props.category.includes("Food")
   })
   const EtsyBusinessToRender = business.filter(item => {
@@ -29,42 +43,41 @@ function BusinessCardCategories({business}) {
 
       <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
         {FoodBusinessToRender}
-      </div> 
+      </div>
 
       {EtsyBusinessToRender.length > 0 ? (
-            <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
-         <p className="text-md font-bold p-2 ">Etsy Sellers</p>
-       </div>
+        <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+          <p className="text-md font-bold p-2 ">Etsy Sellers</p>
+        </div>
       ) : (
         ""
       )}
 
-<div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {EtsyBusinessToRender}
       </div>
 
-
       {CosmeticsBusinessToRender.length > 0 ? (
-         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
-         <p className="text-md font-bold p-2 ">Cosmetics</p>
-       </div>
+        <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+          <p className="text-md font-bold p-2 ">Cosmetics</p>
+        </div>
       ) : (
         ""
       )}
 
-<div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
+      <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
         {CosmeticsBusinessToRender}
       </div>
 
       {HomeBusinessToRender.length > 0 ? (
-         <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
-         <p className="text-md font-bold p-2 ">Home & Living</p>
-       </div>
+        <div className="mt-10 mb-3 flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row">
+          <p className="text-md font-bold p-2 ">Home & Living</p>
+        </div>
       ) : (
         ""
       )}
 
-<div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {HomeBusinessToRender}
       </div>
     </div>
