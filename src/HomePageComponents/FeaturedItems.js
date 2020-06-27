@@ -88,8 +88,8 @@ function FeaturedItems() {
     <div className="bg-white">
     <div className="flex justify-center flex-col  py-8">
       {booksToRender.length > 0 ? (
-        <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row items-end bg-blue-100">
-          <p className="text-md font-bold p-2 ">Featured Books</p>
+        <div className="p-2 mt-10 flex container flex-wrap justify-between text-xl mx-auto px-6 sm:px-12 sm:flex-row items-end bg-blue-100">
+          <p className="text-md font-bold pt-2 ">Featured Books</p>
           <p className="text-sm pt-4"><Link className="text-blue-500" to="/books">Explore All Books</Link></p>
         </div>
       ) : (
@@ -103,8 +103,8 @@ function FeaturedItems() {
 
     <div className="flex justify-center flex-col"> 
       {moviesToRender.length > 0 ? (
-        <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-end bg-gray-100">
-          <p className="text-md font-bold p-2 ">Featured Movies</p>
+        <div className="mt-10  flex container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12  sm:flex-row items-end bg-gray-100">
+          <p className="text-md font-bold pt-2 ">Featured Movies</p>
           <p className="text-sm pt-4"><Link className="text-blue-500" to="/movies">Explore All Movies</Link></p>
         </div>
       ) : (
@@ -118,8 +118,8 @@ function FeaturedItems() {
 
     <div className="flex justify-center flex-col"> 
       {podcastsToRender.length > 0 ? (
-        <div className="mt-10 container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-end bg-blue-100">
-          <p className="text-md font-bold p-2 ">Featured Podcast</p>
+        <div className="mt-10 container flex-wrap justify-between text-xl mb-0 mx-auto px-6 sm:px-12 flex sm:flex-row items-end bg-blue-100">
+          <p className="text-md font-bold pt-2 ">Featured Podcast</p>
           <p className="text-sm pt-4"><Link className="text-blue-500" to="/podcasts">Explore All Podcast</Link></p>
         </div>
       ) : (

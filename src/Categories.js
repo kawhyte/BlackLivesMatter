@@ -7,8 +7,8 @@ import business from "./img/small-business.png"
 import { Link } from "gatsby"
 function Categories() {
   return (
-    <div className="justify-center mx-auto px-6 pb-4 sm:px-12  sm:flex-row items-center ">
-      <div className="mt-20 text-xl flex justify-center font-bold py-2 sm:px-12 items-center">
+    <div className="justify-center mx-auto px-6 pb-1 sm:px-12  sm:flex-row items-center ">
+      <div className="mt-8 text-xl flex justify-center font-bold py-2 sm:px-12 items-center">
         Categories
       </div>
 
