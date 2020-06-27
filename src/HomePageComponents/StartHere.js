@@ -72,7 +72,7 @@ function StartHere() {
         activeButton={activeButton}
       /> */}
 
-        <div className="p-6">
+        <div className="pl-6 pr-6 pt-6">
           <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
             New to Race Relations in America?
           </h3>
@@ -82,7 +82,7 @@ function StartHere() {
           </h1>
         </div>
 
-        <div className="m-2 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ">
+        <div className="m-2 pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           {itemsToRender}
         </div>
       </div>
