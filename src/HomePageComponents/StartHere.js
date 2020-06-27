@@ -76,7 +76,7 @@ function StartHere() {
         activeButton={activeButton}
       /> */}
 
-      <div className= "bg-yellow-100 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
+      <div className= "bg-yellow-100 pl-3 border-dotted border-4 border-gray-400 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ">
 
       {itemsToRender}
       </div>
