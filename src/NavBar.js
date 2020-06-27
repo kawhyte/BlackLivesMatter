@@ -34,13 +34,13 @@ const Header = ({ siteTitle }) => {
               }
               to="/books"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
                 <div className="">
-                  <img
+                  {/* <img
                     className="w-auto mx-auto h-10"
                     src={book}
                     alt="books"
-                  />
+                  /> */}
                 </div>
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Books
@@ -54,13 +54,13 @@ const Header = ({ siteTitle }) => {
               }
               to="/movies"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
                 <div className="">
-                  <img
+                  {/* <img
                     className="w-auto mx-auto h-10"
                     src={movie}
                     alt="movies"
-                  />
+                  /> */}
                 </div>
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Movies
@@ -74,13 +74,13 @@ const Header = ({ siteTitle }) => {
               }
               to="/podcasts"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
                 <div className="">
-                  <img
+                  {/* <img
                     className="w-auto mx-auto h-10"
                     src={podcast}
                     alt="podcast"
-                  />
+                  /> */}
                 </div>
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Podcasts
@@ -94,14 +94,14 @@ const Header = ({ siteTitle }) => {
               }
               to="/business"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-32 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
-                <div className="">
+              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+                {/* <div className="">
                   <img
                     className="w-auto mx-auto h-10"
                     src={business}
                     alt="podcast"
                   />
-                </div>
+                </div> */}
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                  Businesses
                 </h2>

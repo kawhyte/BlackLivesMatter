@@ -7,7 +7,6 @@ import { filterByTags } from "../common/filterByTags"
 import "../css/global.css"
 import CreatePageSection from "../HomePageComponents/CreatePageSection"
 
-
 function StartHere() {
   const data = useStaticQuery(graphql`
     {
@@ -54,38 +53,40 @@ function StartHere() {
     pageSize: 100,
   })
 
-//   const handleButtonClicked = filterByTags(data, setActiveButton, setState)
+  //   const handleButtonClicked = filterByTags(data, setActiveButton, setState)
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let books = createCards(newPages)
 
-
-
   const itemsToRender = books.filter(item => {
-    
-    return (item.props.NewUserItem === true)
+    return item.props.NewUserItem === true
   })
 
   return (
     <>
-    <div className="flex justify-center flex-col"> 
-      {/* <Labels
+      <div className=" mx-auto bg-yellow-100 bg-gradient-search container flex justify-center flex-col border-dotted border-4 border-gray-400">
+        {/* <Labels
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
       /> */}
 
-      <div className= "bg-yellow-100 pl-3 border-dotted border-4 border-gray-400 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ">
+        <div className="p-6">
+          <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
+            New to Race Relations in America?
+          </h3>
+          {/* <h3 className="text-3xl text-indigo-800 font-bold leading-none mb-3">Start here</h3> */}
+          <h1 className="text-xl text-indigo-600 mb-5 mt-4">
+            Start with these hand picked material
+          </h1>
+        </div>
 
-      {itemsToRender}
+        <div className="m-2 pl-3  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ">
+          {itemsToRender}
+        </div>
       </div>
-      </div>
 
-
-
-
-      
       {/* <CreatePageSection business={books} /> */}
     </>
   )
