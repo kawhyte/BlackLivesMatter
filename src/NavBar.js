@@ -30,71 +30,71 @@ const Header = ({ siteTitle }) => {
 
             <Link
               className={
-                "ml-8 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/books"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
-                <div className="">
+              {/* <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 "> */}
+                {/* <div className=""> */}
                   {/* <img
                     className="w-auto mx-auto h-10"
                     src={book}
                     alt="books"
                   /> */}
-                </div>
+                {/* </div> */}
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Books
                 </h2>
-              </div>
+              {/* </div> */}
             </Link>
 
             <Link
               className={
-                " ml-1 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/movies"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
-                <div className="">
+              {/* <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 "> */}
+                {/* <div className=""> */}
                   {/* <img
                     className="w-auto mx-auto h-10"
                     src={movie}
                     alt="movies"
                   /> */}
-                </div>
+                {/* </div> */}
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Movies
                 </h2>
-              </div>
+              {/* </div> */}
             </Link>
 
             <Link
               className={
-                "ml-1 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/podcasts"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
-                <div className="">
+              {/* <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 "> */}
+                {/* <div className=""> */}
                   {/* <img
                     className="w-auto mx-auto h-10"
                     src={podcast}
                     alt="podcast"
                   /> */}
-                </div>
+                {/* </div> */}
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                   Podcasts
                 </h2>
-              </div>
+              {/* </div> */}
             </Link>
 
             <Link
               className={
-                "ml-1 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/business"
             >
-              <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 ">
+              {/* <div className="flex flex-col justify-center px-1 m-2 rounded-lg text-center w-24 transition duration-500 ease-in-out  hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110 "> */}
                 {/* <div className="">
                   <img
                     className="w-auto mx-auto h-10"
@@ -105,7 +105,7 @@ const Header = ({ siteTitle }) => {
                 <h2 className="pt-1 text-sm font-medium text-gray-700">
                  Businesses
                 </h2>
-              </div>
+              {/* </div> */}
             </Link>
 
 
