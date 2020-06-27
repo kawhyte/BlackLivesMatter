@@ -20,7 +20,7 @@ function Labels(props) {
     )
 
   return (
-    <section className="backgroundImage h-32 bg-indigo-100 justify-center flex flex-row flex-wrap rounded-l-lg rounded-r-lg  max-w-4xl mx-auto z-10  mt-20"
+    <section className="backgroundImage rounded border h-32 bg-indigo-100 justify-center flex flex-row flex-wrap rounded-l-lg rounded-r-lg  max-w-4xl mx-auto z-10  mt-10 sm:mt-20 "
 
     
 
@@ -34,8 +34,8 @@ function Labels(props) {
     
     >
       <div className="flex justify-center ">
-        <div className=" mb-16 sm:mt-0 ">
-          <ul className="flex flex-wrap justify-center max-w-6xl bg-white p-4 ml-2 mr-2">
+        <div className="mb-16 sm:mt-0 ">
+          <ul className="flex flex-wrap justify-center max-w-6xl bg-white  p-0 sm:p-1  border rounded-lg ">
             {arrayWithoutDuplicates.map((item, i) => {
               if (item !== null) {
                 return (
@@ -44,7 +44,7 @@ function Labels(props) {
                       <button
                         onClick={e => onClicked({ item })}
                         className={
-                          "cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2  rounded border bg-indigo-600  hover:bg-indigo-500 hover:text-white text-white uppercase active:bg-gray-700"
+                          "cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2  border rounded-lg bg-indigo-600  hover:bg-indigo-500 hover:text-white text-white uppercase active:bg-gray-700"
                         }
                       >
                         {item}
