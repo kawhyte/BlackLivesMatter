@@ -1,11 +1,9 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-
-
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
-    query{
+    query {
       site {
         siteMetadata {
           title
@@ -13,54 +11,76 @@ const Footer = () => {
           author
         }
       }
-      build: allSiteBuildMetadata{
-        nodes{
-          buildTime(formatString:"dddd, MMMM Do YYYY")
+      build: allSiteBuildMetadata {
+        nodes {
+          buildTime(formatString: "dddd, MMMM Do YYYY")
         }
       }
     }
-  
-  `
-  
-  )
+  `)
 
   return (
-
-  //   <div> 
-  //     <div>{` `}</div>
-  //   <footer className="w-full text-center border-t border-grey p-4 pin-b bg-blue-dark">
-  //   <small className="f6 db tc">© {data.site.siteMetadata.year} <b className="ttu">{data.site.siteMetadata.title}</b>., All Rights Reserved</small>
-  // </footer>
-  // </div>
-    <div > 
-  <footer className="flex justify-center px-4 mt-4 mb-10 text-gray-900 bg-white">
+    <div>
+      <footer className="flex justify-center px-4 mt-12 bg-gray-800 text-gray-100">
         <div className="container py-6">
-            <div className="flex flex-col items-center justify-center mt-4 mb-2 md:flex-row">
-                {/* <div>
-                    <a href="https://www.kennywhyte.com/" className="text-xl font-bold">{data.build.nodes[0].buildTime}</a>
-                </div> */}
-                <div className="flex mt-5 md:m-0 items-center justify-center">
-                    <p className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> <a href="https://www.kennywhyte.com/" className=" ml-0 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out">Made with <span className="pr-1" role="img" aria-labelledby="">🍕</span> by {data.site.siteMetadata.author} </a></p>
-                    {/* <div className="mx-4"> */}
-                   
-                   {/* <span className="mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"> Website information updated {data.build.nodes[0].buildTime}</span> */}
-                  	{/* </div> */}
-                </div>
+          <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
+            <div>
+              <a href="#" class="text-xl font-bold uppercase">
+                {data.site.siteMetadata.title}
+              </a>
             </div>
-                <div className="mt-4 flex justify-center mr-4 text-gray-700 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                  <h5 className= "pr-1">Illustrations by</h5> 
-                  <a className= "pr-1" href="https://freepik.com/"> freepik </a> 
-                  <span className= "pr-1">+</span>
-                  <a href="https://icons8.com/"> icons8</a>
-                  <span className= "pl-1 pr-1">+</span>
-                  <a href="https://codepen.io/rafaelrinaldi/">rafaelrinaldi</a>
-                </div>
+            <div class="flex mt-4 md:m-0">
+              <div class="-mx-4">
+                <a href="#" class="px-4 text-sm">
+                  About
+                </a>
+                <a href="#" class="px-4 text-sm">
+                  Blog
+                </a>
+                <a href="#" class="px-4 text-sm">
+                  News
+                </a>
+                <a
+                  href="https://www.kennywhyte.com/"
+                  className="px-4 text-sm text-indigo-300 hover:text-indigo-500"
+                >
+                  Made with
+                  <span className="pr-1 pl-2" role="img" aria-labelledby="">
+                    🍕
+                  </span>
+                  by {data.site.siteMetadata.author}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className=" mt-12 flex justify-center mr-4 text-white text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+            <h5 className="pr-2">Illustrations by</h5>
+            <a
+              className="pr-2 hover:text-indigo-500"
+              href="https://freepik.com/"
+            >
+              freepik
+            </a>
+            <span className="pr-1 hover:text-indigo-500">+</span>
+            <a
+              className="pl-1 pr-1 hover:text-indigo-500"
+              href="https://icons8.com/"
+            >
+              icons8
+            </a>
+            <span className="pl-1 pr-1">+</span>
+            <a
+              className="pl-1 pr-1 hover:text-indigo-500"
+              href="https://codepen.io/rafaelrinaldi/"
+            >
+              rafaelrinaldi
+            </a>
+          </div>
         </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
   )
 }
 
 export default Footer
-
-

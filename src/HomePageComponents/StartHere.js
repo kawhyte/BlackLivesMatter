@@ -65,7 +65,7 @@ function StartHere() {
 
   return (
     <>
-      <div className=" mx-auto bg-yellow-100 bg-gradient-search container flex justify-center flex-col border-dotted border-4 border-gray-400">
+      <div className=" mx-auto container flex justify-center flex-col">
         {/* <Labels
         labels={labels}
         onClicked={handleButtonClicked}
@@ -78,7 +78,7 @@ function StartHere() {
           </h3>
           {/* <h3 className="text-3xl text-indigo-800 font-bold leading-none mb-3">Start here</h3> */}
           <h1 className="text-xl text-indigo-600 mb-5 mt-4">
-            Start with these hand picked material
+            We've hand-picked these media to get you started: 
           </h1>
         </div>
 

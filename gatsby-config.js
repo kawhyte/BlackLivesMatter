@@ -2,8 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Media`,
+    title: `Equality`,
     description: `Media`,
+    tagline:`Exploring Race & Racism`,
     year:`2020`,
     author: `Kenny`,
     twitter: `@IAmKennyWhyte`,

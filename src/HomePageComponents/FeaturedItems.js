@@ -85,8 +85,9 @@ function FeaturedItems() {
 
 
   return (
-    <div className="bg-white">
-    <div className="flex justify-center flex-col  py-8">
+    <div className="">
+
+    <div className="flex justify-center flex-col py-8 ">
       {booksToRender.length > 0 ? (
         <div className="p-2 mt-10 flex container flex-wrap justify-between text-xl mx-auto px-6 sm:px-12 sm:flex-row items-end bg-blue-100">
           <p className="text-md font-bold pt-2 ">Featured Books</p>

@@ -24,14 +24,14 @@ function Labels(props) {
 
     
 
-    style={{
-  // backgroundImage: `url('https://res.cloudinary.com/babyhulk/image/upload/f_auto/v1593291021/Race/bg/andrew-ridley-jR4Zf-riEjI-unsplash.jpg')`,
-  backgroundImage: `url('https://res.cloudinary.com/babyhulk/image/upload/f_auto/v1593312159/Race/bg/bg_2.jpg')`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundColor: '#DFDBE5'
-}}
+//     style={{
+//   // backgroundImage: `url('https://res.cloudinary.com/babyhulk/image/upload/f_auto/v1593291021/Race/bg/andrew-ridley-jR4Zf-riEjI-unsplash.jpg')`,
+//   backgroundImage: `url('https://res.cloudinary.com/babyhulk/image/upload/f_auto/v1593312159/Race/bg/bg_2.jpg')`,
+//   backgroundRepeat: 'no-repeat',
+//   backgroundSize: 'cover',
+//   backgroundPosition: 'center',
+//   backgroundColor: '#DFDBE5'
+// }}
     
     >
       <div className="flex justify-center ">
