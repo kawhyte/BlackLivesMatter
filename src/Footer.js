@@ -45,7 +45,7 @@ const Footer = () => {
                   className="px-4 text-sm text-indigo-300 hover:text-indigo-500"
                 >
                   Made with
-                  <span className="pr-1 pl-2" role="img" aria-labelledby="">
+                  <span className="pr-2 pl-2" role="img" aria-labelledby="">
                     🍕
                   </span>
                   by {data.site.siteMetadata.author}
