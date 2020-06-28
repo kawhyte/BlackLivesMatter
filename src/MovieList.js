@@ -64,6 +64,7 @@ const MovieList = () => {
           labels={labels}
           onClicked={handleButtonClicked}
           activeButton={activeButton}
+          type = {"Movies"}
         />
 
       <CreatePageSection business={movies} />

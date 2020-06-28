@@ -67,6 +67,8 @@ const BookList = () => {
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
+        type = {"Books"}
+        
       />
       <CreatePageSection business={books} />
     </>

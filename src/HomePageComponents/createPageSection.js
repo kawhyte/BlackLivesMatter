@@ -19,9 +19,9 @@ function CreatePageSection({ business }) {
     <div>
       {categoriesToRender.map((item, i) => {
         if (i % 2 === 0) {
-          bgColor = "bg-blue-100"
+          bgColor = "bg-white"
         } else {
-          bgColor = "bg-gray-100"
+          bgColor = "bg-white"
         }
 
         itemToRender = business.filter(card => {
@@ -31,7 +31,7 @@ function CreatePageSection({ business }) {
         if (item !== null) {
           return (
             <>
-              {itemToRender.length > 0 ? (
+              {/* {itemToRender.length > 0 ? (
                 <div
                   key={i}
                   className={
@@ -43,10 +43,10 @@ function CreatePageSection({ business }) {
                 </div>
               ) : (
                 ""
-              )}
+              )} */}
               <div
                 className={
-                  "pl-4  gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  " +
+                  "pl-4 pt-10 gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  " +
                   bgColor
                 }
               >

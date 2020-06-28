@@ -2,7 +2,7 @@ import React from "react"
 
 let arrayWithoutDuplicates = []
 function Labels(props) {
-  const { labels, onClicked, activeButton } = props
+  const { labels, onClicked, activeButton, type } = props
   let itemsToRender = ["VIEW ALL"]
 
   labels.map((label, i) => {
@@ -19,8 +19,10 @@ function Labels(props) {
       []
     )
 
+    console.log("itemsToRender", labels[0].data.Category)
+
   return (
-    <section className="backgroundImage rounded border h-32 bg-indigo-100 justify-center flex flex-row flex-wrap rounded-l-lg rounded-r-lg  max-w-4xl mx-auto z-10  mt-10 sm:mt-20 "
+    <section className={" h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
 
     
 
@@ -34,18 +36,28 @@ function Labels(props) {
 // }}
     
     >
-      <div className="flex justify-center ">
-        <div className="mb-16 sm:mt-0 ">
-          <ul className="flex flex-wrap justify-center max-w-6xl bg-white  p-0 sm:p-1  border rounded-lg ">
+         <div className=" flex flex-col container pl-4 ">
+           
+  <h3 className= " pb-5 uppercase container  flex items-end  text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">{type}</h3>
+        <p className="container  pb-10 flex items-end">Filter {labels[0].data.Category}s by keywords</p>
+    
+     
+
+       
+     
+      
+      <div className="container h-12 flex items-end pb-4">
+          {/* <ul className="flex flex-wrap   p-0 sm:p-1 bg-blue-500  "> */}
+          <div class=" py-1">
             {arrayWithoutDuplicates.map((item, i) => {
               if (item !== null) {
                 return (
-                  <li key={i}>
+                  <span key={i} className="inline-block text-sm mr-2">
                     {item === activeButton ? (
                       <button
                         onClick={e => onClicked({ item })}
                         className={
-                          "cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2  border rounded-lg bg-indigo-600  hover:bg-indigo-500 hover:text-white text-white uppercase active:bg-gray-700"
+                          "cursor-pointer  text-xs font-semibold inline-block py-1 px-2  border rounded-lg bg-indigo-600  hover:bg-indigo-500 hover:text-white text-white uppercase active:bg-gray-700"
                         }
                       >
                         {item}
@@ -60,14 +72,15 @@ function Labels(props) {
                         {item}
                       </button>
                     )}
-                  </li>
+                  </span>
                 )
               }
               return ""
             })}
-          </ul>
+          {/* </ul> */}
         </div>
-      </div>
+        </div>
+        </div>
     </section>
   )
 }

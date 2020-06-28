@@ -68,6 +68,7 @@ const PodcastList = () => {
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
+        type = {"Podcasts"}
       />
       <CreatePageSection business={podcasts} />
     </>
