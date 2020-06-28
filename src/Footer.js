@@ -29,16 +29,10 @@ const Footer = () => {
                 {data.site.siteMetadata.title}
               </a>
             </div>
-            <div class="flex mt-4 md:m-0">
+            <div class="flex  mt-4 md:m-0">
               <div class="-mx-4">
-                <a href="#" class="px-4 text-sm">
-                  About
-                </a>
-                <a href="#" class="px-4 text-sm">
-                  Blog
-                </a>
-                <a href="#" class="px-4 text-sm">
-                  News
+                <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
+                NMAAHC
                 </a>
                 <a
                   href="https://www.kennywhyte.com/"

@@ -91,7 +91,7 @@ const Header = () => {
               </button>
             </Link>
 
-            <Link
+            {/* <Link
               className={
                 "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
@@ -100,7 +100,7 @@ const Header = () => {
               <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500">
                 About
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
