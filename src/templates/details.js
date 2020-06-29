@@ -11,13 +11,6 @@ const Details = ({ data }) => {
 
   let ratingNumber = item.Rating
  
-
-  //if (item !== null) {
-
-  //return ("")
-
-  ///} else {
-
   return (
     <>
       {/* <div>{item.Name}</div>

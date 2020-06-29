@@ -97,7 +97,7 @@ function FeaturedItems() {
         ""
       )}
       {/* <div className="flex flex-wrap container justify-between  mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-center bg-blue-100"> */}
-      <div className=" pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 bg-blue-100">
+      <div className=" pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-blue-100">
         {booksToRender}
       </div>
       </div>
@@ -112,7 +112,7 @@ function FeaturedItems() {
         ""
       )}
       {/* <div className="flex flex-wrap container justify-between  mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-center bg-blue-100"> */}
-      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 bg-gray-100">
+      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-gray-100">
         {moviesToRender}
       </div>
       </div>
@@ -127,7 +127,7 @@ function FeaturedItems() {
         ""
       )}
       {/* <div className="flex flex-wrap container justify-between  mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-center bg-blue-100"> */}
-      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 bg-blue-100">
+      <div className="gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 bg-blue-100">
         {podcastsToRender}
       </div>
       </div>

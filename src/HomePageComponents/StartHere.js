@@ -82,7 +82,7 @@ function StartHere() {
           </h1>
         </div>
 
-        <div className="m-2 pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+        <div className="m-2 pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {itemsToRender}
         </div>
       </div>
