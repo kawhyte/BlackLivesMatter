@@ -22,7 +22,7 @@ function Labels(props) {
     console.log("itemsToRender", labels[0].data.Category)
 
   return (
-    <section className={" h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
+    <section className={"h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
 
     
 
@@ -57,7 +57,7 @@ function Labels(props) {
                       <button
                         onClick={e => onClicked({ item })}
                         className={
-                          "cursor-pointer  text-xs font-semibold inline-block py-1 px-2  border rounded-lg bg-indigo-600  hover:bg-indigo-500 hover:text-white text-white uppercase active:bg-gray-700"
+                          "cursor-pointer  text-xs font-semibold inline-block py-1 px-2  border rounded-lg bg-black  hover:bg-black hover:text-white text-white uppercase active:bg-gray-700"
                         }
                       >
                         {item}
@@ -66,7 +66,7 @@ function Labels(props) {
                       <button
                         onClick={e => onClicked({ item })}
                         className={
-                          "cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2  rounded border border-gray-500  hover:bg-indigo-500 hover:text-white text-gray-700 uppercase"
+                          "cursor-pointer m-1 text-xs font-semibold inline-block py-1 px-2 border rounded-lg  hover:bg-black hover:text-white text-gray-900 uppercase"
                         }
                       >
                         {item}
