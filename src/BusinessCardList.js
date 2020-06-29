@@ -14,6 +14,7 @@ const BusinessCardList = () => {
           data {
             Genre
             Primary_color
+            Color
             Name
             Link
             Description
@@ -83,13 +84,14 @@ const BusinessCardList = () => {
 
   return (
     <>
-      <div className="flex justify-center ">
+      {/* <div className="flex justify-center "> */}
         <Labels
           labels={labels}
           onClicked={handleButtonClicked}
           activeButton={activeButton}
+          type = {"Black-owned Businesses"}
         />
-      </div>
+      {/* </div> */}
       <CreatePageSection business={business} />
     </>
   )

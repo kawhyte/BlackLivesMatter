@@ -22,7 +22,7 @@ function Card({
 }) {
 
   return (
-    <div className="relative hover-trigger mt-6 mb-6">
+    <div className="relative hover-trigger mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
         <Link to={`/${slug}`} > 

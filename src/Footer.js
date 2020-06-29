@@ -31,9 +31,9 @@ const Footer = () => {
             </div>
             <div class="flex  mt-4 md:m-0">
               <div class="-mx-4">
-                <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
+                {/* <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
                 NMAAHC
-                </a>
+                </a> */}
                 <a
                   href="https://www.kennywhyte.com/"
                   className="px-4 text-sm text-indigo-300 hover:text-indigo-500"

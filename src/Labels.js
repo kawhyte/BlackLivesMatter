@@ -22,7 +22,7 @@ function Labels(props) {
     console.log("itemsToRender", labels[0].data.Category)
 
   return (
-    <section className={"h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
+    <section className={"mb-12 h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
 
     
 

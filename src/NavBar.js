@@ -41,7 +41,7 @@ const Header = () => {
               className={
                 "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
-              to="/books"
+              to="/"
             >
               <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500  ">
                 Home
