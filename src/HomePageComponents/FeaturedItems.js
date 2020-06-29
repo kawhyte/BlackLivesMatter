@@ -63,11 +63,11 @@ function FeaturedItems() {
 
   return (
     <>
-    <div className="flex justify-center flex-col  py-8">
-
+    {/* <div className="flex justify-center flex-col  py-8"> */}
+   
     <CreatePageSection business={itemsToRender} renderDetails ={true}/>
 
-     </div>
+     {/* </div> */}
 
      </>
 

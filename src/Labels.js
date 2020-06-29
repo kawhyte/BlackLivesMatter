@@ -49,7 +49,7 @@ function Labels(props) {
       
       <div className="container h-12 flex items-end pb-4">
           {/* <ul className="flex flex-wrap   p-0 sm:p-1 bg-blue-500  "> */}
-          <div class=" py-1">
+          <div className=" py-1">
             {arrayWithoutDuplicates.map((item, i) => {
               if (item !== null) {
                 return (

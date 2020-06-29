@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 let itemToRender = ""
-let bgColor = "bg-blue-100"
+let bgColor = ""
 let categoriesToRender = []
 
 function CreatePageSection({ business, renderDetails }) {
@@ -13,7 +13,8 @@ function CreatePageSection({ business, renderDetails }) {
     return categoriesToRender
   })
 
-  
+   console.log("categoriesToRender ",categoriesToRender)
+   console.log("business ",business)
   return (
     <>
       {categoriesToRender.map((item, i) => {

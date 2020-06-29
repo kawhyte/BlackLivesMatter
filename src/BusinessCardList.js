@@ -90,9 +90,10 @@ const BusinessCardList = () => {
           onClicked={handleButtonClicked}
           activeButton={activeButton}
           type = {"Black-owned Businesses"}
+          
         />
       {/* </div> */}
-      <CreatePageSection business={business} />
+      <CreatePageSection business={business} renderDetails ={true} />
     </>
   )
 }
