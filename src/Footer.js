@@ -23,14 +23,14 @@ const Footer = () => {
     <div>
       <footer className="flex justify-center px-4 mt-12 bg-gray-800 text-gray-100">
         <div className="container py-6">
-          <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
+          <div className="flex flex-col items-center justify-between mt-6 md:flex-row">
             <div>
-              <a href="#" class="text-xl font-bold uppercase">
+              <a href="#" className="text-xl font-bold uppercase">
                 {data.site.siteMetadata.title}
               </a>
             </div>
-            <div class="flex  mt-4 md:m-0">
-              <div class="-mx-4">
+            <div className="flex mt-4 md:m-0">
+              <div className="-mx-4">
                 {/* <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
                 NMAAHC
                 </a> */}

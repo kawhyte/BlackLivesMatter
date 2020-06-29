@@ -65,7 +65,7 @@ function Card({
             {author}
           </div>
           <div className=" truncate-custom text-xs md:text-md text-gray-500 text-center">
-            {published}
+          {published}
           </div>
         </div>
       </div>
