@@ -19,7 +19,7 @@ function BusinessCard({
   return (
     <>
       <div className="relative hover-trigger max-w-sm rounded   mx-4 mb-8 ">
-        <a href={link} rel="noreferrer" rel="nofollow" target="_blank">
+        <a href={link} rel="noreferrer"  target="_blank">
           <img
             className="w-full h-50 object-cover object-center businesscard "
             src={
@@ -38,7 +38,6 @@ function BusinessCard({
           <a
             href={link}
             rel="noreferrer"
-            rel="nofollow"
             target="_blank"
             className="inline-block  px-3 py-1 text-sm font-semibold  mr-2"
           >

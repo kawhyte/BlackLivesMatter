@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="container py-6">
           <div className="flex flex-col items-center justify-between mt-6 md:flex-row">
             <div>
-              <a href="#" className="text-xl font-bold uppercase">
+              <a href="/" className="text-xl font-bold uppercase">
                 {data.site.siteMetadata.title}
               </a>
             </div>

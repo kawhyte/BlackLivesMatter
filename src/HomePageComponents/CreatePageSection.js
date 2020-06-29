@@ -13,9 +13,11 @@ function CreatePageSection({ business, renderDetails }) {
     return categoriesToRender
   })
 
+  
   return (
     <div>
       {categoriesToRender.map((item, i) => {
+
         if (renderDetails) {
           if (i % 2 === 0) {
             bgColor = "bg-blue-100"
@@ -44,15 +46,17 @@ function CreatePageSection({ business, renderDetails }) {
                   }
                 >
                   <p className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
-                 {/* <p className="text-sm pt-4"><Link className="text-blue-500" to={`/${(item).toLowerCase()}s`} >Explore All Books</Link></p> */}
-                <p className="text-sm pt-4"><Link className="text-blue-500" to={`/${links}s`} >Explore All {item}s</Link></p>
-
+                  <p className="text-sm pt-4">
+                    <Link className="text-blue-500" to={`/${links}s`}>
+                      Explore All {item}s
+                    </Link>
+                  </p>
                 </div>
               ) : (
                 ""
               )}
-              <div
-                className={
+              <div 
+                className={ 
                   "pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4  " +
                   bgColor
                 }
@@ -62,6 +66,7 @@ function CreatePageSection({ business, renderDetails }) {
             </>
           )
         }
+        return ""
       })}
     </div>
   )

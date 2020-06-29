@@ -2,7 +2,6 @@ import React from "react"
 import book from "./img/book.png"
 import movie from "./img/movie.png"
 import podcast from "./img/podcast.png"
-import article from "./img/articles.png"
 import business from "./img/small-business.png"
 import { Link } from "gatsby"
 function Categories() {

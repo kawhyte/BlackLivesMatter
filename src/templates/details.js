@@ -1,16 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import NavBar from "../NavBar"
-import Hero from "../Hero"
 import Footer from "../Footer"
 import { graphql } from "gatsby"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
 
-
   let ratingNumber = item.Rating
- 
+
   return (
     <>
       {/* <div>{item.Name}</div>
@@ -29,7 +27,7 @@ const Details = ({ data }) => {
             <div className="sm:w-3/5 flex items-center justify-center ">
               <img
                 alt="Poster of book or movie"
-                className="mr-10  mb-8  object-right  md:object-right lg:object-bottom xl:object-left rounded border border-gray-200"
+                className="mr-10   mb-8  object-right  md:object-right lg:object-bottom xl:object-left rounded border border-gray-200"
                 src={item.Image}
               />
             </div>
@@ -106,12 +104,7 @@ const Details = ({ data }) => {
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span> */}
-                <a
-                  href={item.Link}
-                  rel="noreferrer"
-                  rel="nofollow"
-                  target="_blank"
-                >
+                <a href={item.Link} rel="noreferrer" target="_blank">
                   {" "}
                   <button className="flex  text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                     Go to Website

@@ -40,9 +40,7 @@ function StartHere() {
     }
   `)
 
-  const [state, setState] = useState(data.allAirtable.nodes)
-  const [labels] = useState(data.allAirtable.nodes)
-  const [activeButton, setActiveButton] = useState("VIEW ALL")
+  const [state] = useState(data.allAirtable.nodes)
 
   const [pageState] = useState({
     bills: data.allAirtable.nodes,

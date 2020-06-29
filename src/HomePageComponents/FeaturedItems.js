@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import Card from "../Card"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
 import { createCards } from "../common/createCards"
 import CreatePageSection from "../HomePageComponents/CreatePageSection"
-import { Link } from "gatsby"
+
 
 function FeaturedItems() {
   const data = useStaticQuery(graphql`
