@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./common/paginate"
 import "./css/global.css"
 import CreatePageSection from "./HomePageComponents/CreatePageSection"
+import Categories from "./Categories"
 
 const BusinessCardList = () => {
   const data = useStaticQuery(graphql`
@@ -93,6 +94,7 @@ const BusinessCardList = () => {
           bgColor={"bg-purple-100"}
           
         />
+         <Categories />
       {/* </div> */}
       <CreatePageSection business={business} renderDetails ={true} />
     </>

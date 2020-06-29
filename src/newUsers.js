@@ -4,7 +4,7 @@ import StartHere from "./HomePageComponents/StartHere"
 function NewUsers() {
   return (
     <div>
-      <section className="bg-gradient-home-page py-8">
+      <section className="bg-orange-100 py-8">
         <div className="flex flex-col justify-center ">
           <div>
             <StartHere />

@@ -18,9 +18,9 @@ function CreatePageSection({ business, renderDetails }) {
   let newCat = categoriesToRender.map((item, i) => {
     if (renderDetails) {
       if (i % 2 === 0) {
-        bgColor = "bg-blue-100"
+        bgColor = "bg-white"
       } else {
-        bgColor = "bg-gray-100"
+        bgColor = "bg-white"
       }
     } else {
       bgColor = "bg-white"

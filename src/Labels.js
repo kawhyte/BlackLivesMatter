@@ -24,7 +24,7 @@ function Labels(props) {
     // console.log("LLAbles", labels[0].data.Category)
 
   return (
-    <section className={"mb-12 h-56 bg-red-100 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + bgColor }
+    <section className={"mb-1 h-56 bg-red-100 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + bgColor }
 
     
 

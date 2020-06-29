@@ -6,6 +6,7 @@ import { createCards } from "./common/createCards"
 import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
 import CreatePageSection from "./HomePageComponents/CreatePageSection"
+import Categories from "./Categories"
 
 const MovieList = () => {
   const data = useStaticQuery(graphql`
@@ -67,6 +68,7 @@ const MovieList = () => {
           type = {"Movies"}
           bgColor={"bg-teal-100"}
         />
+          <Categories />
    <div
         className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
       >
