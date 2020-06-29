@@ -41,11 +41,11 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
             <div
               
               className={
-                "mt-10  flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
+                "flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
                 bgColor
               }
             >
-              <p className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
+              <p className={"font-bold pb-8 pt-2"}>Featured {item}s</p>
               {showlinks ? (<p className="text-sm pt-4">
                 <Link
                   key={business.id}
