@@ -37,8 +37,8 @@ function CreatePageSection({ business, renderDetails }) {
 
         if (item !== null) {
           return (
-            <>
-              {itemToRender.length > 0 && renderDetails ? (
+            <div>
+              {/* {itemToRender.length > 0 && renderDetails ? (
                 <div key={business.id}
                   className={
                     "mt-10  flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
@@ -53,8 +53,8 @@ function CreatePageSection({ business, renderDetails }) {
                     </Link>
                   </p>
                 </div>
-              ) : ""
-              }
+              ) : "text"
+              } */}
               <div 
                 className={ 
                   "pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4  " +
@@ -63,7 +63,7 @@ function CreatePageSection({ business, renderDetails }) {
               >
                 {itemToRender}
               </div>
-            </>
+            </div>
           )
         }
         //return " "

@@ -20,7 +20,7 @@ const Footer = () => {
   `)
 
   return (
-    <div>
+    <>
       <footer className="flex justify-center px-4 mt-12 bg-gray-800 text-gray-100">
         <div className="container py-6">
           <div className="flex flex-col items-center justify-between mt-6 md:flex-row">
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   )
 }
 

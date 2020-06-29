@@ -14,10 +14,6 @@
 }
 
 
-.bg-gradient-home-page {
-  background: rgba(246,246,242,1);
-  /* background: linear-gradient(90deg, rgba(246,246,242,1) 0%, rgba(255,255,255,1) 100%); */
-}
 
 .withholdingBg {
 
@@ -116,13 +112,6 @@
   color: #f8fafc;
   /*.text-grey-lightest*/
 }
-
-
-
-
-
-
-
 
 
 .banner {
