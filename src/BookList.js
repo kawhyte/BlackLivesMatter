@@ -61,23 +61,25 @@ const BookList = () => {
 
   let books = createCards(newPages)
 
+ console.log("BOOK $$$$$%%%%%%%%% ", labels)
+ console.log("BOOK $$$$$%%%%%%%%% State ", state)
+
   return (
     <>
       <Labels
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
-        type = {"Books"}
-        
+        type={"Books"}
       />
-      <CreatePageSection business={books} />
+
+      <div
+        className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+      >
+        {books}
+      </div>
     </>
   )
 }
 
 export default BookList
-
-
-
-
-

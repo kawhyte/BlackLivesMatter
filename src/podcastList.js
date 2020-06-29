@@ -55,7 +55,6 @@ const PodcastList = () => {
     pageSize: 100,
   })
 
-
   const handleButtonClicked = filterByTags(data, setActiveButton, setState)
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
@@ -68,9 +67,12 @@ const PodcastList = () => {
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
-        type = {"Podcasts"}
+        type={"Podcasts"}
       />
-      <CreatePageSection business={podcasts} />
+
+      <div className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+        {podcasts}
+      </div>
     </>
   )
 }

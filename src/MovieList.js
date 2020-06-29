@@ -66,8 +66,12 @@ const MovieList = () => {
           activeButton={activeButton}
           type = {"Movies"}
         />
-
-      <CreatePageSection business={movies} />
+   <div
+        className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+      >
+     {movies} 
+      
+      </div>
     </>
   )
 }

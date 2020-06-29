@@ -6,7 +6,6 @@ let categoriesToRender = []
 
 function CreatePageSection({ business, renderDetails }) {
 
-  console.log("@@@@business ", business)
   //get categories
   business.map((label, i) => {
     if (!categoriesToRender.includes(label.props.category)) {
@@ -14,8 +13,6 @@ function CreatePageSection({ business, renderDetails }) {
     }
     return categoriesToRender
   })
-
-  console.log("categoriesToRender ", categoriesToRender)
   
 
   let newCat = categoriesToRender.map((item, i) => {
@@ -35,8 +32,7 @@ function CreatePageSection({ business, renderDetails }) {
       return card.props.category.includes(item)
     })
 
-    console.log("item- ", item)
-    console.log("itemToRender$$$ ", itemToRender)
+
 
     if (item !== null) {
       if (itemToRender.length > 0 && renderDetails) {

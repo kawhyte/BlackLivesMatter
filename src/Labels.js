@@ -19,10 +19,11 @@ function Labels(props) {
       []
     )
 
-    console.log("itemsToRender", labels[0].data.Category)
+    // console.log("Labels", labels)
+    // console.log("LLAbles", labels[0].data.Category)
 
   return (
-    <section className={"mb-12 h-56 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " + labels[0].data.Color}
+    <section className={"mb-12 h-56 bg-gray-100 items-center justify-center flex flex-row flex-wrap  mx-auto  mt-10 sm:mt-10 " }
 
     
 
@@ -40,7 +41,7 @@ function Labels(props) {
          <div className=" flex flex-col container pl-4 ">
            
   <h3 className= " pb-5 uppercase container  flex items-end  text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">{type}</h3>
-        <p className="container  pb-10 flex items-end">Filter {labels[0].data.Category}s by keywords</p>
+        <p className="container  pb-10 flex items-end">Filter {type} by keywords</p>
     
      
 

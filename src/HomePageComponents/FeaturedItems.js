@@ -48,6 +48,8 @@ function FeaturedItems() {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
   let books = createCards(newPages)
+  // console.log("$$$$$%%%%%%%%% ", labels)
+  console.log("$$$$$%%%%%%%%% State ", state)
 
   const itemsToRender = books.filter(item => {
     return (

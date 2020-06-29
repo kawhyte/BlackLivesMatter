@@ -129,6 +129,8 @@ export const query = graphql`
       filter: { table: { eq: "Books" }, recordId: { eq: $recordId } }
     ) {
       nodes {
+        id
+        recordId
         data {
           Image
           Name
