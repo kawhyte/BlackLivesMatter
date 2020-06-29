@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
 import { graphql } from "gatsby"
+import SEO from "../seo"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
@@ -11,6 +12,12 @@ const Details = ({ data }) => {
 
   return (
     <>
+    <SEO 
+    title = {item.Name}
+    image = {item.Image}
+    description = {item.Description}
+    
+    />
       {/* <div>{item.Name}</div>
     <div>{item.image}</div> */}
       {/* <div>{item.Image}</div> */}

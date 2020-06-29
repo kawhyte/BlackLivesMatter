@@ -3,13 +3,14 @@ import "../css/global.css"
 import CardList from "../bookList"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
-import Categories from "../Categories"
+import SEO from "../seo"
 
 const books = () => {
   return (
     <div>
       <NavBar />
-
+      <SEO 
+      />
       <CardList />
       <Footer />
     </div>

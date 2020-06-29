@@ -6,11 +6,12 @@ import Footer from "../Footer"
 import Categories from "../Categories"
 import FeaturedItems from "../HomePageComponents/FeaturedItems"
 import NewUsers from "../NewUsers"
-
+import SEO from "../seo"
 const index = () => {
   return (
     <div>
       <NavBar />
+      <SEO /> 
       <Hero />
       <Categories />
       <NewUsers />
