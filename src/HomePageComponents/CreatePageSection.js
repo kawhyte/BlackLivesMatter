@@ -15,7 +15,7 @@ function CreatePageSection({ business, renderDetails }) {
 
   
   return (
-    <div>
+    <>
       {categoriesToRender.map((item, i) => {
 
         if (renderDetails) {
@@ -38,39 +38,39 @@ function CreatePageSection({ business, renderDetails }) {
           return (
             <>
               {itemToRender.length > 0 && renderDetails ? (
-                <div
-                  key={i}
+                <div key={business.id}
                   className={
                     "mt-10  flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
                     bgColor
                   }
                 >
                   
-                  <p className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
-                  <p className="text-sm pt-4">
-                    <Link className="text-blue-500" to={`/${links}s`}>
+                  <p  className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
+                  <p  className="text-sm pt-4">
+                    <Link key={business.id} className="text-blue-500" to={`/${links}s`}>
                       Explore All {item}s
                     </Link>
                   </p>
                 </div>
-              ) : (
-                ""
-              )}
+              ) : ""
+              }
               <div 
                 className={ 
                   "pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4  " +
                   bgColor
-                }
+                } 
               >
                 {itemToRender}
               </div>
             </>
           )
         }
-        return ""
+        //return " "
       })}
-    </div>
+    </>
   )
 }
 
 export default CreatePageSection
+
+
