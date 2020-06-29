@@ -65,6 +65,7 @@ const MovieList = () => {
           onClicked={handleButtonClicked}
           activeButton={activeButton}
           type = {"Movies"}
+          bgColor={"bg-teal-100"}
         />
    <div
         className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"

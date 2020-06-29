@@ -61,8 +61,7 @@ const BookList = () => {
 
   let books = createCards(newPages)
 
- console.log("BOOK $$$$$%%%%%%%%% ", labels)
- console.log("BOOK $$$$$%%%%%%%%% State ", state)
+
 
   return (
     <>
@@ -71,6 +70,7 @@ const BookList = () => {
         onClicked={handleButtonClicked}
         activeButton={activeButton}
         type={"Books"}
+        bgColor={"bg-indigo-100"}
       />
 
       <div
