@@ -10,6 +10,7 @@ import Card from "../Card"
             name={node.data.Name}
             bookImage={node.data.Attachments[0].thumbnails.full.url}
             genre={node.data.Genre}
+            featured={node.data.Featured}
             author={node.data.Author}
             rating={node.data.Rating}
             description={node.data.Description}

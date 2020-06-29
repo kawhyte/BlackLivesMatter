@@ -1,11 +1,8 @@
 import React, { useState } from "react"
-import Labels from "../Labels"
 import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
 import { createCards } from "../common/createCards"
-import { filterByTags } from "../common/filterByTags"
 import "../css/global.css"
-import CreatePageSection from "../HomePageComponents/CreatePageSection"
 
 function StartHere() {
   const data = useStaticQuery(graphql`
@@ -53,8 +50,6 @@ function StartHere() {
     pageSize: 100,
   })
 
-  //   const handleButtonClicked = filterByTags(data, setActiveButton, setState)
-
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
   let books = createCards(newPages)
@@ -66,19 +61,12 @@ function StartHere() {
   return (
     <>
       <div className=" mx-auto container flex justify-center flex-col">
-        {/* <Labels
-        labels={labels}
-        onClicked={handleButtonClicked}
-        activeButton={activeButton}
-      /> */}
-
         <div className="pl-6 pr-6 pt-6">
           <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
             New to Race Relations in America?
           </h3>
-          {/* <h3 className="text-3xl text-indigo-800 font-bold leading-none mb-3">Start here</h3> */}
           <h1 className="text-xl text-indigo-600 mb-5 mt-4">
-            We've hand-picked these media to get you started: 
+            We've hand-picked these media to get you started:
           </h1>
         </div>
 
@@ -86,8 +74,6 @@ function StartHere() {
           {itemsToRender}
         </div>
       </div>
-
-      {/* <CreatePageSection business={books} /> */}
     </>
   )
 }
