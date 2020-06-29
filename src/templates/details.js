@@ -32,7 +32,7 @@ const Details = ({ data }) => {
               />
             </div>
 
-            <div className="w-full sm:w-3/5  ml-2">
+            <div className="w-full sm:w-3/5 ml-2">
               <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase text-left">
                 {item.Author}
               </h2>
