@@ -61,7 +61,7 @@ function FeaturedItems() {
   return (
     <>
       {/* <div className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 bg-red-100 "> */}
-        <CreatePageSection business={itemsToRender} renderDetails={true} />
+        <CreatePageSection business={itemsToRender} renderDetails={true} showlinks={true}/>
       {/* </div> */}
     </>
   )

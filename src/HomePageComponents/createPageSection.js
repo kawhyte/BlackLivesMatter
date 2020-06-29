@@ -4,7 +4,7 @@ let itemToRender = ""
 let bgColor = ""
 let categoriesToRender = []
 
-function CreatePageSection({ business, renderDetails }) {
+function CreatePageSection({ business, renderDetails, showlinks }) {
 
   //get categories
   business.map((label, i) => {
@@ -46,7 +46,7 @@ function CreatePageSection({ business, renderDetails }) {
               }
             >
               <p className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
-              <p className="text-sm pt-4">
+              {showlinks ? (<p className="text-sm pt-4">
                 <Link
                   key={business.id}
                   className="text-blue-500"
@@ -54,7 +54,10 @@ function CreatePageSection({ business, renderDetails }) {
                 >
                   Explore All {item}s
                 </Link>
-              </p>
+              </p>) : "" }
+                
+              
+             
             </div>
             <div key= {itemToRender.recordId}
               className={

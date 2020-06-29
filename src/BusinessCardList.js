@@ -96,7 +96,7 @@ const BusinessCardList = () => {
         />
          <Categories />
       {/* </div> */}
-      <CreatePageSection business={business} renderDetails ={true} />
+      <CreatePageSection business={business} renderDetails ={true} showlinks={false} />
     </>
   )
 }
