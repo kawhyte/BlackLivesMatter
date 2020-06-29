@@ -45,6 +45,7 @@ function CreatePageSection({ business, renderDetails }) {
                     bgColor
                   }
                 >
+                  
                   <p className={"font-bold pb-8 pt-4"}>Featured {item}s</p>
                   <p className="text-sm pt-4">
                     <Link className="text-blue-500" to={`/${links}s`}>
