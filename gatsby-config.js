@@ -15,10 +15,15 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        offset: -100
-      }
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-7700317-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+      },
     },
     {
       resolve: `gatsby-source-airtable`,

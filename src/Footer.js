@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -34,7 +35,8 @@ const Footer = () => {
                 {/* <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
                 NMAAHC
                 </a> */}
-                <a
+
+                <OutboundLink 
                   href="https://www.kennywhyte.com/"
                   className="px-4 text-sm text-indigo-300 hover:text-indigo-500"
                 >
@@ -43,7 +45,7 @@ const Footer = () => {
                     🍕
                   </span>
                   by {data.site.siteMetadata.author}
-                </a>
+                </OutboundLink >
               </div>
             </div>
           </div>
