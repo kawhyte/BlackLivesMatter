@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { StaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, keywords, description, image, article, author, url }) => {
+const SEO = ({ title, keywords, description, image, article, author, url, lang }) => {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -16,6 +16,7 @@ const SEO = ({ title, keywords, description, image, article, author, url }) => {
         const metaUrl = url || data.site.siteMetadata.url
         const metaImage = image || data.site.siteMetadata.image
         const metaKeywords = keywords || data.site.siteMetadata.keywords 
+        const metaLang = lang || data.site.siteMetadata.lang 
 
         return (
           <Helmet
@@ -32,6 +33,10 @@ const SEO = ({ title, keywords, description, image, article, author, url }) => {
               {
                 property: `og:description`,
                 content: metaDescription,
+              },
+              {
+                property: `og:lang`,
+                content: metaLang,
               },
               {
                 property: `og:type`,

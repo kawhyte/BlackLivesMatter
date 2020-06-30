@@ -8,7 +8,7 @@ function business() {
   return (
     <div>
       <NavBar />
-      <SEO />
+      <SEO title="Racial Inequality in America | Black-owned Businessess"/>
       <BusinessCardList />
       <Footer />
     </div>

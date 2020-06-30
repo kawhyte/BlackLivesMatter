@@ -2,14 +2,15 @@ require('dotenv').config()
 
 module.exports = {
  siteMetadata: {
-    title: "Equality",
+    title: "Racial Inequality",
     author: "Kenny",
     titleTemplate: "%s · The Real Hero",
     description:"Exploring Race & Racism. A repository of books, podcasts & movies to learn about Race Relations in America.",
     url: "https://equality.netlify.app", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    image: "/src/img/movie.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@IAmKennyWhyte",
     year:"2020",
+    lang: `en`,
     keywords:["BLM","Racism in America","Racism","Black Lives Matter", "Systemic racism", "Antiracist", "Antiracism"]
   },
   plugins: [

@@ -9,7 +9,7 @@ const books = () => {
   return (
     <div>
       <NavBar />
-      <SEO />
+      <SEO title="Racial Inequality in America | Podcast"/>
       <PodcastList />
       <Footer />
     </div>

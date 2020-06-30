@@ -10,8 +10,8 @@ function Hero() {
     </header>
     <div className="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
         <div className="sm:w-2/5 flex flex-col items-start mt-8 sm:mt-0">
-            <h1 className="text-4xl lg:text-6xl leading-none mb-4 knockout"><strong className="font-black">Exploring Race & Racism </strong></h1>
-            <p className="lg:text-lg mb-4 sm:mb-12">A repository of books, podcasts & movies to learn about Racial Equality in America</p>
+            <h1 className="text-4xl lg:text-6xl leading-none mb-4 knockout stroke"><strong className="font-black">Exploring Race & Racism in America </strong></h1>
+            <p className="lg:text-lg mb-4 sm:mb-12">A repository of books, podcasts & movies to learn about Racial Inequality in America</p>
     
         </div>
         <div className=" w-full sm:w-3/5  ml-2">
