@@ -4,6 +4,7 @@ import NavBar from "../NavBar"
 import Footer from "../Footer"
 import { graphql } from "gatsby"
 import SEO from "../seo"
+import arrow  from "../img/icons8-back-small.png"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
@@ -25,9 +26,11 @@ const Details = ({ data }) => {
       {/* <Hero /> */}
       <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-center">
         <div className="px-5 py-24 justify-center  ">
-          <div className="text-left mb-6 ">
+          <div className="text-left mb-6 flex">
+          <Link to="/"> <img src ={arrow} width="20" height="1"  alt="arrow"/> </Link>
             <Link to="/">
-              <span className=" mr-3">ᗉ</span>Home
+              <span className=" mr-3 pl-1">Home</span>
+
             </Link>
           </div>
           <div className="container px-12  justify-center sm:px-12 flex flex-col sm:flex-row">
