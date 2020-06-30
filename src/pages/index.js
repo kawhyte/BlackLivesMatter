@@ -11,7 +11,7 @@ const index = () => {
   return (
     <div>
       <NavBar />
-      <SEO /> 
+      <SEO  title="Home | Racial Equality"/> 
       <Hero />
       <Categories />
       <NewUsers />
