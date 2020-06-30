@@ -8,7 +8,7 @@ function Categories() {
   return (
     <div className="sm:hidden inline-block justify-center mx-auto px-6  sm:px-12  sm:flex-row items-center mb-8 ">
       <div className="mt-2 text-xl flex justify-center font-bold pt-2 sm:px-12 items-center">
-        Categories
+      Browse Categories
       </div>
 
       <div className="flex flex-wrap justify-center">

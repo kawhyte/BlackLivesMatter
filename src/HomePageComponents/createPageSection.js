@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+
+import arrow  from "../img/icons8-forward-small.png"
 let itemToRender = ""
 let bgColor = ""
 let categoriesToRender = []
@@ -41,20 +43,27 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
             <div
               
               className={
-                "flex container flex-wrap justify-between text-2xl  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
+                "flex container flex-wrap justify-between text-2xl pt-12  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
                 bgColor
               }
             >
-              <p className={"font-bold pb-8 pt-2"}>Featured {item}s</p>
-              {showlinks ? (<p className="text-sm pt-4">
+              <div className="container flex justify-between items-end"> 
+              <p className={"font-medium"}>Featured {item}s</p>
+              {showlinks ? (
+              <div className="flex"> 
+              <p className="text-sm">
                 <Link
                   key={business.id}
-                  className="text-blue-500"
+                  className="text-blue-500 font-medium pr-1"
                   to={`/${links}s`}
                 >
                   Explore All {item}s
                 </Link>
-              </p>) : "" }
+              </p>
+              <img src ={arrow} width="20" height="1"  alt="arrow"/> 
+              </div>
+              ) : "" }
+              </div>
                 
               
              

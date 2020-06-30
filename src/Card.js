@@ -53,18 +53,18 @@ function Card({
         </div>
         <div className=" ">
           <a href={link}>
-            <div className=" truncate-custom text-sm md:text-lg font-medium break-words text-gray-700 text-center  mt-6">
+            <h3 className="uppercase truncate-custom text-sm md:text-md font-medium break-words text-gray-700 text-center  mt-6">
               {name}
-            </div>
+            </h3>
           </a>
           <div className="fade-in h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom break-words  text-left text-sm rounded ">
             {description}
           </div>
 
-          <div className=" truncate-custom text-sm md:text-md text-gray-500 text-center">
+          <div className=" truncate-custom text-sm md:text-md font-light text-gray-700 text-center">
             {author}
           </div>
-          <div className=" truncate-custom text-xs md:text-md text-gray-500 text-center">
+          <div className=" truncate-custom text-xs md:text-md text-gray-700 font-light text-center">
           {published}
           </div>
         </div>
