@@ -11,7 +11,7 @@ const SEO = ({ title, keywords, description, image, article, author, url }) => {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const metaTitle = title || data.site.siteMetadata.title
+        const metaTitle = title  || data.site.siteMetadata.title + "Equality in America"
         const metaAuthor = author || data.site.siteMetadata.author
         const metaUrl = url || data.site.siteMetadata.url
         const metaImage = image || data.site.siteMetadata.image
@@ -27,7 +27,7 @@ const SEO = ({ title, keywords, description, image, article, author, url }) => {
               },
               {
                 property: `og:title`,
-                content: metaTitle,
+                content: metaTitle ,
               },
               {
                 property: `og:description`,
