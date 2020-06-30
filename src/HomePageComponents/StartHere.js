@@ -64,7 +64,7 @@ function StartHere() {
             New to Race Relations in America?
           </h3>
           <h1 className="text-xl text-indigo-600 mb-5 mt-4">
-            We've hand-picked these media to get you started:
+            We've hand-picked the following four items to get you started:
           </h1>
         </div>
 
