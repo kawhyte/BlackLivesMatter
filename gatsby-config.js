@@ -10,7 +10,7 @@ module.exports = {
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@IAmKennyWhyte",
     year:"2020",
-    keywords:["BLM", "Black Lives Matter"]
+    keywords:["BLM","Racism in America","Racism","Black Lives Matter", "Systemic racism", "Antiracist", "Antiracism"]
   },
   plugins: [
     {
