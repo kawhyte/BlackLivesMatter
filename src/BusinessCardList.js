@@ -14,6 +14,7 @@ const BusinessCardList = () => {
         nodes {
           data {
             Genre
+            Excerpt 
             Primary_color
             Color
             Name
@@ -79,6 +80,7 @@ const BusinessCardList = () => {
       description={node.data.Description}
       link={node.data.Link}
       category={node.data.Category}
+      excerpt ={node.data.Excerpt}
       primary_color={node.data.Primary_color}
     />
   ))

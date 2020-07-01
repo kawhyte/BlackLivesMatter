@@ -15,6 +15,7 @@ function BusinessCard({
   date,
   category,
   primary_color,
+  excerpt 
 }) {
   return (
     <>

@@ -20,6 +20,7 @@ const BookList = () => {
           recordId
           data {
             Slug
+            Excerpt 
             Author
             Color
             Date
@@ -62,7 +63,7 @@ const BookList = () => {
 
   let books = createCards(newPages)
 
-
+console.log("@@EX", books)
 
   return (
     <>

@@ -58,8 +58,8 @@ console.log("This is it ", excerpt)
               {name}
             </h3>
           </a>
-          <div className="fade-in h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom break-words  text-left text-sm rounded ">
-            {excerpt}
+          <div className="fade-in truncate-excerpt h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10  text-left text-sm rounded ">
+            {excerpt}...
           </div>
 
           <div className=" truncate-custom text-sm md:text-md font-light text-gray-700 text-center">
