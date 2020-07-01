@@ -12,7 +12,7 @@ const MovieList = () => {
   const data = useStaticQuery(graphql`
     {
       allAirtable(
-        filter: { table: { eq: "Books" }, data: { Category: { eq: "Movie" } } }
+        filter: { table: { eq: "Books" }, data: { Category: { eq: "Video" } } }
         limit: 100
       ) {
         nodes {
@@ -66,7 +66,7 @@ const MovieList = () => {
           labels={labels}
           onClicked={handleButtonClicked}
           activeButton={activeButton}
-          type = {"Movies"}
+          type = {"Videos"}
           bgColor={"bg-teal-100"}
         />
           <Categories />

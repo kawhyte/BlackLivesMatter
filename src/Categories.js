@@ -27,7 +27,7 @@ function Categories() {
             <img className="w-auto mx-auto h-8  " src={movie} alt="movies" />
           </div>
           <h2 className="ml-4 pt-2 text-md font-medium text-gray-700">
-            Movies
+            Videos
           </h2>
         </div>
         </Link>

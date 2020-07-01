@@ -63,7 +63,7 @@ const BookList = () => {
 
   let books = createCards(newPages)
 
-console.log("@@EX", books)
+
 
   return (
     <>
@@ -72,7 +72,7 @@ console.log("@@EX", books)
         onClicked={handleButtonClicked}
         activeButton={activeButton}
         type={"Books"}
-        bgColor={"bg-indigo-100"}
+        bgColor={"bg-red-100"}
       />
       <Categories />
       <div

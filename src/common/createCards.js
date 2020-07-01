@@ -23,7 +23,9 @@ import Card from "../Card"
             image={node.data.Image}
             category={node.data.Category}
             slug={node.data.Slug} 
-            NewUserItem={node.data.NewUserItem} 
+            NewUserItem={node.data.NewUserItem}
+            
+
             />
         ))
       }

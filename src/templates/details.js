@@ -36,7 +36,7 @@ const Details = ({ data }) => {
           <div className="container px-12  justify-center sm:px-12 flex flex-col sm:flex-row">
             <div className="sm:w-3/5 flex items-center justify-center ">
               <img
-                alt="Poster of book or movie"
+                alt="Poster of book or Video"
                 className="mr-10   mb-8  object-right  md:object-right lg:object-bottom xl:object-left rounded border border-gray-200"
                 src={item.Image}
               />

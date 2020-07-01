@@ -3,9 +3,9 @@ import React from 'react'
 function Hero() {
     return (
 
-<main className="bg-white font-montserrat mb-2">
+<main className="bg-white font-montserrat ">
 
-    <header className="h-10 sm:h-20 flex items-center">
+    <header className="h-10 sm:h-12 flex items-center">
      
     </header>
     <div className="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">

@@ -19,15 +19,14 @@ function Card({
   recordId,
   slug,
   excerpt,
-  NewUserItem
+  NewUserItem,
 }) {
-console.log("This is it ", excerpt)
   return (
     <div className="relative hover-trigger mb-6">
       <div className="flex flex-col  ">
         <div className="justify-center align-middle flex ">
-        <Link to={`/${slug}`} > 
-          {/* <a href="" target="_blank" rel="noreferrer"> */}
+          <Link to={`/${slug}`}>
+            {/* <a href="" target="_blank" rel="noreferrer"> */}
             {category === "Book" ? (
               <div className="book m-2">
                 <img
@@ -37,6 +36,18 @@ console.log("This is it ", excerpt)
                     bookImage
                   }
                 />
+                {NewUserItem ? (
+                  <div className="p-1 absolute top-0 left-0 z-20 ml-0">
+                    <span
+                      className={
+                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle " +
+                        color
+                      }
+                    >
+                      {category}
+                    </span>
+                  </div>
+                ) : ("")}
               </div>
             ) : (
               <div className="notbook m-2 ">
@@ -47,9 +58,20 @@ console.log("This is it ", excerpt)
                     bookImage
                   }
                 />
+                {NewUserItem ? (
+                  <div className="p-1 absolute top-0 left-0 z-20 ml-0">
+                    <span
+                      className={
+                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle " +
+                        color
+                      }
+                    >
+                      {category}
+                    </span>
+                  </div>
+                ) : ("")}
               </div>
             )}
-          {/* </a> */}
           </Link>
         </div>
         <div className=" ">
@@ -58,15 +80,18 @@ console.log("This is it ", excerpt)
               {name}
             </h3>
           </a>
-          <div className="fade-in truncate-excerpt h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10  text-left text-sm rounded ">
-            {excerpt}...
-          </div>
+          <Link to={`/${slug}`}>
+            <div className="truncate-excerpt h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10  text-left text-sm rounded ">
+              {excerpt}...
+              <p className="text-blue-700 mt-2">View more {`>>`} </p>
+            </div>
+          </Link>
 
           <div className=" truncate-custom text-sm md:text-md font-light text-gray-700 text-center">
             {author}
           </div>
           <div className=" truncate-custom text-xs md:text-md text-gray-700 font-light text-center">
-          {published}
+            {published}
           </div>
         </div>
       </div>

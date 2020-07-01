@@ -9,7 +9,7 @@ const movies = () => {
   return (
     <div>
       <NavBar />
-      <SEO title="Racial Inequality in America | Movies" />
+      <SEO title="Racial Inequality in America | Videos" />
       <MovieList />
       <Footer />
     </div>
