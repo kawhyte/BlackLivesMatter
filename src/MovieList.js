@@ -19,6 +19,7 @@ const MovieList = () => {
           id
           data {
             Slug
+            Excerpt
             Author
             Color
             Date

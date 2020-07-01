@@ -22,6 +22,7 @@ const PodcastList = () => {
           id
           data {
             Slug
+            Excerpt
             Author
             Color
             Date

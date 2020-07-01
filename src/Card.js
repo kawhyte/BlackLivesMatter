@@ -18,9 +18,10 @@ function Card({
   image,
   recordId,
   slug,
+  excerpt,
   NewUserItem
 }) {
-
+console.log("This is it ", excerpt)
   return (
     <div className="relative hover-trigger mb-6">
       <div className="flex flex-col  ">
@@ -58,7 +59,7 @@ function Card({
             </h3>
           </a>
           <div className="fade-in h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10 truncate-custom break-words  text-left text-sm rounded ">
-            {description}
+            {excerpt}
           </div>
 
           <div className=" truncate-custom text-sm md:text-md font-light text-gray-700 text-center">

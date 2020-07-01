@@ -13,6 +13,7 @@ function FeaturedItems() {
           recordId
           data {
             Slug
+            Excerpt
             Featured
             Author
             Color

@@ -13,6 +13,7 @@ function StartHere() {
           recordId
           data {
             NewUserItem
+            Excerpt
             Slug
             Author
             Color
