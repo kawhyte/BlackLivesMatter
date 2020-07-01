@@ -19,7 +19,7 @@ function BusinessCard({
 }) {
   return (
     <>
-      <div className="relative hover-trigger max-w-sm rounded   mx-4 mb-8 ">
+      <div className="relative hover-trigger max-w-sm rounded   mx-4 mb-8 mt-2 ">
         <a href={link} rel="noreferrer"  target="_blank">
           <img
             className="w-full h-50 object-cover object-center businesscard "
