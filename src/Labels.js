@@ -44,7 +44,7 @@ function Labels(props) {
          <div className=" flex flex-col container pl-4 ">
            
   <h3 className= " pb-5 uppercase container  flex items-end  text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">{type}</h3>
-        <p className="container  pb-10 flex items-end">Filter {type} by keywords</p>
+        <p className="container mb-12 sm:mb-4 lg:mb-2  pb-10 flex items-end">Filter {type} by keywords</p>
     
      
 

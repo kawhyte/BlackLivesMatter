@@ -73,7 +73,7 @@ const PodcastList = () => {
         bgColor={"bg-orange-200"}
       />
 <Categories />
-      <div className="pl-4  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+      <div className="pl-4 mt-16  gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
         {podcasts}
       </div>
     </>
