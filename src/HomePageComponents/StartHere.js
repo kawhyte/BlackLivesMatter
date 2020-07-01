@@ -64,7 +64,7 @@ function StartHere() {
           <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
             New to Race Relations in America?
           </h3>
-          <h1 className="text-xl text-indigo-600 mb-5 mt-4">
+          <h1 className="text-xl text-gray-600 mb-5 mt-4">
             We've hand-picked the following four items to get you started:
           </h1>
         </div>
