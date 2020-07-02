@@ -6,12 +6,13 @@ import { createCards } from "./common/createCards"
 import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
 import Categories from "./Categories"
+import AboutPageCard from "./AboutPageCard"
 
-const BookList = () => {
+const AboutPageList = () => {
   const data = useStaticQuery(graphql`
     {
       allAirtable(
-        filter: { table: { eq: "Books" }, data: { Category: { eq: "Book" } } }
+        filter: { table: { eq: "Person" } }
         limit: 100
       ) {
         nodes {
@@ -19,6 +20,8 @@ const BookList = () => {
           recordId
           data {
             Slug
+            Born
+            Death
             Excerpt 
             Author
             Color
@@ -31,7 +34,7 @@ const BookList = () => {
             Category
             Featured
             Rating
-            Image
+            Img
             Attachments {
               filename
               thumbnails {
@@ -56,31 +59,50 @@ const BookList = () => {
     pageSize: 100,
   })
 
+
+
   const handleButtonClicked = filterByTags(data, setActiveButton, setState)
 
-  const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
+  let person = state.map((node, i) => (
+    <AboutPageCard
+      key={i}
+     
+      name={node.data.Name}
+      image ={node.data.Img}
+      link ={node.data.Link}
+      //image={node.data.Attachments[0].thumbnails.full.url}
+      
+      description={node.data.Description}
+      born={node.data.Born}
+      death={node.data.Death}
 
-  let books = createCards(newPages)
+    />
+  ))
+
+
+//   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
+
+//   let books = createCards(newPages)
 
 
 
   return (
     <>
-      <Labels
+      {/* <Labels
         labels={labels}
         onClicked={handleButtonClicked}
         activeButton={activeButton}
         type={"Books"}
         bgColor={"bg-red-100"}
-      />
-      <Categories />
+      /> */}
+      {/* <Categories /> */}
       <div
-        className="pl-4 mt-16 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+        className="pl-4 mt-8 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
       >
-        {books}
+        {person}
       </div>
     </>
   )
 }
 
-export default BookList
+export default AboutPageList

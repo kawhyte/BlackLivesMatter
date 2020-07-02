@@ -42,7 +42,7 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
                 bgColor
               }
             >
-              <div className="container flex justify-between items-end">
+              <div className="container flex justify-between items-end mb-2">
                 <p className={"font-medium"}>Featured {item}s</p>
                 {showlinks ? (
                   <div className="flex">

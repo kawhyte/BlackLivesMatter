@@ -5,7 +5,6 @@ import { paginate } from "./common/paginate"
 import { createCards } from "./common/createCards"
 import { filterByTags } from "./common/filterByTags"
 import "./css/global.css"
-import CreatePageSection from "./HomePageComponents/CreatePageSection"
 import Categories from "./Categories"
 
 const BookList = () => {

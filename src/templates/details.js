@@ -24,8 +24,8 @@ const Details = ({ data }) => {
       {/* <div>{item.Image}</div> */}
       <NavBar />
       {/* <Hero /> */}
-      <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12 flex-col-reverse sm:flex-row items-center">
-        <div className="px-5 py-24 justify-center  ">
+      <section className="flex  flex-wrap justify-center container mx-auto px-6 sm:px-12  sm:flex-row mt-24 min-h-screen">
+        <div className="px-5 py-2 justify-center  ">
           <div className="text-left mb-6 flex">
           <Link to="/"> <img src ={arrow} width="20" height="1"  alt="arrow"/> </Link>
             <Link to="/">

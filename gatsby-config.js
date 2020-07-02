@@ -48,6 +48,14 @@ module.exports = {
 
           //   tableView: `YOUR_TABLE_VIEW_NAME` // optional
           //   // can leave off queryName, mapping or tableLinks if not needed
+          },
+          {
+             baseId: process.env.AIRTABLE_BASEID,
+             tableName: `Person`,
+             // tableLinks: [`CASE`, `SENSITIVE`, `COLUMN`, `NAMES`], // optional, for deep linking to records across tables.
+
+          //   tableView: `YOUR_TABLE_VIEW_NAME` // optional
+          //   // can leave off queryName, mapping or tableLinks if not needed
           }
         ]
       }
