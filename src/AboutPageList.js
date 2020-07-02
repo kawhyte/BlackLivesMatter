@@ -96,7 +96,7 @@ const AboutPageList = () => {
       /> */}
       {/* <Categories /> */}
       <div
-        className="pl-4 mt-8 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4"
+        className="p-3 mt-8 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4"
       >
         {person}
       </div>

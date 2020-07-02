@@ -20,9 +20,7 @@ function Labels(props) {
       []
     )
 
-  // console.log("Labels", labels)
-  // console.log("LLAbles", labels[0].data.Category)
-
+ 
   return (
     <section
       className={

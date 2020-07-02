@@ -41,15 +41,15 @@ const Header = () => {
               className={
                 "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
-              to="/"
+              to="/know-their-names"
             >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500  ">
-                Home
+              <button className=" pt-1 text-sm font-medium text-gray-700 hover:text-gray-500  ">
+              Know Their Names
               </button>
             </Link>
             <Link
               className={
-                "hidden sm:inline-block ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "hidden md:inline-block ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/books"
             >
@@ -60,7 +60,7 @@ const Header = () => {
 
             <Link
               className={
-                "hidden sm:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/videos"
             >
@@ -71,7 +71,7 @@ const Header = () => {
 
             <Link
               className={
-                "hidden sm:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/podcasts"
             >
@@ -82,7 +82,7 @@ const Header = () => {
 
             <Link
               className={
-                "hidden sm:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
               to="/business"
             >
