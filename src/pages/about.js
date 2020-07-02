@@ -52,6 +52,7 @@ function about() {
     </main>
     <h1 className="mt-12 text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">Know their names</h1>
     <h3 className="mt-4 text-md tracking-tight leading-10 font-normal text-gray-900 sm:text-md sm:leading-none md:text-xl">A non-comprehensive list of black people that have died as a result of police brutality and/or racsim.</h3>
+    <h3 className="mt-4 text-xs  ">* This list highlights a few of the Black people killed. There are many, many more.</h3>
     {/* <AboutPageList /> */}
 
   </div>
