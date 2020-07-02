@@ -41,7 +41,7 @@ function about() {
         The rate at which black Americans are killed by police is more than twice as high as the rate for white Americans.
 <span className="pr-2"> ~ LA Johnson/NPR </span>
         </div>
-        <p class="pb-6 text-left break-words"> The racial inequality website was made not only highlight police brutality and racsim in Amaerica, 
+        <p class="pb-6 text-left break-words"> The racial inequality website was made not only highlight police brutality and racism in Amaerica, 
         but also a way forward to a better tomorrow. To create a nation where we can all say that 
 
         <span className="italic text-gray-600" > "We hold these truths to be self-evident, that all men are created equal, 
