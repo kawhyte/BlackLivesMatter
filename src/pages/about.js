@@ -5,14 +5,6 @@ import AboutPageCard from '../AboutPageCard'
 import AboutPageList from '../AboutPageList'
 
 function about() {
-
-
-
-
-
-
-
-
   
     return (
 <div>
@@ -59,7 +51,7 @@ function about() {
       </div>
     </main>
     <h1 className="mt-12 text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">Know their names</h1>
-    <h1 className="mt-4 text-md tracking-tight leading-10 font-normal text-gray-900 sm:text-md sm:leading-none md:text-xl">List of black people that have died as a result of police brutality and/or racsim.</h1>
+    <h3 className="mt-4 text-md tracking-tight leading-10 font-normal text-gray-900 sm:text-md sm:leading-none md:text-xl">A non-comprehensive list of black people that have died as a result of police brutality and/or racsim.</h3>
     {/* <AboutPageList /> */}
 
   </div>
