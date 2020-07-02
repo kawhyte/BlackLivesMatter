@@ -40,8 +40,8 @@ function Card({
                   <div className="p-1 absolute top-0 left-0 z-20 ml-0">
                     <span
                       className={
-                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle " +
-                        color
+                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle bg-teal-100 " 
+                        
                       }
                     >
                       {category}
@@ -62,8 +62,7 @@ function Card({
                   <div className="p-1 absolute top-0 left-0 z-20 ml-0">
                     <span
                       className={
-                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle " +
-                        color
+                        "text-sm font-medium py-1 px-2 rounded text-gray-800 align-middle bg-teal-100"
                       }
                     >
                       {category}
