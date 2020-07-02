@@ -43,8 +43,8 @@ const Header = () => {
               }
               to="/know-their-names"
             >
-              <button className=" pt-1 text-sm font-medium text-gray-700 hover:text-gray-500  ">
-              Know Their Names
+              <button className=" pt-1 text-xs   sm:text-sm      bg-transparent hover:bg-gray-900 text-black font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded  ">
+              Know their names
               </button>
             </Link>
             <Link
@@ -97,7 +97,7 @@ const Header = () => {
               }
               to="/about"
             >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500">
+              <button className="pt-1  text-sm font-medium text-gray-700 hover:text-gray-500">
                 About
               </button>
             </Link> 
