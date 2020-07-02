@@ -4,9 +4,6 @@ import noImage from "./img/noPhotoFound.jpg"
 
 function AboutPageCard({ name, born, death, image, link }) {
 
-  console.log("@@@@", image)
-
-  // image === null ? noImage : image
   return (
     // <div class="bg-white overflow-hidden ">
     //   <div className="text-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
@@ -39,12 +36,12 @@ function AboutPageCard({ name, born, death, image, link }) {
       alt={name}
     />
     <div class="p-4 absolute bottom-0 inset-x-0 z-20">
-      <h2 class="text-lg font-semibold text-gray-400 leading-tight">
-     {name}
-           <p class="text-xs text-gray-100">
+      <h2 class="text-lg font-semibold text-white leading-tight bg-black opacity-50">
+     {name} </h2>
+           <p class="text-xs text-white bg-black opacity-50">
              {born} - {death}
            </p>
-      </h2>
+      
     </div></a>
   </div>
 

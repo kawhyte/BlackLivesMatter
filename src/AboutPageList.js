@@ -12,8 +12,7 @@ const AboutPageList = () => {
   const data = useStaticQuery(graphql`
     {
       allAirtable(
-        filter: { table: { eq: "Person" } }
-        limit: 100
+        filter: {table: {eq: "Person"}}, sort: {order: DESC, fields: data___Death}
       ) {
         nodes {
           id
