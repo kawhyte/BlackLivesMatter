@@ -6,7 +6,7 @@ import business from "./img/small-business.png"
 import { Link } from "gatsby"
 function Categories() {
   return (
-    <div className="sm:hidden inline-block justify-center mx-auto px-6  sm:px-12  sm:flex-row items-center mb-8 ">
+    <div className="sm:hidden inline-block justify-center mx-auto px-6  sm:px-12  sm:flex-row items-center mb-1 ">
       <div className="mt-2 text-xl flex justify-center font-bold pt-2 sm:px-12 items-center">
       Browse Categories
       </div>
