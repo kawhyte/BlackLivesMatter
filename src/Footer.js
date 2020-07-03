@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery,Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Footer = () => {
@@ -30,12 +30,12 @@ const Footer = () => {
               <p href="/" className="text-sm text-gray-500 font-bold pb-4 uppercase">
                 {data.site.siteMetadata.title}
               </p>
-              <a href="" class="text-left text-gray-400 text-sm py-1">Know their names</a>
-              <a href="" class="text-left text-gray-400 text-sm py-1">Books</a>
-              <a href="" class="text-left text-gray-400 text-sm py-1">Video</a>
-              <a href="" class="text-left text-gray-400 text-sm py-1">Podcast</a>
-              <a href="" class="text-left text-gray-400 text-sm py-1">Businesses</a>
-              <a href="" class="text-left text-gray-400 text-sm py-1">About</a>
+              <Link to="/know-their-names" class="text-left text-gray-400 text-sm py-1">Know their names</Link>
+              <Link to="/books" class="text-left text-gray-400 text-sm py-1">Books</Link>
+              <Link to="/videos"  class="text-left text-gray-400 text-sm py-1">Video</Link>
+              <Link to="/podcasts"  class="text-left text-gray-400 text-sm py-1">Podcast</Link>
+              <Link to="/business"  class="text-left text-gray-400 text-sm py-1">Businesses</Link>
+              <Link to="/about"  class="text-left text-gray-400 text-sm py-1">About</Link>
 
             </div>
 
