@@ -6,7 +6,7 @@ import Footer from "../Footer"
 import Categories from "../Categories"
 import FeaturedItems from "../HomePageComponents/FeaturedItems"
 import NewUsers from "../NewUsers"
-import SEO from "../seo"
+import SEO from "../Seo"
 const index = () => {
   return (
     <div>

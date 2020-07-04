@@ -1,9 +1,9 @@
 import React from "react"
 import "../css/global.css"
-import CardList from "../bookList"
+import CardList from "../BookList"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
-import SEO from "../seo"
+import SEO from "../Seo"
 
 const books = () => {
   return (

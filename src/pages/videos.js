@@ -3,7 +3,7 @@ import "../css/global.css"
 import MovieList from "../MovieList"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
-import SEO from "../seo"
+import SEO from "../Seo"
 
 const movies = () => {
   return (
