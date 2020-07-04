@@ -40,39 +40,12 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col  md:ml-10">
-              <p href="/" className="text-sm font-bold text-gray-500 pb-4 uppercase text-left">
-                Resources
+              <p href="/" className="text-sm font-bold text-gray-500 pb-4 uppercase text-left mt-4 sm:mt-0">
+               Learn More
               </p>
               <a href="https://nmaahc.si.edu/" className="text-sm text-gray-400 text-left py-1">
                 National Museum of African American History & Culture
                 </a> 
-           
-
-
-<div className="text-sm text-left py-1 text-gray-400">  
-              <span className="pr-2">Illustrations by</span>
-            <a
-              className=" hover:text-indigo-500"
-              href="https://freepik.com/"
-            >
-              freepik
-            </a>
-            <span className="hover:text-indigo-500">,</span>
-            <a
-              className="pl-1  hover:text-indigo-500"
-              href="https://icons8.com/"
-            >
-              icons8
-            </a>
-            <span className="">,</span>
-            <a
-              className="pl-1 pr-1 hover:text-indigo-500"
-              href="https://codepen.io/rafaelrinaldi/"
-            >
-              rafaelrinaldi
-            </a>
-            </div>
-
 
             </div>
 
@@ -101,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" mt-4 flex justify-center mr-4 text-white text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+          <div className=" mt-4 flex flex-col justify-center mr-4 text-white text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
 
 
 
@@ -115,6 +88,30 @@ const Footer = () => {
                   </span>
                   by {data.site.siteMetadata.author}
                 </OutboundLink >
+
+                <div className="text-sm py-1 text-gray-400">  
+              <span className="pr-2">Illustrations by</span>
+            <a
+              className=" hover:text-indigo-500"
+              href="https://freepik.com/"
+            >
+              freepik
+            </a>
+            <span className="hover:text-indigo-500">,</span>
+            <a
+              className="pl-1  hover:text-indigo-500"
+              href="https://icons8.com/"
+            >
+              icons8
+            </a>
+            <span className="">,</span>
+            <a
+              className="pl-1 pr-1 hover:text-indigo-500"
+              href="https://codepen.io/rafaelrinaldi/"
+            >
+              rafaelrinaldi
+            </a>
+            </div>
 
 
           </div>
