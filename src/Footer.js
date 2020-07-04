@@ -43,7 +43,7 @@ const Footer = () => {
               <p href="/" className="text-sm font-bold text-gray-500 pb-4 uppercase text-left">
                 Resources
               </p>
-              <a href="https://nmaahc.si.edu/" class="text-sm text-gray-400 text-left py-1">
+              <a href="https://nmaahc.si.edu/" className="text-sm text-gray-400 text-left py-1">
                 National Museum of African American History & Culture
                 </a> 
            
