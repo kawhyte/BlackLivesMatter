@@ -26,16 +26,16 @@ const Footer = () => {
       <footer className="flex justify-center px-4 mt-12 bg-gray-800 text-gray-100">
         <div className="container py-6">
           <div className="flex flex-col items-start  mt-6 md:flex-row">
-            <div className="flex flex-col mr-8 mb-2">
-              <p href="/" className="text-sm text-gray-500 font-bold pb-4 uppercase">
+            <div className="flex flex-col items-start  justify-start mr-8 mb-2">
+              <p href="/" className="text-left text-sm text-gray-500 font-bold pb-4 uppercase">
                 {data.site.siteMetadata.title}
               </p>
-              <Link to="/know-their-names" class="text-left text-gray-400 text-sm py-1">Know their names</Link>
-              <Link to="/books" class="text-left text-gray-400 text-sm py-1">Books</Link>
-              <Link to="/videos"  class="text-left text-gray-400 text-sm py-1">Video</Link>
-              <Link to="/podcasts"  class="text-left text-gray-400 text-sm py-1">Podcast</Link>
-              <Link to="/business"  class="text-left text-gray-400 text-sm py-1">Businesses</Link>
-              <Link to="/about"  class="text-left text-gray-400 text-sm py-1">About</Link>
+              <Link to="/know-their-names" className="text-left text-gray-400 text-sm py-1">Know their names</Link>
+              <Link to="/books" className="text-left text-gray-400 text-sm py-1">Books</Link>
+              <Link to="/videos"  className="text-left text-gray-400 text-sm py-1">Videos</Link>
+              <Link to="/podcasts"  className="text-left text-gray-400 text-sm py-1">Podcast</Link>
+              <Link to="/business"  className="text-left text-gray-400 text-sm py-1">Businesses</Link>
+              <Link to="/about"  className="text-left text-gray-400 text-sm py-1">About</Link>
 
             </div>
 
