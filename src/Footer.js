@@ -46,6 +46,15 @@ const Footer = () => {
               <a href="https://nmaahc.si.edu/" className="text-sm text-gray-400 text-left py-1">
                 National Museum of African American History & Culture
                 </a> 
+              <a href="https://apedf.org/" className="text-sm text-gray-400 text-left py-1">
+                 African People’s Education and Defense Fund
+                </a> 
+              <a href="https://blacklivesmatter.com/" className="text-sm text-gray-400 text-left py-1">
+                BlackLivesMatter movement
+                </a> 
+              <a href="https://www.civilrightsmuseum.org/" className="text-sm text-gray-400 text-left py-1">
+                Association of African American Museums 
+                </a> 
 
             </div>
 
