@@ -14,6 +14,5 @@ function NewUsers() {
     </div>
   )
 }
-
 export default NewUsers
 
