@@ -35,7 +35,7 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
     if (item !== null) {
       if (itemToRender.length > 0 && renderDetails) {
         return (
-          <div key={itemToRender.recordId}>
+          <div key={i}>
             <div
               className={
                 "flex container flex-wrap justify-between text-2xl pt-12  mx-auto px-6 sm:px-12  flex-col-reverse sm:flex-row " +
@@ -45,23 +45,20 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
               <div className="container flex justify-between items-end mb-2">
                 <p className={"font-medium"}>Featured {item}s</p>
                 {showlinks ? (
-                  <div className="flex">
-                    <p className="text-sm">
+                  <div  className="flex">
                       <Link
-                        key={business.id}
-                        className="text-blue-500 font-medium pr-1"
                         to={`/${links}s`}
                       >
+                    <p className="text-sm text-blue-600 pb-1">
                         Explore All {item}s
-                      </Link>
                     </p>
-                    <Link
-                      key={business.id}
-                      className="text-blue-500 font-medium pr-1"
-                      to={`/${links}s`}
-                    >
+                  
+                      </Link>
+                      <Link
+                        to={`/${links}s`}
+                      >
                       <img src={arrow} width="20" height="1" alt="arrow" />
-                    </Link>
+                      </Link>
                   </div>
                 ) : (
                   ""
