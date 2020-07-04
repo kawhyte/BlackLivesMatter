@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
 import { graphql } from "gatsby"
-import SEO from "../seo"
+import SEO from "../Seo"
 import arrow  from "../img/icons8-back-small.png"
 
 const Details = ({ data }) => {
