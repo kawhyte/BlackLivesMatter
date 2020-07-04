@@ -87,6 +87,7 @@ const SEO = ({ title, keywords, description, image, article, author, url, lang }
 
 export default SEO
 
+
 // const SEO = ({ title, description, image, article }) => {
 //   const { pathname } = useLocation()
 //   const { site } = useStaticQuery(query)
