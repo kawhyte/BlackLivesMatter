@@ -136,16 +136,16 @@ const Details = ({ data }) => {
            
 
          <div class="flex items-center justify-start mt-8 top-auto">
-        {/* {  
-        item.Amazon !==null ?
+        {  
+        item.Indie ?
 
          <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
-             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Small Shop
+             <img src={other} class="fill-current w-6 h-6 mr-2" alt="icon"/> Indie Shop
            </button> </a>
         :""
        
-        }  */}
-        {  
+        } 
+        {/* {  
         item.Amazon  ?
 
          <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
@@ -153,19 +153,20 @@ const Details = ({ data }) => {
            </button> </a>
         :""
        
-        } 
+        }  */}
 
         {  
-        item.Amazon  ?
+        item.Youtube  ?
 
          <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={youtube} class="fill-current w-6 h-6 mr-2" alt="icon"/> YouTube
            </button> </a>
+           
         :""
        
         } 
         {  
-        item.Amazon !==null ?
+        item.Spotify ?
 
          <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={spotify} class="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
@@ -174,7 +175,7 @@ const Details = ({ data }) => {
        
         } 
         {  
-        item.Amazon !==null ?
+        item.Netflix  ?
 
          <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={netflix} class="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
@@ -183,10 +184,10 @@ const Details = ({ data }) => {
        
         } 
         {  
-        item.Amazon !==null ?
+        item.Other  ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
-             <img src={other} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
+         <a href={item.Other}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
            </button> </a>
         :""
        
