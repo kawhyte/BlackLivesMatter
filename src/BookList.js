@@ -50,6 +50,7 @@ const BookList = () => {
   const [labels] = useState(data.allAirtable.nodes)
   const [activeButton, setActiveButton] = useState("VIEW ALL")
 
+
   const [pageState] = useState({
     bills: data.allAirtable.nodes,
     currentPage: 1,

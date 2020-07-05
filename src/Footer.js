@@ -55,31 +55,6 @@ const Footer = () => {
               <a href="https://www.civilrightsmuseum.org/" className="text-sm text-gray-400 text-left py-1">
                 Association of African American Museums 
                 </a> 
-
-            </div>
-
-         
-
-            {/* <OutboundLink 
-                  href="https://www.kennywhyte.com/"
-                  className="px-4 text-sm text-indigo-300 hover:text-indigo-500"
-                >
-                  Made with
-                  <span className="pr-2 pl-2" role="img" aria-labelledby="">
-                    🍕
-                  </span>
-                  by {data.site.siteMetadata.author}
-                </OutboundLink > */}
-
-
-            <div className="flex mt-4 md:m-0">
-              <div className="-mx-4">
-                {/* <a href="https://nmaahc.si.edu/" class="px-4 text-sm hover:text-indigo-500">
-                NMAAHC
-                </a> */}
-
-            
-              </div>
             </div>
           </div>
 
