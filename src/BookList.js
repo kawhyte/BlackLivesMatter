@@ -20,6 +20,7 @@ const BookList = () => {
           data {
             Amazon
             Google
+            Libby
             Spotify
             Youtube
             BlackOwned

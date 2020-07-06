@@ -80,7 +80,7 @@ const Details = ({ data }) => {
             </Link>
           </div>
           <div className="container px-12  justify-center sm:px-12 flex flex-col lg:flex-row ">
-            <div className="lg:w-2/5 flex items-start justify-start bg-gray-400">
+            <div className="lg:w-2/5 flex items-start justify-start">
               <img
                 alt="Poster of book or Video"
                 className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded border border-gray-200"
@@ -142,7 +142,7 @@ const Details = ({ data }) => {
         item.BlackOwned !== null ?
 
          <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Local shop*
+             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Small Business *
            </button> </a>
         :""
        
@@ -206,7 +206,7 @@ const Details = ({ data }) => {
 
       </div>
       <div className="text-left italic text-gray-600 text-xs mt-4">
-      {item.BlackOwned !== null ? <p className ="mb-2">*Buy items from Black-Owned stores</p>: ""}
+      {item.BlackOwned !== null ? <p className ="mb-2">*Buy item from Black-Owned/Small businesses</p>: ""}
         {item.Libby !== null ?  <p>**Borrow and read ebooks and audiobooks from your local public library for FREE!</p>: ""}
       </div>
               </div>
@@ -243,6 +243,7 @@ export const query = graphql`
         recordId
         data {
           Amazon
+          Libby
           Google
           Spotify
           Youtube
