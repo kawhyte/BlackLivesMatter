@@ -5,12 +5,12 @@ import Footer from "../Footer"
 import { graphql } from "gatsby"
 import SEO from "../Seo"
 import arrow  from "../img/icons8-back-small.png"
-import amazon  from "../img/icons/icons8-amazon-100.png"
-import youtube  from "../img/icons/icons8-play-button-100.png"
+import amazon  from "../img/icons/icons8-amazon.svg"
+import youtube  from "../img/icons/icons8-play-button.svg"
 import netflix  from "../img/icons/icons8-netflix-100-2.png"
 import spotify  from "../img/icons/icons8-spotify-100.png"
 import indie  from "../img/icons/icons8-for-you-100.png"
-import google  from "../img/icons/icons8-google-100.png"
+import google  from "../img/icons/icons8-google.svg"
 import libby  from "../img//icons/libby.png"
 
 const Details = ({ data }) => {
@@ -80,11 +80,12 @@ const Details = ({ data }) => {
             </Link>
           </div>
           <div className="container px-12  justify-center sm:px-12 flex flex-col lg:flex-row ">
-            <div className="lg:w-2/5 flex items-start justify-start">
+            <div className="lg:w-2/5 flex items-start justify-start bg-gray-400">
               <img
                 alt="Poster of book or Video"
-                className="mr-10   mb-8  object-right  md:object-right lg:object-bottom xl:object-left rounded border border-gray-200"
+                className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded border border-gray-200"
                 src={item.Image}
+                height={20}
               />
             </div>
 
