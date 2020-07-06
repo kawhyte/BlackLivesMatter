@@ -4,14 +4,17 @@ import NavBar from "../NavBar"
 import Footer from "../Footer"
 import { graphql } from "gatsby"
 import SEO from "../Seo"
-import arrow  from "../img/icons8-back-small.png"
-import amazon  from "../img/icons/icons8-amazon.svg"
-import youtube  from "../img/icons/icons8-play-button.svg"
-import netflix  from "../img/icons/icons8-netflix-100-2.png"
-import spotify  from "../img/icons/icons8-spotify-100.png"
-import indie  from "../img/icons/icons8-for-you-100.png"
-import google  from "../img/icons/icons8-google.svg"
-import libby  from "../img//icons/libby.png"
+import arrow from "../img/icons8-back-small.png"
+import amazon from "../img/icons/icons8-amazon.svg"
+import youtube from "../img/icons/icons8-play-button.svg"
+import netflix from "../img/icons/icons8-netflix-100-2.png"
+import spotify from "../img/icons/icons8-spotify-100.png"
+import indie from "../img/icons/icons8-for-you-100.png"
+import googleBook from "../img/icons/icons8-google-books.svg"
+import googleVideo from "../img/icons/icons8-google-play-movies-and-tv.svg"
+import libby from "../img//icons/icons8-library-64.png"
+import apple from "../img//icons/icons8-apple-podcasts-40.png"
+import mainSite from "../img/icons/icons8-website-64.png"
 import Recommendation from "../common/recommendations"
 // import whereToGetItem from "../common/whereToGetItem"
 
@@ -20,16 +23,13 @@ const Details = ({ data }) => {
 
   let ratingNumber = item.Rating
 
-
   return (
     <>
-    <SEO 
-    title = {item.Name}
-    image = {item.Image}
-    description = {item.Description}
-    
-    />
-
+      <SEO
+        title={item.Name}
+        image={item.Image}
+        description={item.Description}
+      />
 
       {/* <div>{item.Name}</div>
     <div>{item.image}</div> */}
@@ -39,7 +39,10 @@ const Details = ({ data }) => {
       <section className="flex flex-wrap mt-24 justify-center container mx-auto px-2 sm:px-2  sm:flex-row  min-h-screen">
         <div className="px-1 py-2 justify-start ">
           <div className="text-left mb-12 flex justify-start">
-          <Link to="/"> <img src ={arrow} width="20" height="1"  alt="arrow"/> </Link>
+            <Link to="/">
+              {" "}
+              <img src={arrow} width="20" height="1" alt="arrow" />{" "}
+            </Link>
             <Link to="/">
               <span className=" mr-3 pl-1">Home</span>
             </Link>
@@ -49,8 +52,10 @@ const Details = ({ data }) => {
               <img
                 alt="Poster of Book or Video"
                 className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded "
-                src={"https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
-                item.Image}
+                src={
+                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
+                  item.Image
+                }
                 height={20}
               />
             </div>
@@ -98,92 +103,211 @@ const Details = ({ data }) => {
                   <span className=" ml-3 mr-3 text-sm">{item.Rating}</span>
                 </span>
               </div>
-    
- 
-                <p className="text-md text-left mt-12 ">Where to find <span className="font-semibold italic"> {item.Name}:</span> </p>
-           
 
-         <div className="flex flex-wrap items-center justify-start  top-auto  pt-8  pb-4">
+              <p className="text-md text-left mt-12 ">
+                Where to find{" "}
+                <span className="font-semibold italic"> {item.Name}:</span>{" "}
+              </p>
+
+              <div className="flex flex-wrap items-center justify-start  top-auto  pt-8  pb-4">
 
 
-{/* <whereToGetItem items={item}></whereToGetItem> */}
+                {/* <whereToGetItem items={item}></whereToGetItem> */}
 
-        {  
-        item.BlackOwned !== null ?
+                {item.Category === "Podcast" ? (
+                  item.Google !== null ? (
+                    <a target="_blank" rel="noopener noreferrer" href={item.Google}>
+                      {" "}
+                      <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
+                        <img
+                          src={mainSite}
+                          className="fill-current w-6 h-6 mr-2"
+                          alt="icon"
+                        />{" "}
+                        Main Site
+                      </button>{" "}
+                    </a>
+                  ) : ("")
 
-         <a href={item.BlackOwned}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={indie} className="fill-current w-6 h-6 mr-2" alt="icon"/> Small Business *
-           </button> </a>
-        :""
-       
-        } 
-        {  
-        item.Libby !== null ?
+                ) : (
+                  ""
+                )}
 
-         <a href={item.Libby}> <button className="bg-gray-200 text-gray-800 px-4 py-2  rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={libby} className="fill-current w-6 h-6 mr-2" alt="icon"/> Library**
-           </button> </a>
-        :""
-       
-        } 
-        {  
-        item.Amazon !== null ?
 
-         <a href={item.Amazon}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={amazon} className="fill-current w-6 h-6 mr-2" alt="icon"/> Amazon
-           </button> </a>
-        :""
-       
-        } 
 
-        {  
-        item.Youtube !== null ?
 
-         <a href={item.Youtube}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400">
-             <img src={youtube} className="fill-current w-6 h-6 mr-2 " alt="icon"/> YouTube
-           </button> </a>
-           
-        :""
-       
-        } 
-        {  
-        item.Spotify !== null ?
 
-         <a href={item.Spotify}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={spotify} className="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
-           </button> </a>
-        :""
-       
-        } 
-        {  
-        item.Netflix !== null ?
+                {item.BlackOwned !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.BlackOwned}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+                      <img
+                        src={indie}
+                        className="fill-current w-6 h-6 mr-2"
+                        alt="icon"
+                      />{" "}
+                      Small Business *
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
+                {item.Libby !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.Libby}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2  rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+                      <img
+                        src={libby}
+                        className="fill-current w-6 h-6 mr-2"
+                        alt="icon"
+                      />{" "}
+                      Find at your Library**
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
+                {item.Amazon !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.Amazon}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+                      <img
+                        src={amazon}
+                        className="fill-current w-6 h-6 mr-2"
+                        alt="icon"
+                      />{" "}
+                      Amazon
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
 
-         <a href={item.Netflix}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={netflix} className="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
-           </button> </a>
-        :""
-       
-        } 
-        {  
-        item.Google !== null ?
+                {item.Youtube !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.Youtube}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400">
+                      <img
+                        src={youtube}
+                        className="fill-current w-6 h-6 mr-2 "
+                        alt="icon"
+                      />{" "}
+                      YouTube
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
+                {item.Spotify !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.Spotify}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+                      <img
+                        src={spotify}
+                        className="fill-current w-6 h-6 mr-2"
+                        alt="icon"
+                      />{" "}
+                      Spotify
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
+                {item.Netflix !== null ? (
+                  <a target="_blank" rel="noopener noreferrer" href={item.Netflix}>
+                    {" "}
+                    <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+                      <img
+                        src={netflix}
+                        className="fill-current w-6 h-6 mr-2"
+                        alt="icon"
+                      />{" "}
+                      Netflix
+                    </button>{" "}
+                  </a>
+                ) : (
+                  ""
+                )}
+                {item.Category === "Book" ? (
+                  item.Google !== null ? (
+                    <a target="_blank" rel="noopener noreferrer" href={item.Google}>
+                      {" "}
+                      <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
+                        <img
+                          src={googleBook}
+                          className="fill-current w-6 h-6 mr-2"
+                          alt="icon"
+                        />{" "}
+                        Google books
+                      </button>{" "}
+                    </a>
+                  ) : (
+                    ""
+                  )
+                ) : (
+                  ""
+                )}
+                {item.Category === "Video" ? (
+                  item.Google !== null ? (
+                    <a target="_blank" rel="noopener noreferrer" href={item.Google}>
+                      {" "}
+                      <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
+                        <img
+                          src={googleVideo}
+                          className="fill-current w-6 h-6 mr-2"
+                          alt="icon"
+                        />{" "}
+                        Google Play Video
+                      </button>{" "}
+                    </a>
+                  ) : (
+                    ""
+                  )
+                ) : (
+                  ""
+                )}
+             
+                {item.Category === "Podcast" ? (
+                  item.Apple !== null ? (
+                    <a target="_blank" rel="noopener noreferrer" href={item.Apple}>
+                      {" "}
+                      <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
+                        <img
+                          src={apple}
+                          className="fill-current w-6 h-6 mr-2"
+                          alt="icon"
+                        />{" "}
+                        Apple
+                      </button>{" "}
+                    </a>
+                  ) : ("")
 
-         <a href={item.Google}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={google} className="fill-current w-6 h-6 mr-2" alt="icon"/> Google
-           </button> </a>
-        :""
-       
-        } 
-
-      </div>
-      <div className="text-left italic text-gray-600 text-xs pb-4 border-b   border-gray-400">
-      {item.BlackOwned !== null ? <p className ="mb-2">*Buy item from Black-Owned/Small businesses</p>: ""}
-        {item.Libby !== null ?  <p>**Borrow and read ebooks and audiobooks from your local public library for FREE!</p>: ""}
-      </div>
+                ) : (
+                  ""
+                )}
               </div>
-                </div>
+              <div className="text-left italic text-gray-600 text-xs pb-4 border-b   border-gray-400">
+                {item.BlackOwned !== null ? (
+                  <p className="mb-2">
+                    *Buy item from Black-Owned/Small businesses
+                  </p>
+                ) : (
+                  ""
+                )}
+                {item.Libby !== null ? (
+                  <p>
+                    **Borrow and read ebooks and audiobooks from your local
+                    public library for FREE!
+                  </p>
+                ) : (
+                  ""
+                )}
               </div>
+            </div>
+          </div>
+        </div>
 
-              {/* <div className="flex pt-10">
+        {/* <div className="flex pt-10">
  
                 <a href={item.Link} rel="noreferrer" target="_blank">
                   {" "}
@@ -192,9 +316,8 @@ const Details = ({ data }) => {
                   </button>
                 </a>
               </div> */}
-    
-      
-      <Recommendation />
+
+        <Recommendation />
       </section>
       <Footer />
     </>
@@ -213,6 +336,8 @@ export const query = graphql`
         id
         recordId
         data {
+          Category
+          Apple
           Amazon
           Libby
           Google
