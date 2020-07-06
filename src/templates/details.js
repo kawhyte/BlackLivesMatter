@@ -12,14 +12,13 @@ import spotify  from "../img/icons/icons8-spotify-100.png"
 import indie  from "../img/icons/icons8-for-you-100.png"
 import google  from "../img/icons/icons8-google.svg"
 import libby  from "../img//icons/libby.png"
+import Recommendation from "../common/recommendations"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
 
   let ratingNumber = item.Rating
 
-  console.log(item.Amazon)
-  console.log(item)
 
   return (
     <>
@@ -31,47 +30,12 @@ const Details = ({ data }) => {
     />
 
 
-
-
-{/* <div class="md:flex shadow-lg  mx-6 md:mx-auto my-40 max-w-lg md:max-w-2xl h-64">
-   <img class="h-full w-full md:w-1/3  object-cover rounded-lg rounded-r-none pb-5/6" src={item.Image} alt="bag" />
-   <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
-      <div class="flex items-center">
-         <h2 class="text-xl text-gray-800 font-medium mr-auto">Your Travel Buddy</h2>
-         <p class="text-gray-800 font-semibold tracking-tighter">
-            only
-            <i class="text-gray-600 line-through">60$</i>
-            48$
-         </p>
-      </div>
-      <p class="text-sm text-gray-700 mt-4">
-         Lorem, ipsum dolor sit amet consectetur Amet veritatis ipsam reiciendis numquam tempore commodi ipsa suscipit laboriosam, sit earum at sequ adipisicing elit. Amet veritatis ipsam reiciendis numquam tempore commodi ipsa suscipit laboriosam, sit earum at sequi.
-      </p>
-      <div class="flex items-center justify-end mt-4 top-auto">
-         <button class="bg-white text-red-500 px-4 py-2 rounded mr-auto hover:underline">Delete</button>
-         <button class="bg-white text-red-500 px-4 py-2 rounded mr-auto hover:underline">Delete</button>
-         <button class="bg-white text-red-500 px-4 py-2 rounded mr-auto hover:underline">Delete</button>
-         <button class=" bg-gray-200 text-blue-600 px-2 py-2 rounded-md mr-2">Edit</button>
-         <button class=" bg-gray-200 text-blue-600 px-2 py-2 rounded-md mr-2">Edit</button>
-         <button class=" bg-blue-600 text-gray-200 px-2 py-2 rounded-md ">Publish</button>
-      </div>
-   </div>
-</div> */}
-
-
-
-
-
-
-
-
-
       {/* <div>{item.Name}</div>
     <div>{item.image}</div> */}
       {/* <div>{item.Image}</div> */}
       <NavBar />
       {/* <Hero /> */}
-      <section className="flex flex-wrap justify-center container mx-auto px-2 sm:px-2  sm:flex-row mt-24 min-h-screen">
+      <section className="flex flex-wrap mt-24 justify-center container mx-auto px-2 sm:px-2  sm:flex-row  min-h-screen">
         <div className="px-1 py-2 justify-start ">
           <div className="text-left mb-12 flex justify-start">
           <Link to="/"> <img src ={arrow} width="20" height="1"  alt="arrow"/> </Link>
@@ -134,15 +98,15 @@ const Details = ({ data }) => {
               </div>
     
  
-                <p className="text-sm text-left border-gray-400 border-b  mt-12"></p>
+                <p className="text-md text-left mt-12 ">Where to find <span className="font-semibold italic"> {item.Name}:</span> </p>
            
 
-         <div class="flex flex-wrap items-center justify-start mt-6 top-auto">
+         <div className="flex flex-wrap items-center justify-start  top-auto border-b   border-gray-400 pt-8  pb-12">
         {  
         item.BlackOwned !== null ?
 
-         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Small Business *
+         <a href={item.BlackOwned}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={indie} className="fill-current w-6 h-6 mr-2" alt="icon"/> Small Business *
            </button> </a>
         :""
        
@@ -150,8 +114,8 @@ const Details = ({ data }) => {
         {  
         item.Libby !== null ?
 
-         <a href={item.Libby}> <button class="bg-gray-200 text-gray-800 px-4 py-2  rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={libby} class="fill-current w-6 h-6 mr-2" alt="icon"/> Library**
+         <a href={item.Libby}> <button className="bg-gray-200 text-gray-800 px-4 py-2  rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={libby} className="fill-current w-6 h-6 mr-2" alt="icon"/> Library**
            </button> </a>
         :""
        
@@ -159,8 +123,8 @@ const Details = ({ data }) => {
         {  
         item.Amazon !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={amazon} class="fill-current w-6 h-6 mr-2" alt="icon"/> Amazon
+         <a href={item.Amazon}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={amazon} className="fill-current w-6 h-6 mr-2" alt="icon"/> Amazon
            </button> </a>
         :""
        
@@ -169,8 +133,8 @@ const Details = ({ data }) => {
         {  
         item.Youtube !== null ?
 
-         <a href={item.Youtube}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400">
-             <img src={youtube} class="fill-current w-6 h-6 mr-2 " alt="icon"/> YouTube
+         <a href={item.Youtube}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400">
+             <img src={youtube} className="fill-current w-6 h-6 mr-2 " alt="icon"/> YouTube
            </button> </a>
            
         :""
@@ -179,8 +143,8 @@ const Details = ({ data }) => {
         {  
         item.Spotify !== null ?
 
-         <a href={item.Spotify}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={spotify} class="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
+         <a href={item.Spotify}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={spotify} className="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
            </button> </a>
         :""
        
@@ -188,8 +152,8 @@ const Details = ({ data }) => {
         {  
         item.Netflix !== null ?
 
-         <a href={item.Netflix}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={netflix} class="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
+         <a href={item.Netflix}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={netflix} className="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
            </button> </a>
         :""
        
@@ -197,8 +161,8 @@ const Details = ({ data }) => {
         {  
         item.Google !== null ?
 
-         <a href={item.Google}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
-             <img src={google} class="fill-current w-6 h-6 mr-2" alt="icon"/> Google
+         <a href={item.Google}> <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={google} className="fill-current w-6 h-6 mr-2" alt="icon"/> Google
            </button> </a>
         :""
        
@@ -224,6 +188,7 @@ const Details = ({ data }) => {
               </div> */}
     
       
+      <Recommendation></Recommendation>
       </section>
       <Footer />
     </>
