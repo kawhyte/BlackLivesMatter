@@ -136,11 +136,11 @@ const Details = ({ data }) => {
                 <p className="text-sm text-left border-gray-400 border-b  mt-12"></p>
            
 
-         <div class="flex items-center justify-start mt-8 top-auto">
+         <div class="flex flex-wrap items-center justify-start mt-6 top-auto">
         {  
         item.BlackOwned !== null ?
 
-         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Local shop*
            </button> </a>
         :""
@@ -149,7 +149,7 @@ const Details = ({ data }) => {
         {  
         item.Libby !== null ?
 
-         <a href={item.Libby}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.Libby}> <button class="bg-gray-200 text-gray-800 px-4 py-2  rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={libby} class="fill-current w-6 h-6 mr-2" alt="icon"/> Library**
            </button> </a>
         :""
@@ -158,7 +158,7 @@ const Details = ({ data }) => {
         {  
         item.Amazon !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={amazon} class="fill-current w-6 h-6 mr-2" alt="icon"/> Amazon
            </button> </a>
         :""
@@ -168,7 +168,7 @@ const Details = ({ data }) => {
         {  
         item.Youtube !== null ?
 
-         <a href={item.Youtube}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400">
+         <a href={item.Youtube}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400">
              <img src={youtube} class="fill-current w-6 h-6 mr-2 " alt="icon"/> YouTube
            </button> </a>
            
@@ -178,7 +178,7 @@ const Details = ({ data }) => {
         {  
         item.Spotify !== null ?
 
-         <a href={item.Spotify}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.Spotify}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={spotify} class="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
            </button> </a>
         :""
@@ -187,7 +187,7 @@ const Details = ({ data }) => {
         {  
         item.Netflix !== null ?
 
-         <a href={item.Netflix}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.Netflix}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={netflix} class="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
            </button> </a>
         :""
@@ -196,7 +196,7 @@ const Details = ({ data }) => {
         {  
         item.Google !== null ?
 
-         <a href={item.Google}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+         <a href={item.Google}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2  mt-2 inline-flex items-center hover:bg-gray-400 ">
              <img src={google} class="fill-current w-6 h-6 mr-2" alt="icon"/> Google
            </button> </a>
         :""
