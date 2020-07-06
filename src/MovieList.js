@@ -18,6 +18,15 @@ const MovieList = () => {
         nodes {
           id
           data {
+            Amazon
+            Google
+            Spotify
+            Youtube
+            BlackOwned
+            Netflix
+            Featured
+            Image
+            Img
             Slug
             Excerpt
             Author

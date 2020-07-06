@@ -10,7 +10,8 @@ import youtube  from "../img/icons/icons8-play-button-100.png"
 import netflix  from "../img/icons/icons8-netflix-100-2.png"
 import spotify  from "../img/icons/icons8-spotify-100.png"
 import indie  from "../img/icons/icons8-for-you-100.png"
-import other  from "../img/icons/icons8-man-in-red-shirt-chemical-test-tube-100.png"
+import google  from "../img/icons/icons8-google-100.png"
+import libby  from "../img//icons/libby.png"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
@@ -139,8 +140,17 @@ const Details = ({ data }) => {
         {  
         item.BlackOwned !== null ?
 
-         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
-             <img src={other} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
+         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Local shop*
+           </button> </a>
+        :""
+       
+        } 
+        {  
+        item.Libby !== null ?
+
+         <a href={item.Libby}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={libby} class="fill-current w-6 h-6 mr-2" alt="icon"/> Library**
            </button> </a>
         :""
        
@@ -183,16 +193,20 @@ const Details = ({ data }) => {
         :""
        
         } 
-        {/* {  
-        item.Other !== null ?
+        {  
+        item.Google !== null ?
 
-         <a href={item.Other}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
-             <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
+         <a href={item.Google}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:bg-gray-400 ">
+             <img src={google} class="fill-current w-6 h-6 mr-2" alt="icon"/> Google
            </button> </a>
         :""
        
-        }  */}
+        } 
 
+      </div>
+      <div className="text-left italic text-gray-600 text-xs mt-4">
+      {item.BlackOwned !== null ? <p className ="mb-2">*Buy items from Black-Owned stores</p>: ""}
+        {item.Libby !== null ?  <p>**Borrow and read ebooks and audiobooks from your local public library for FREE!</p>: ""}
       </div>
               </div>
                 </div>

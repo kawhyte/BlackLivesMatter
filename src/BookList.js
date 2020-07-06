@@ -18,6 +18,14 @@ const BookList = () => {
           id
           recordId
           data {
+            Amazon
+            Google
+            Spotify
+            Youtube
+            BlackOwned
+            Netflix
+            Featured
+            Img
             Slug
             Excerpt 
             Author
