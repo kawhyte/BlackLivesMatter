@@ -30,7 +30,7 @@ function AboutPageCard({ name, born, death, image, link }) {
     ></div> */}
     <a href={link} rel="noreferrer" target="_blank" className="">
     <img
-      src={image === null ? noImage : image}//"https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
+      src={image === null ? noImage : "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" + image}//"https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
       className="absolute left-0 top-0 w-full h-full z-0 object-cover"
       alt={name}
     />

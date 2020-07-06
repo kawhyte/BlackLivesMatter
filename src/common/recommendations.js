@@ -70,7 +70,7 @@ function Recommendation() {
       <div className=" mx-auto container flex justify-center flex-col">
         <div className="pl-6 pr-6 pt-6">
           <h1 className="text-xl text-gray-600 mb-5 mt-4">
-          You may also like the following:
+          Here are some other titles:
           </h1>
         </div>
 

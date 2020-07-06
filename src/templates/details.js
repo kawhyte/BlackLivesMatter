@@ -13,6 +13,7 @@ import indie  from "../img/icons/icons8-for-you-100.png"
 import google  from "../img/icons/icons8-google.svg"
 import libby  from "../img//icons/libby.png"
 import Recommendation from "../common/recommendations"
+// import whereToGetItem from "../common/whereToGetItem"
 
 const Details = ({ data }) => {
   let item = data.allAirtable.nodes[0].data
@@ -46,9 +47,10 @@ const Details = ({ data }) => {
           <div className="container px-12  justify-center sm:px-12 flex flex-col lg:flex-row ">
             <div className="lg:w-2/5 flex items-start justify-start">
               <img
-                alt="Poster of book or Video"
-                className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded border border-gray-200"
-                src={item.Image}
+                alt="Poster of Book or Video"
+                className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded "
+                src={"https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
+                item.Image}
                 height={20}
               />
             </div>
@@ -101,7 +103,11 @@ const Details = ({ data }) => {
                 <p className="text-md text-left mt-12 ">Where to find <span className="font-semibold italic"> {item.Name}:</span> </p>
            
 
-         <div className="flex flex-wrap items-center justify-start  top-auto border-b   border-gray-400 pt-8  pb-12">
+         <div className="flex flex-wrap items-center justify-start  top-auto  pt-8  pb-4">
+
+
+{/* <whereToGetItem items={item}></whereToGetItem> */}
+
         {  
         item.BlackOwned !== null ?
 
@@ -169,7 +175,7 @@ const Details = ({ data }) => {
         } 
 
       </div>
-      <div className="text-left italic text-gray-600 text-xs mt-4">
+      <div className="text-left italic text-gray-600 text-xs pb-4 border-b   border-gray-400">
       {item.BlackOwned !== null ? <p className ="mb-2">*Buy item from Black-Owned/Small businesses</p>: ""}
         {item.Libby !== null ?  <p>**Borrow and read ebooks and audiobooks from your local public library for FREE!</p>: ""}
       </div>
@@ -188,7 +194,7 @@ const Details = ({ data }) => {
               </div> */}
     
       
-      <Recommendation></Recommendation>
+      <Recommendation />
       </section>
       <Footer />
     </>
