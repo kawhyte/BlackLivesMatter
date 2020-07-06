@@ -46,9 +46,13 @@ exports.createPages = async function ({ actions, graphql }) {
       allAirtable(filter: {table: {eq: "Books"}}) {
         nodes {
           data {
-            Image
+            Amazon
+            Google
+            Spotify
+            Youtube
+            BlackOwned
             Name
-            Link
+            Netflix
             Description
             Author
             Date
@@ -57,6 +61,8 @@ exports.createPages = async function ({ actions, graphql }) {
             Rating
             Slug
             Featured
+            Image
+            Img
           }
           recordId
         }

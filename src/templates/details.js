@@ -132,33 +132,33 @@ const Details = ({ data }) => {
               </div>
     
  
-                {/* <p className="text-sm text-left  mt-12">{item.Name} can be found at:</p> */}
+                <p className="text-sm text-left border-gray-400 border-b  mt-12"></p>
            
 
          <div class="flex items-center justify-start mt-8 top-auto">
         {  
-        item.Indie ?
+        item.BlackOwned !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
-             <img src={other} class="fill-current w-6 h-6 mr-2" alt="icon"/> Indie Shop
+         <a href={item.BlackOwned}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+             <img src={other} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
            </button> </a>
         :""
        
         } 
-        {/* {  
-        item.Amazon  ?
+        {  
+        item.Amazon !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:border-gray-400 ">
              <img src={amazon} class="fill-current w-6 h-6 mr-2" alt="icon"/> Amazon
            </button> </a>
         :""
        
-        }  */}
+        } 
 
         {  
-        item.Youtube  ?
+        item.Youtube !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+         <a href={item.Youtube}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center hover:border-red-400 ">
              <img src={youtube} class="fill-current w-6 h-6 mr-2" alt="icon"/> YouTube
            </button> </a>
            
@@ -166,48 +166,35 @@ const Details = ({ data }) => {
        
         } 
         {  
-        item.Spotify ?
+        item.Spotify !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+         <a href={item.Spotify}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={spotify} class="fill-current w-6 h-6 mr-2" alt="icon"/> Spotify
            </button> </a>
         :""
        
         } 
         {  
-        item.Netflix  ?
+        item.Netflix !== null ?
 
-         <a href={item.Amazon}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
+         <a href={item.Netflix}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={netflix} class="fill-current w-6 h-6 mr-2" alt="icon"/> Netflix
            </button> </a>
         :""
        
         } 
-        {  
-        item.Other  ?
+        {/* {  
+        item.Other !== null ?
 
          <a href={item.Other}> <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded mr-2 inline-flex items-center ">
              <img src={indie} class="fill-current w-6 h-6 mr-2" alt="icon"/> Other
            </button> </a>
         :""
        
-        } 
+        }  */}
 
       </div>
-
-
-
-
-
               </div>
-
-
-
-
-
-
-
-
                 </div>
               </div>
 
@@ -240,12 +227,13 @@ export const query = graphql`
         id
         recordId
         data {
-          Spotify
-          Google
           Amazon
-          Image
+          Google
+          Spotify
+          Youtube
+          BlackOwned
           Name
-          Link
+          Netflix
           Description
           Author
           Date
@@ -254,6 +242,8 @@ export const query = graphql`
           Rating
           Slug
           Featured
+          Image
+          Img
         }
         recordId
       }
