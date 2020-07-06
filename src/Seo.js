@@ -1,7 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
 import { StaticQuery, graphql } from "gatsby"
 
 const SEO = ({ title, keywords, description, image, article, author, url, lang }) => {

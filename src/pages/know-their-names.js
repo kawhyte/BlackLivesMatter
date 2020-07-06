@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBar from "../NavBar"
 import Footer from "../Footer"
-import AboutPageCard from "../AboutPageCard"
 import AboutPageList from "../AboutPageList"
 
 function knowtheirnames() {

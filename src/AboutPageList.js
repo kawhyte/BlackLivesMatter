@@ -1,12 +1,7 @@
 import React, { useState } from "react"
-import Labels from "./Labels"
 import { graphql, useStaticQuery } from "gatsby"
-import { paginate } from "./common/paginate"
-import { createCards } from "./common/createCards"
-import { filterByTags } from "./common/filterByTags"
-import "./css/global.css"
-import Categories from "./Categories"
 import AboutPageCard from "./AboutPageCard"
+import "./css/global.css"
 
 const AboutPageList = () => {
   const data = useStaticQuery(graphql`
@@ -48,19 +43,8 @@ const AboutPageList = () => {
     }
   `)
 
-  const [state, setState] = useState(data.allAirtable.nodes)
-  const [labels] = useState(data.allAirtable.nodes)
-  const [activeButton, setActiveButton] = useState("VIEW ALL")
+  const [state] = useState(data.allAirtable.nodes)
 
-  const [pageState] = useState({
-    bills: data.allAirtable.nodes,
-    currentPage: 1,
-    pageSize: 100,
-  })
-
-
-
-  const handleButtonClicked = filterByTags(data, setActiveButton, setState)
 
   let person = state.map((node, i) => (
     <AboutPageCard
@@ -87,14 +71,7 @@ const AboutPageList = () => {
 
   return (
     <>
-      {/* <Labels
-        labels={labels}
-        onClicked={handleButtonClicked}
-        activeButton={activeButton}
-        type={"Books"}
-        bgColor={"bg-red-100"}
-      /> */}
-      {/* <Categories /> */}
+
       <div
         className="p-3 mt-8 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4"
       >

@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "../common/paginate"
 import { createCards } from "../common/createCards"
 import "../css/global.css"
+let addLabelToCard = true
 
 function StartHere() {
   const data = useStaticQuery(graphql`
@@ -51,7 +52,7 @@ function StartHere() {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let books = createCards(newPages)
+  let books = createCards(newPages, addLabelToCard)
 
   const itemsToRender = books.filter(item => {
     return item.props.NewUserItem === true

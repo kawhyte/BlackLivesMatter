@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "../Card"
 
-   export function createCards(newPages) {
+   export function createCards(newPages, addLabelToCard ) {
         return newPages.map((node, i) => (
           <Card
             key={i}
@@ -24,6 +24,7 @@ import Card from "../Card"
             category={node.data.Category}
             slug={node.data.Slug} 
             NewUserItem={node.data.NewUserItem}
+            addLabelToCard ={addLabelToCard}
             
 
             />

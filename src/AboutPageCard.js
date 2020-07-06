@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import noImage from "./img/noPhotoFound.jpg"
 
 function AboutPageCard({ name, born, death, image, link }) {

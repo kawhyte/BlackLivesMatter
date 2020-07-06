@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { paginate } from "./paginate"
 import { createCards } from "./createCards"
 import "../css/global.css"
+let addLabelToCard = true
 
 function Recommendation() {
   const data = useStaticQuery(graphql`
@@ -51,7 +52,7 @@ function Recommendation() {
 
   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
 
-  let books = createCards(newPages)
+  let books = createCards(newPages, addLabelToCard)
 
   let randomNumber = Math.floor(Math.random()*books.length-1);
 

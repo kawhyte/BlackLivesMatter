@@ -1,8 +1,6 @@
 import React from "react"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
-import AboutPageCard from "../AboutPageCard"
-import AboutPageList from "../AboutPageList"
 
 function about() {
   return (
@@ -28,6 +26,7 @@ function about() {
               <img
                 src="https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
                 className="absolute left-0 top-0 w-full h-full z-0 object-cover"
+                alt="Black Lives Matter"
               />
               <div className="p-4 absolute bottom-0 left-0 z-20">
                 <h2 className="text-4xl font-semibold text-gray-100 leading-tight">

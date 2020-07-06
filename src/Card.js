@@ -20,6 +20,7 @@ function Card({
   slug,
   excerpt,
   NewUserItem,
+  addLabelToCard
 }) {
   return (
     <div className="relative hover-trigger mb-6">
@@ -36,7 +37,7 @@ function Card({
                     bookImage
                   }
                 />
-                {NewUserItem ? (
+                {addLabelToCard ? (
                   <div className="p-1 absolute top-0 left-0 z-20 ml-0">
                     <span
                       className={
@@ -58,7 +59,7 @@ function Card({
                     bookImage
                   }
                 />
-                {NewUserItem ? (
+                {addLabelToCard ? (
                   <div className="p-1 absolute top-0 left-0 z-20 ml-0">
                     <span
                       className={
