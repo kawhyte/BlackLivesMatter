@@ -130,7 +130,7 @@ const Footer = () => {
             </OutboundLink>
 
             <div className="text-sm py-1 text-gray-400">
-              <span className="pr-2">Illustrations by</span>
+              <span className="pr-2">Illustrations from</span>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,6 +156,15 @@ const Footer = () => {
                 href="https://codepen.io/rafaelrinaldi/"
               >
                 rafaelrinaldi
+              </a>
+              <span className=""> &</span>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pl-1 pr-1 hover:text-indigo-500"
+                href="https://unsplash.com/s/photos/blm"
+              >
+                unsplash.com
               </a>
             </div>
           </div>
