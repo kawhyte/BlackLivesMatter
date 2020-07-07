@@ -35,25 +35,25 @@ function about() {
               </div>
             </div>
 
-            <div className="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
-              <div className="border-l-4 border-gray-500 pl-4 mb-6 italic rounded text-left">
+            <div className="px-1 lg:px-0 mt-6 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+              <div className="text-sm pl-0 mb-6 italic rounded text-left">
                 The rate at which black Americans are killed by police is more
                 than twice as high as the rate for white Americans.
                 <span className="pr-2"> ~ LA Johnson/NPR </span>
               </div>
               <p className="pb-6 text-left break-words">
-                {" "}
-                The racial inequality website was made not only highlight police
-                brutality and racism in America, but also a way forward to a
-                better tomorrow. To create a nation where we can all say that
-                <span className="italic text-gray-600">
-                  {" "}
+               
+                The racial inequality website was made  to not only highlight police
+                brutality and racism in America, but also find a way forward to a
+                better tomorrow. To create a nation where we can all say that</p> 
+                <p className="border-l-4 border-gray-500 pl-4 mb-6 italic rounded text-left">
+                
                   "We hold these truths to be self-evident, that all men are
                   created equal, that they are endowed by their Creator with
                   certain unalienable Rights, that among these are Life, Liberty
                   and the pursuit of Happiness".
-                </span>
-              </p>
+                </p>
+              
             </div>
           </main>
 

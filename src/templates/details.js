@@ -39,12 +39,16 @@ const Details = ({ data }) => {
       <section className="flex flex-wrap mt-24 justify-center container mx-auto px-2 sm:px-2  sm:flex-row  min-h-screen">
         <div className="px-1 py-2 justify-start ">
           <div className="text-left mb-12 flex justify-start">
-            <Link to="/">
+            <Link to="/" >
               {" "}
-              <img src={arrow} width="20" height="1" alt="arrow" />{" "}
             </Link>
             <Link to="/">
-              <span className=" mr-3 pl-1">Home</span>
+              <div className="flex hover:bg-gray-200 h-8 w-8"> 
+              <img  className="" src={arrow}  alt="arrow" />
+
+              <span className="mr-2 p-1 hover:bg-gray-200">Home</span>
+              
+            </div>
             </Link>
           </div>
           <div className="container px-12  justify-center sm:px-12 flex flex-col lg:flex-row ">

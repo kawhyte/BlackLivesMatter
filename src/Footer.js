@@ -110,18 +110,23 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" mt-4 flex flex-col justify-center mr-4 text-white text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+          <div className="mt-4 flex flex-col justify-center mr-4 text-white text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
             <OutboundLink
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.kennywhyte.com/"
-              className="px-4 text-sm text-indigo-300 hover:text-indigo-500"
+              className="px-4 mb-2 text-sm text-indigo-500  hover:text-indigo-200 flex flex-col-reverse justify-center"
             >
-              Made with
-              <span className="pr-2 pl-2" role="img" aria-labelledby="">
-                🍕
-              </span>
-              by {data.site.siteMetadata.author}
+   
+             <div  className="flex justify-center items-end"> 
+               
+                  <img className="h-10 w-10" src="https://res.cloudinary.com/babyhulk/image/upload/w_70,h_70,f_auto/v1589318555/hero-image/avatar-01.png"  />
+              <span className="ml-2">Website created by {" "}{data.site.siteMetadata.author} </span>  
+               
+               </div>
+               
+               
+            
             </OutboundLink>
 
             <div className="text-sm py-1 text-gray-400">
