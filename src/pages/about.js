@@ -1,6 +1,7 @@
 import React from "react"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
+import photo  from "../img/BLM.jpeg"
 
 function about() {
   return (
@@ -24,7 +25,7 @@ function about() {
                 }}
               ></div>
               <img
-                src="https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
+                src={photo}
                 className="absolute left-0 top-0 w-full h-full z-0 object-cover"
                 alt="Black Lives Matter"
               />
