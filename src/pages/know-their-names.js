@@ -56,9 +56,7 @@ function knowtheirnames() {
         HAMILTON - TIMOTHY CAUGHMAN - SYLVILLE SMITH - COREY JONES - TYRE KING - MILES HALL
          - KENDRICK JOHNSON - CHARLEENA LYLES - MICHAEL
         LORENZO DEAN - TRAYVON MARTIN - RENISHA MCBRIDE - KIWANE CARRINGTON -
-        OSCAR GRANT III - KALIEF BROWDER - DARRIEN HUNT - TROY
-        HODGE - WILLIAM GREEN - DION JOHNSON - TONY MCDADE -
-        JAMEL FLOYD - ITALIA MARIE KELLY - DAVID MCATEE - CHRIS BEATY
+        OSCAR GRANT III - KALIEF BROWDER - DARRIEN HUNT
       </div>
       {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto container ">
 
