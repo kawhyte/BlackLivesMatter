@@ -2,7 +2,29 @@ import React from "react"
 import Card from "../Card"
 
    export function createCards(newPages, addLabelToCard ) {
-        return newPages.map((node, i) => (
+
+  let sortedPages = newPages.sort(function (a, b) {
+
+    let nameA = a.data.Name.toUpperCase(); 
+    let nameB = b.data.Name.toUpperCase(); 
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+});
+  
+
+console.log("sortedPages ", sortedPages)
+
+ 
+
+        return sortedPages.map((node, i) => (
           <Card
             key={i}
             id={node.id}
