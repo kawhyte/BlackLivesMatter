@@ -75,11 +75,11 @@ function Card({
           </Link>
         </div>
         <div className=" ">
-          <a href={link}>
+          {/* <a href={link}> */}
             <h3 className="uppercase truncate-custom text-sm md:text-md font-medium break-words text-gray-700 text-center  mt-6">
               {name}
             </h3>
-          </a>
+          {/* </a> */}
           <Link to={`/${slug}`}>
             <div className="truncate-excerpt h-auto absolute bg-white border border-grey-100 px-4 py-2 hover-target z-10  text-left text-sm rounded ">
               {excerpt}...

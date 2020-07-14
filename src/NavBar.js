@@ -29,7 +29,7 @@ const Header = () => {
           >
             <img
               className="ml-6 h-12 w-12"
-              src="https://res.cloudinary.com/babyhulk/image/upload/w_40,h_40,f_auto/v1589318555/hero-image/avatar-01.png"
+              src="https://res.cloudinary.com/babyhulk/image/upload/w_48,h_48,f_auto/v1589318555/hero-image/avatar-01.png"
               // src="https://res.cloudinary.com/babyhulk/image/upload/w_70,h_70,f_auto/v1589318555/hero-image/fist-01.png"
               alt="Family"
             />
