@@ -49,7 +49,7 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
                       <Link
                         to={`/${links}s`}
                       >
-                    <p className="text-sm text-blue-600 pb-1">
+                    <p className="text-sm text-blue-800 pb-1">
                         Explore All {item}s
                     </p>
                   

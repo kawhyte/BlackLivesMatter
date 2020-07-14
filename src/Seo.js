@@ -19,6 +19,11 @@ const SEO = ({ title, keywords, description, image, article, author, url, lang }
         return (
           <Helmet
             title={title}
+
+            htmlAttributes={{
+              lang,
+            }}
+
             meta={[
               {
                 name: `description`,

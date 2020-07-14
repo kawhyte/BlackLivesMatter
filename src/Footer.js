@@ -117,7 +117,7 @@ const Footer = () => {
               href="https://www.kennywhyte.com/"
               className="px-4 mb-2 text-sm text-indigo-500  hover:text-indigo-200 flex flex-col-reverse justify-center"
             >
-              <div className=" text-base flex justify-center items-end">
+              <div className="text-gray-400 text-base flex justify-center items-end">
                 <img
                   className="h-10 w-10"
                   alt="icon"
