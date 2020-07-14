@@ -19,11 +19,6 @@ import Card from "../Card"
     return 0;
 });
   
-
-console.log("sortedPages ", sortedPages)
-
- 
-
         return sortedPages.map((node, i) => (
           <Card
             key={i}
