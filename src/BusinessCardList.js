@@ -20,6 +20,7 @@ const BusinessCardList = () => {
             Name
             Link
             Description
+            Type
             Category
             Attachments {
               thumbnails {
@@ -82,6 +83,7 @@ const BusinessCardList = () => {
       category={node.data.Category}
       excerpt ={node.data.Excerpt}
       primary_color={node.data.Primary_color}
+      type={node.data.Type}
     />
   ))
 

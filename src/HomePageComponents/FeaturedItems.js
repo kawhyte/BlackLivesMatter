@@ -55,7 +55,8 @@ function FeaturedItems() {
     return (
       (item.props.category.includes("Book") && item.props.featured === true) ||
       (item.props.category.includes("Video") && item.props.featured === true) ||
-      (item.props.category.includes("Podcast") && item.props.featured === true)
+      (item.props.category.includes("Podcast") && item.props.featured === true) ||
+      (item.props.category.includes("Business") && item.props.featured === true)
     )
   })
 
