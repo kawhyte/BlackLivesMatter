@@ -1,7 +1,20 @@
 import React from "react"
 import noImage from "./img/noPhotoFound.jpg"
 
-function AboutPageCard({ name, born, death, image, link }) {
+function AboutPageCard({ name, born, death, image, link, age }) {
+
+
+  // if (!born) {
+  //   born==="?"
+  //   age===""
+    
+  // } 
+  // if (!death) {
+  //   death==="?"
+  //   age===""
+    
+  // } 
+
 
   return (
     // <div class="bg-white overflow-hidden ">
@@ -37,8 +50,11 @@ function AboutPageCard({ name, born, death, image, link }) {
     <div class="p-4 absolute bottom-0 inset-x-0 z-20">
       <h2 class="text-lg font-semibold text-white leading-tight bg-black opacity-50">
      {name} </h2>
+           <p class="text-md text-blue-200 bg-black opacity-50">
+             {born ? age + ` years old` :" " }
+           </p>
            <p class="text-xs text-white bg-black opacity-50">
-             {born} - {death}
+             {born ? born: "?"} - {death}
            </p>
       
     </div></a>

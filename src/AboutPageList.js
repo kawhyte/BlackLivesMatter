@@ -13,30 +13,13 @@ const AboutPageList = () => {
           id
           recordId
           data {
-            Slug
+            Name
             Born
             Death
-            Excerpt 
-            Author
-            Color
-            Date
-            Description
-            Genre
-            Link
-            Name
-            Publisher
             Category
-            Featured
-            Rating
+            Link
             Img
-            Attachments {
-              filename
-              thumbnails {
-                full {
-                  url
-                }
-              }
-            }
+            Age
           }
         }
       }
@@ -44,7 +27,7 @@ const AboutPageList = () => {
   `)
 
   const [state] = useState(data.allAirtable.nodes)
-
+ console.log("STATE " , state)
 
   let person = state.map((node, i) => (
     <AboutPageCard
@@ -55,9 +38,10 @@ const AboutPageList = () => {
       link ={node.data.Link}
       //image={node.data.Attachments[0].thumbnails.full.url}
       
-      description={node.data.Description}
+      // description={node.data.Description}
       born={node.data.Born}
       death={node.data.Death}
+      age ={node.data.Age}
 
     />
   ))
