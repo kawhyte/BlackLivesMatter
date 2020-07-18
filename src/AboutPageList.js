@@ -27,7 +27,6 @@ const AboutPageList = () => {
   `)
 
   const [state] = useState(data.allAirtable.nodes)
- console.log("STATE " , state)
 
   let person = state.map((node, i) => (
     <AboutPageCard
@@ -45,11 +44,6 @@ const AboutPageList = () => {
 
     />
   ))
-
-
-//   const newPages = paginate(state, pageState.currentPage, pageState.pageSize)
-
-//   let books = createCards(newPages)
 
 
 

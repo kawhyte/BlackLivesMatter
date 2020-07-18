@@ -1,65 +1,36 @@
-import React from "react"
+import React, { lazy } from "react"
 import noImage from "./img/noPhotoFound.jpg"
 
 function AboutPageCard({ name, born, death, image, link, age }) {
-
-
-  // if (!born) {
-  //   born==="?"
-  //   age===""
-    
-  // } 
-  // if (!death) {
-  //   death==="?"
-  //   age===""
-    
-  // } 
-
-
   return (
-    // <div class="bg-white overflow-hidden ">
-    //   <div className="text-center p-6 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-    //     <a href={link} rel="noreferrer" target="_blank" className="">
-    //       {/* <img class="rounded-full mx-auto  " src={image} alt={name} /> */}
-    //       <p class="pt-2 text-lg font-semibold text-blue-500 ">{name}</p>
-    //       <p class="text-sm text-gray-600">
-    //         {born} - {death}
-    //       </p>
-    //     </a>
-    //   </div>
-    // </div>
-
-
     <div
-    class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative h-auto transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-    style={{ height: '15em'  }} 
-  >
-    {/* <div
-      class="absolute left-0 bottom-0 w-full h-full z-10"
-      style={{
-        backgroundImage:
-          "linear-gradient`(180deg,transparent,rgba(0,0,0,.7))",
-      }}
-    ></div> */}
-    <a href={link} rel="noreferrer" target="_blank" className="">
-    <img
-      src={image === null ? noImage : "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" + image}//"https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80"
-      className="absolute left-0 top-0 w-full h-full z-0 object-cover"
-      alt={name}
-    />
-    <div class="p-4 absolute bottom-0 inset-x-0 z-20">
-      <h2 class="text-lg font-semibold text-white leading-tight bg-black opacity-50">
-     {name} </h2>
-           <p class="text-md text-blue-200 bg-black opacity-50">
-             {born ? age + ` years old` :" " }
-           </p>
-           <p class="text-xs text-white bg-black opacity-50">
-             {born ? born: "?"} - {death}
-           </p>
-      
-    </div></a>
-  </div>
-
+      className="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative h-auto transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+      style={{ height: "15em" }}
+    >
+      <a href={link} rel="noreferrer" target="_blank" className="">
+        <img 
+          src={ 
+            image === null
+              ? noImage
+              : "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
+                image
+          }
+          className="absolute left-0 top-0 w-full h-full z-0 object-cover"
+          alt={name}
+        />
+        <div className="absolute bottom-0 inset-x-0 z-20">
+          <h2 className="text-lg font-semibold text-white leading-tight bg-black pt-1">
+            {name}
+          </h2>
+          {/* <p className="text-md text-pink-100 bg-black opacity-50">
+            {born ? age + ` years old` : " "}
+          </p> */}
+          <p className="text-xs text-white bg-black pb-1">
+            {born ? born : "?"} - {death}
+          </p>
+        </div>
+      </a>
+    </div>
   )
 }
 
