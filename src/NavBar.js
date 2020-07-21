@@ -94,7 +94,20 @@ const Header = () => {
               </button>
             </Link>
 
-            <Link
+            <a  
+            
+            target="_blank"
+            rel="noopener noreferrer"
+              className={
+                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+              }
+              href="https://www.kennywhyte.com/"
+            >
+              <button className="pt-1  text-sm font-medium text-gray-700 hover:text-gray-500">
+                About
+              </button>
+            </a>
+            {/* <Link
               className={
                 "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               }
@@ -103,7 +116,7 @@ const Header = () => {
               <button className="pt-1  text-sm font-medium text-gray-700 hover:text-gray-500">
                 About
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>

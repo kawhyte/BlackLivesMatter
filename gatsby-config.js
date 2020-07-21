@@ -4,7 +4,7 @@ module.exports = {
  siteMetadata: {
     title: "Racial Inequality",
     author: "Kenny",
-    titleTemplate: "%s · The Real Hero",
+    titleTemplate: "%s · Racial Inequality",
     description:"Exploring Race & Racism. A repository of books, podcasts & movies to learn about Race Relations in America.",
     url: "https://equality.netlify.app", // No trailing slash allowed!
     image: "https://res.cloudinary.com/babyhulk/image/upload/v1595351314/hero-image/race.png", // Path to your image you placed in the 'static' folder
@@ -14,7 +14,7 @@ module.exports = {
     keywords:["BLM","Racism in America","Racism","Black Lives Matter", "Systemic racism", "Antiracist", "Antiracism"]
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -26,7 +26,7 @@ module.exports = {
         pageTransitionDelay: 0,
       },
     },
-    
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-airtable`,
       options: {
