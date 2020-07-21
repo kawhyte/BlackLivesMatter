@@ -30,6 +30,10 @@ const SEO = ({ title, keywords, description, image, article, author, url, lang }
                 content: metaDescription,
               },
               {
+                name: `title`,
+                content: metaTitle,
+              },
+              {
                 property: `og:title`,
                 content: metaTitle ,
               },
@@ -81,6 +85,7 @@ const SEO = ({ title, keywords, description, image, article, author, url, lang }
                   }
                 : []
             )}
+            title={title}
           />
         )
       }}

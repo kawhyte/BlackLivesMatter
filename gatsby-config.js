@@ -14,6 +14,7 @@ module.exports = {
     keywords:["BLM","Racism in America","Racism","Black Lives Matter", "Systemic racism", "Antiracist", "Antiracism"]
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -25,6 +26,7 @@ module.exports = {
         pageTransitionDelay: 0,
       },
     },
+    
     {
       resolve: `gatsby-source-airtable`,
       options: {
