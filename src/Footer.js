@@ -62,12 +62,12 @@ const Footer = () => {
               >
                 Businesses
               </Link>
-              <Link
+              {/* <Link
                 to="/about"
                 className="text-left text-gray-400  py-1"
               >
                 About
-              </Link>
+              </Link> */}
             </div>
 
             <div className="text-base flex flex-col  md:ml-10">
@@ -110,7 +110,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" text-base mt-4 flex flex-col justify-center mr-4 text-white  sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+          <div className=" text-base mt-8 flex flex-col justify-center mr-4 text-white  sm:text-xs md:text-sm lg:text-sm xl:text-sm">
             <OutboundLink
               target="_blank"
               rel="noopener noreferrer"
