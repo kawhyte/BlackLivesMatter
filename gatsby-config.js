@@ -7,7 +7,7 @@ module.exports = {
     titleTemplate: "%s · The Real Hero",
     description:"Exploring Race & Racism. A repository of books, podcasts & movies to learn about Race Relations in America.",
     url: "https://equality.netlify.app", // No trailing slash allowed!
-    image: "/src/img/movie.png", // Path to your image you placed in the 'static' folder
+    image: "https://res.cloudinary.com/babyhulk/image/upload/v1595351314/hero-image/race.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@IAmKennyWhyte",
     year:"2020",
     lang: `en`,
