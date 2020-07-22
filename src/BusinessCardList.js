@@ -94,7 +94,7 @@ const BusinessCardList = () => {
           labels={labels}
           onClicked={handleButtonClicked}
           activeButton={activeButton}
-          type = {"Black-owned Businesses"}
+          type = {"Black-owned Small Businesses"}
           bgColor={"bg-purple-100"}
           
         />
