@@ -5,7 +5,7 @@ function Questions() {
       <div className= "">
         <div className=" mx-auto container flex justify-center flex-col ">
           <div className="pl-6 pr-6 pt-6">
-            <h1 className="font-medium text-left text-2xl text-gray-800 mb-5 mt-4">
+            <h1 className="font-medium text-left text-2xl text-gray-800 mb-3 mt-4">
               Frequently Asked Questions
             </h1>
           </div>
