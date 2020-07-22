@@ -16,7 +16,7 @@ function Questions() {
               {
                 question:`what is systemic racism? `,
                 answer: `Systemic or Institutional racism is a form of racism that is embedded as normal practice within society or an organisation. It can lead to such issues as discrimination in criminal justice, employment, housing, health care, political power, and education, among other issues.`,
-                source:`https://en.wikipedia.org/wiki/Institutional_racism`,
+                source:`https://www.google.com/search?q=what+is+systemic+racism`,
                 sourceName:`wikipedia.org`,
                 link: `/know-their-names`,
                 image: `Know their names`,
