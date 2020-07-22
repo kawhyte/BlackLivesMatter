@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 const Header = () => {
+  const [isExpanded, toggleExpansion] = useState(false)
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,10 +24,10 @@ const Header = () => {
   return (
     <>
       <nav className="w-full  mx-auto p-2 mt-4 container pr-4">
-        <div className="w-full flex items-center justify-between">
-          <a
-            className="flex items-center justify-center flex-column text-gray-900 no-underline hover:no-underline font-bold text-sm md:text-xl lg:text-xl uppercase"
-            href="/"
+        <div className="flex flex-wrap items-center justify-between max-w-6xl p-4 mx-auto md:p-8">
+          <Link
+            className="sm:mb-5  flex items-center justify-center flex-column text-gray-900 no-underline hover:no-underline font-bold text-sm md:text-xl lg:text-xl uppercase"
+            to="/"
           >
             <img
               className="ml-6 h-12 w-12"
@@ -34,89 +36,97 @@ const Header = () => {
               alt="Family"
             />
             {/* <svg className="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"/></svg> */}
-            <p className=" hidden lg:inline-block text-sm sm:text-md lg:text-lg sm:p-2 ">
+            <p className="  text-base sm:text-xl  sm:p-2 ">
               {data.site.siteMetadata.title}
             </p>
-          </a>
+          </Link>
 
-          <div className="flex w-2/3 justify-end content-center pl-1">
-            <Link
-              className={
-                "ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/know-their-names"
+          <button
+            className="items-center block px-3 py-2 text-black border border-white rounded md:hidden "
+            onClick={() => toggleExpansion(!isExpanded)}
+          >
+            <svg
+              className="w-3 h-3 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <button className=" pt-1 text-sm font-medium text-gray-700 hover:text-gray-500 ">
-                Know their names
-              </button>
-            </Link>
-            <Link
-              className={
-                "hidden md:inline-block ml-8 font-medium text-gray-900  hover:text-blue-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/books"
-            >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500  ">
-                Books
-              </button>
-            </Link>
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
 
-            <Link
-              className={
-                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/videos"
-            >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500 ">
-                Videos
-              </button>
-            </Link>
-
-            <Link
-              className={
-                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/podcasts"
-            >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500 ">
-                Podcasts
-              </button>
-            </Link>
-
-            <Link
-              className={
-                "hidden md:inline-block ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/business"
-            >
-              <button className="pt-1 text-sm font-medium text-gray-700 hover:text-gray-500">
-                Businesses
-              </button>
-            </Link>
-
-            <a  
-            
-            target="_blank"
-            rel="noopener noreferrer"
-              className={
-                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              href="https://www.kennywhyte.com/"
-            >
-              <button className="pt-1  text-sm font-medium text-gray-700 hover:text-gray-500">
-                About
-              </button>
-            </a>
-            {/* <Link
-              className={
-                "ml-6 font-medium text-gray-900  hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              }
-              to="/about"
-            >
-              <button className="pt-1  text-sm font-medium text-gray-700 hover:text-gray-500">
-                About
-              </button>
-            </Link> */}
+          <div
+            className={`${
+              isExpanded ? `block` : `hidden`
+            }   md:flex md:items-center w-full md:w-auto bg-gray-100 text-left pl-4  md:text-center md:bg-white mt-5  md:mt-0`}
+          >
+            {[
+              {
+                route: `/know-their-names`,
+                title: `Know their names`,
+                type: `internal`,
+              },
+              {
+                route: `/books`,
+                title: `Books`,
+                type: `internal`,
+              },
+              {
+                route: `/videos`,
+                title: `Videos`,
+                type: `internal`,
+              },
+              {
+                route: `/podcasts`,
+                title: `Podcasts`,
+                type: `internal`,
+              },
+              {
+                route: `/business`,
+                title: `Small Businesses`,
+                type: `internal`,
+              },
+              {
+                route: `https://www.kennywhyte.com/`,
+                title: `About`,
+                type: `external`,
+              },
+              // {
+              //   route: `https://www.linkedin.com/in/kawhyte/`,
+              //   title: `Contact me`,
+              //   type: `external`
+              // },
+            ].map(link =>
+              link.type === "internal" ? (
+                <Link
+               
+                  className={
+                    " font-normal block my-2 text-black no-underline md:inline-block md:mt-0 md:ml-6 hover:text-blue-500 hover:border-blue-500 px-2 "
+                  }
+                  key={link.title}
+                  to={link.route}
+                > 
+                
+                  <button 
+                  
+                  className= {" pt-1 text-sm font-medium text-gray-700 hover:text-blue-500 " }>
+                    {link.title}
+                  </button> 
+                </Link>
+              ) : (
+                <a
+                  key={link.title}
+                  href={link.route}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-normal block my-2 text-black no-underline md:inline-block md:mt-0 md:ml-6 hover:text-gray-500 px-2"
+                >
+                  <button className=" pt-1 text-sm font-medium text-gray-700 hover:text-blue-500 ">
+                    {link.title}
+                  </button>
+                </a>
+              )
+            )}
           </div>
         </div>
       </nav>
