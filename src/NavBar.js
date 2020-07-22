@@ -42,11 +42,11 @@ const Header = () => {
           </Link>
 
           <button
-            className="items-center block px-3 py-2 text-black border border-white rounded md:hidden "
+            className="bg-gray-200 hover:bg-gray-400  items-center block px-3 py-2 text-black border border-white rounded md:hidden "
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <svg
-              className="w-3 h-3 fill-current"
+              className="w-5 h-4 fill-current "
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
