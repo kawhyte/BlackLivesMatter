@@ -12,22 +12,21 @@ function AboutPageCard({ name, born, death, image, link, age }) {
           src={ 
             image === null
               ? noImage
-              : "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
-                image
+              : image
           }
           className="absolute left-0 top-0 w-full h-full z-0 object-cover"
           alt={name}
         />
-        <div className="absolute bottom-0 inset-x-0 z-20">
+        <div className="absolute bottom-0 inset-x-0 z-20 bg-black">
           <h2 className="text-lg font-semibold text-white leading-tight bg-black pt-1">
             {name}
           </h2>
+          <p className="text-xs text-white bg-black pb-1">
+            {born ? born + " -" : ""} {death}
+          </p>
           {/* <p className="text-md text-pink-100 bg-black opacity-50">
             {born ? age + ` years old` : " "}
           </p> */}
-          <p className="text-xs text-white bg-black pb-1">
-            {born ? born : "?"} - {death}
-          </p>
         </div>
       </a>
     </div>
