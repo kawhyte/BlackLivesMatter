@@ -57,11 +57,11 @@ function Questions() {
               (
                 <section key={card.id}
               className="p-5 flex flex-col justify-between
-								bg-white dark:bg-gray-200 rounded-lg"
+              bg-gray-100 dark:bg-gray-200 rounded-lg"
               href="/"
             >
               <div
-                className="flex items-center justify-between dark:text-gray-700  uppercase truncate-custom text-sm md:text-md font-semibold break-words text-gray-700 text-left"
+                className="flex items-center justify-between dark:text-black uppercase truncate-custom text-sm md:text-md font-semibold break-words text-gray-700 text-left"
               >
                 <span>{card.question}</span>
               </div>
