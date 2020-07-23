@@ -8,6 +8,7 @@ import FeaturedItems from "../HomePageComponents/FeaturedItems"
 import NewUsers from "../NewUsers"
 import SEO from "../Seo"
 import Questions from "../Questions"
+import Quotes from "../Quotes"
 const index = () => {
   return (
     <div>
@@ -16,7 +17,8 @@ const index = () => {
       <Hero />
       <Categories />
       <NewUsers />
-      <Questions></Questions>
+      <Quotes />
+      <Questions />
       <FeaturedItems />
       <Footer />
     </div>

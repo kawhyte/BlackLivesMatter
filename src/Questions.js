@@ -2,15 +2,15 @@ import React from "react"
 
 function Questions() {
   return (
-      <div className= "">
+      <div className= "bg-gray-100">
         <div className=" mx-auto container flex justify-center flex-col ">
           <div className="pl-6 pr-6 pt-6">
-            <h1 className="font-medium text-left text-2xl text-gray-800 mb-3 mt-4">
+            <h1 className="font-medium text-left text-2xl text-black mb-3 mt-4">
               Frequently Asked Questions
             </h1>
           </div>
 
-          <div className="m-2 pl-3 pb-6 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+          <div className="mb-8 pl-3 pb-6 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
 
           {[
               {
@@ -18,7 +18,7 @@ function Questions() {
                 answer: `Systemic or Institutional racism is a form of racism that is embedded as normal practice within society or an organisation. It can lead to such issues as discrimination in criminal justice, employment, housing, health care, political power, and education, among other issues.`,
                 source:`https://www.google.com/search?q=what+is+systemic+racism`,
                 sourceName:`wikipedia.org`,
-                link: `/know-their-names`,
+                id: 1,
                 image: `Know their names`,
               },
               {
@@ -26,7 +26,7 @@ function Questions() {
                 answer: `BLM’s #WhatMatters2020 will focus on issues concerning racial injustice, police brutality, criminal justice reform, Black immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare, access to quality education, and voting rights and suppression.`,
                 source:`https://blacklivesmatter.com/what-matters-2020/`,
                 sourceName:`blacklivesmatter.com`,
-                link: `/know-their-names`,
+                id: 2,
                 image: `Know their names`,
               },
               {
@@ -34,7 +34,7 @@ function Questions() {
                 answer: `Racial trauma, a form of race-based stress, refers to People of Color and Indigenous individuals’ (POCI) reactions to dangerous events and real or perceived experiences of racial discrimination. Such experiences may include threats of harm and injury, humiliating and shaming events, and witnessing racial discrimination toward other POCI.`,
                 source:`https://psycnet.apa.org/fulltext/2019-01033-001.html`,
                 sourceName:`American Psychological Association`,
-                link: `/know-their-names`,
+                id: 3,
                 image: `Know their names`,
               },
            
@@ -43,7 +43,7 @@ function Questions() {
                 answer: `LEAP: A Framework for Becoming a Better Ally to Black Employees. L: Listen and learn from your Black colleagues’ experiences. E: Engage with Black colleagues in racially diverse and more casual settings. A: Ask Black employees about their work and their goals. P: Provide your Black colleagues with opportunities, suggestions, encouragement, and general support. `,
                 source:`https://hbr.org/2020/07/how-to-be-a-better-ally-to-your-black-colleagues`,
                 sourceName:`Harvard Business Review`,
-                link: `/know-their-names`,
+                id: 4,
                 image: `Know their names`,
               },
          
@@ -55,9 +55,9 @@ function Questions() {
               // },
             ].map(card =>
               (
-                <section
+                <section key={card.id}
               className="p-5 flex flex-col justify-between
-								bg-gray-100 dark:bg-gray-200 rounded-lg"
+								bg-white dark:bg-gray-200 rounded-lg"
               href="/"
             >
               <div
