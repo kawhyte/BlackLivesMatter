@@ -1,5 +1,5 @@
 import React from 'react'
-
+import img  from './img/diversity.png'
 function Hero() {
     return (
 
@@ -20,7 +20,8 @@ function Hero() {
               className=" object-right sm:object-top md:object-right lg:object-bottom xl:object-left "
               src="https://res.cloudinary.com/babyhulk/image/upload/w_706,h_348,f_auto/v1591813794/hero-image/diversity.png"
             //   src="https://res.cloudinary.com/babyhulk/image/upload/w_70,h_70,f_auto/v1589318555/hero-image/avatar-01.png"
-              alt="Showing diversity"
+            //   src={img}
+            alt="Showing diversity"
             />
 
            

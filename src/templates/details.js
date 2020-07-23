@@ -23,6 +23,8 @@ const Details = ({ data }) => {
 
   let ratingNumber = item.Rating
 
+  console.log(item )
+
   return (
     <>
       <SEO
@@ -38,10 +40,8 @@ const Details = ({ data }) => {
       {/* <Hero /> */}
       <section className="flex flex-wrap mt-24 justify-center container mx-auto px-2 sm:px-2  sm:flex-row  min-h-screen">
         <div className="px-1 py-2 justify-start ">
-          <div className="text-left mb-12 flex justify-start">
-            <Link to="/" >
-              {" "}
-            </Link>
+          <div className="text-left mb-12 flex justify-start ">
+          
             <Link to="/">
               <div className="flex hover:bg-gray-200 h-8 w-8"> 
               <img  className="" src={arrow}  alt="arrow" />
@@ -55,11 +55,12 @@ const Details = ({ data }) => {
             <div className="lg:w-2/5 flex items-start justify-start">
               <img
                 alt="Poster of Book or Video"
-                className="mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded "
-                src={
-                  "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
-                  item.Image
-                }
+                className="bg-gray-600 mr-10 mb-8 object-cover  w-full  md:object-right lg:object-bottom xl:object-cover rounded "
+                // src={
+                //   "https://res.cloudinary.com/babyhulk/image/fetch/c_fill,g_face,f_auto/" +
+                //   item.Image
+                // }
+                src={item.Image}
                 height={20}
               />
             </div>
