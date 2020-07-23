@@ -5,7 +5,7 @@ function Quotes() {
     return (
 
             <>
-              <div className="">
+              <div className="bg-gray-100">
                 <div className="container mx-auto ">
                   <main className=" p-2 ">
                     <div className="text-center break-words mt-2 ">

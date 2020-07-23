@@ -2,7 +2,7 @@ import React from "react"
 
 function Questions() {
   return (
-      <div className= "bg-gray-100">
+      <div className= "bg-white">
         <div className=" mx-auto container flex justify-center flex-col ">
           <div className="pl-6 pr-6 pt-6">
             <h1 className="font-medium text-left text-2xl text-black mb-3 mt-4">
@@ -61,7 +61,7 @@ function Questions() {
               href="/"
             >
               <div
-                className="flex items-center justify-between dark:text-gray-700  uppercase truncate-custom text-sm md:text-md font-semibold break-words text-gray-700 text-center"
+                className="flex items-center justify-between dark:text-gray-700  uppercase truncate-custom text-sm md:text-md font-semibold break-words text-gray-700 text-left"
               >
                 <span>{card.question}</span>
               </div>
