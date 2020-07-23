@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
  siteMetadata: {
-    title: "Racial Justice & Equality",
+    title: "Racial Equality",
     author: "Kenny",
     titleTemplate: "%s · Racial Equality",
     description:"Exploring Racial Justice & Equality. A repository of books, podcasts & movies to learn about Race Relations in America.",
