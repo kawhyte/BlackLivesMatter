@@ -10,7 +10,7 @@ function Quotes() {
                   <main className=" p-2 ">
                     <div className="text-center break-words mt-2 ">
                       <h1 className="text-xl lg:text-3xl leading-none lg:mb-1  p-2 md:text-2xl lg:mx-20 text-center md:p-12">
-                            The goal is to find a way forward to a better tomorrow.
+                            Let us find a way forward to a better tomorrow.
                       </h1>
         
                       {/* The rate at which black Americans are killed by police is more

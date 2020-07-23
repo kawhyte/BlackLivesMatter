@@ -83,7 +83,7 @@ const Header = () => {
               },
               {
                 route: `/business`,
-                title: `Small Businesses`,
+                title: `Ecommerce Businesses`,
                 type: `internal`,
               },
               {
