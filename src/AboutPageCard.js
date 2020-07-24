@@ -8,24 +8,22 @@ function AboutPageCard({ name, born, death, image, link, age }) {
       style={{ height: "15em" }}
     >
       <a href={link} rel="noreferrer" target="_blank" className="">
-        <img 
-          src={ 
-            image === null
-              ? noImage
-              : image
-          }
+        <img
+          src={image === null ? noImage : image}
           className="absolute left-0 top-0 w-full h-full z-0 object-cover"
           alt={name}
         />
-        <div className="absolute bottom-0 inset-x-0 z-20 bg-black">
-          <h2 className="text-lg font-semibold text-white leading-tight bg-black pt-1">
+        <div className="absolute bottom-0 inset-x-0 z-20 bg-black py-1 flex justify-center">
+          <h2 className="text-lg font-semibold text-white leading-tight bg-black pt-2 mx-2">
             {name}
           </h2>
-          <p className="text-xs text-white bg-black pb-1">
+
+
+          {age ? <p className="flex justify-center text-sm text-black mb-2 mt-2 font-medium  mx-2">
+          <span className="px-1 bg-yellow-300">   {age + ` y/o` }</span> 
+          </p>: " "}
+          {/* <p className="text-xs text-white bg-black pb-1">
             {born ? born + " -" : ""} {death}
-          </p>
-          {/* <p className="text-md text-pink-100 bg-black opacity-50">
-            {born ? age + ` years old` : " "}
           </p> */}
         </div>
       </a>
