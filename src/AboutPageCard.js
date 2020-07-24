@@ -14,12 +14,12 @@ function AboutPageCard({ name, born, death, image, link, age }) {
           alt={name}
         />
         <div className="absolute bottom-0 inset-x-0 z-20 bg-black py-1 flex justify-center">
-          <h2 className="text-lg font-semibold text-white leading-tight bg-black pt-2 mx-2">
+          <h2 className=" text-sm md:text-lg font-semibold text-white leading-tight bg-black pt-2 mx-2">
             {name}
           </h2>
 
 
-          {age ? <p className="flex justify-center text-sm text-black mb-2 mt-2 font-medium  mx-2">
+          {age ? <p className="flex justify-center text-xs md:text-sm text-black mb-2 mt-2 font-medium  mx-2">
           <span className="px-1 bg-yellow-300">   {age + ` y/o` }</span> 
           </p>: " "}
           {/* <p className="text-xs text-white bg-black pb-1">
