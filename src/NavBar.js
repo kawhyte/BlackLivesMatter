@@ -83,7 +83,7 @@ const Header = () => {
               },
               {
                 route: `/business`,
-                title: `Black-Owned Business`,
+                title: `Black-Owned Businesses`,
                 type: `internal`,
               },
               {
