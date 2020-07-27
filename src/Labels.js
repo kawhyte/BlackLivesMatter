@@ -40,11 +40,11 @@ function Labels(props) {
         <h3 className=" pb-5 uppercase container  flex items-end  text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
           {type}
         </h3>
-        <p className="container mb-12 sm:mb-4 lg:mb-2  pb-10 flex items-end">
+        <p className="container mb-1  sm:mb-4 lg:mb-2 pb-2 sm:pb-10   md:pb-10 flex items-end">
           Filter {type} by keywords
         </p>
 
-        <div className="container h-12 flex items-end pb-4">
+        <div className="container h-12 flex items-start sm:items-end pb-4">
           {/* <ul className="flex flex-wrap   p-0 sm:p-1 bg-blue-500  "> */}
           <div className=" py-1">
             {arrayWithoutDuplicates.map((item, i) => {
