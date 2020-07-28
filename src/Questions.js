@@ -10,7 +10,7 @@ function Questions() {
             </h1>
           </div>
 
-          <div className="mb-8 pl-3 pb-6 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+          <div className="mb-8 ml-3 mr-2 pb-6 gap-4 mx-auto container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
 
           {[
               {
@@ -56,17 +56,17 @@ function Questions() {
             ].map(card =>
               (
                 <section key={card.id}
-              className="p-5 flex flex-col justify-between
-              bg-gray-100 dark:bg-gray-200 rounded-lg"
+              className=" mr-6 p-4 flex flex-col justify-between
+              bg-orange-100  rounded-lg"
               href="/"
             >
               <div
-                className="flex items-center justify-between dark:text-black uppercase truncate-custom text-sm md:text-md font-semibold break-words text-gray-700 text-left"
+                className="flex items-center justify-between dark:text-black uppercase truncate-custom text-sm md:text-md font-medium  break-words text-black text-left"
               >
-                <span>{card.question}</span>
+                <strong>{card.question}</strong>
               </div>
 
-              <p className="font-normal leading-snug text-left  my-3  text-sm md:text-md text-gray-700 "
+              <p className="font-normal leading-snug text-left  my-3  text-sm md:text-md text-gray-900 "
               >
                {card.answer}
               </p>
