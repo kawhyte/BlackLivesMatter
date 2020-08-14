@@ -88,7 +88,7 @@ const Header = () => {
               },
               {
                 route: `https://www.kennywhyte.com/`,
-                title: `About`,
+                title: `About Me`,
                 type: `external`,
               },
               // {
