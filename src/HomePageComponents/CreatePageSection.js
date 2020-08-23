@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import arrow from "../img/icons8-forward-small.png"
 let itemToRender = ""
 let bgColor = ""
