@@ -89,7 +89,6 @@ function CreatePageSection({ business, renderDetails, showlinks }) {
           </div>
         )
       }
-
       // return (
       //    <div>
       //      {(itemToRender.length > 0 && renderDetails) ? (
