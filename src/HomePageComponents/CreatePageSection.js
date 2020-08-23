@@ -5,6 +5,7 @@ let itemToRender = ""
 let bgColor = ""
 let categoriesToRender = []
 
+
 function CreatePageSection({ business, renderDetails, showlinks }) {
   //get categories
   business.map((label, i) => {
