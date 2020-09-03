@@ -63,10 +63,10 @@ function StartHere() {
       <div className=" mx-auto container flex justify-center flex-col">
         <div className="pl-6 pr-6 pt-6">
           <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
-            New to Race Relations in America?
+          Trying to understand Racial Justice & Inequality in America?
           </h3>
           <h1 className="text-xl text-gray-800 mb-5 mt-4">
-            We've hand-picked the following four items to get you started:
+          We've hand-picked the following four items to quickly get you started:
           </h1>
         </div>
 
