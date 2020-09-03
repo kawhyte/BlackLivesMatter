@@ -22,13 +22,12 @@ function AboutPageCard({ name, born, death, image, link, age }) {
           {age ? <p className="flex justify-center text-xs md:text-sm text-black mb-2 mt-2 font-medium  mx-2">
           <span className="px-1 bg-yellow-300">   {age + ` y/o` }</span> 
           </p>: " "}
-          {/* <p className="text-xs text-white bg-black pb-1">
-            {born ? born + " -" : ""} {death}
-          </p> */}
+    
         </div>
       </a>
     </div>
   )
 }
+
 
 export default AboutPageCard
