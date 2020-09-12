@@ -13,7 +13,7 @@ const index = () => {
   return (
     <div>
       <NavBar />
-      <SEO title="Racial Inequality in America | Home" /> 
+      <SEO title="Racial Justice in America | Home" /> 
       <Hero />
       <Categories />
       <NewUsers />

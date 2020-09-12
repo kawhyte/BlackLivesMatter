@@ -61,13 +61,17 @@ function StartHere() {
   return (
     <>
       <div className=" mx-auto container flex justify-center flex-col">
-        <div className="pl-6 pr-6 pt-6">
-          <h3 className="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl">
-          Trying to understand Racial Justice & Inequality in America?
+
+        <div className="pl-6 pr-6 pt-4 sm:mb-6">
+
+          <h3 className="text-2xl  text-left sm:text-center tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl sm:mb-6">
+             Understanding Racial Injustice in America.
           </h3>
-          <h1 className="text-xl text-gray-800 mb-5 mt-4">
-          We've hand-picked the following four items to quickly get you started:
-          </h1>
+        <span class=" mr-2 text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Quick Start:</span>
+          <span className=" text-gray-800 mb-5 mt-1  text-base leading-6 font-light tracking-wide" >
+            We've hand-picked the following four items to get you started
+          </span>
+
         </div>
 
         <div className="m-2 pl-3 gap-4 mx-auto container grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
