@@ -9,7 +9,7 @@ const books = () => {
   return (
     <div>
       <NavBar />
-      <SEO title="Racial Inequality in America | Books"
+      <SEO title="Racial Justice in America | Books"
       />
       <CardList />
       <Footer />

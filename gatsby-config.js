@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports = {
  siteMetadata: {
-    title: "Racial Equality",
+    title: "Racial Justice",
     author: "Kenny",
-    titleTemplate: "%s · Racial Equality",
+    titleTemplate: "%s · Racial Justice",
     description:"Exploring Racial Justice & Equality. A repository of books, podcasts & movies to learn about Race Relations in America.",
     url: "https://equality.netlify.app", // No trailing slash allowed!
     image: "https://res.cloudinary.com/babyhulk/image/upload/v1595351314/hero-image/race.png", // Path to your image you placed in the 'static' folder
