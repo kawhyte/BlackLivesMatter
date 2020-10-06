@@ -67,7 +67,7 @@ function StartHere() {
           <h3 className="text-2xl  text-left sm:text-center tracking-tight leading-10 font-extrabold text-gray-900 sm:text-3xl sm:leading-none md:text-4xl sm:mb-6">
              Understanding Racial Injustice in America.
           </h3>
-        <span class=" mr-2 text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Quick Start:</span>
+        <span class=" mr-2 text-base leading-6 text-black font-semibold tracking-wide uppercase">Quick Start:</span>
           <span className=" text-gray-800 mb-5 mt-1  text-base leading-6 font-light tracking-wide" >
             We've hand-picked the following four items to get you started
           </span>
